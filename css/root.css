@@ -1,0 +1,19 @@
+:root{
+    /*colors*/
+    --white-color: #ffffff;
+    --color-bg : #000;
+    --dark-green-color: #4D724D;
+    --light-green-color: #86AB87;
+    --red-color: #CE5858;
+    --yellow-color:#FBE38B;
+    --gray-color:#584C4C;
+    /*book exchange*/
+    --font-navbar:1.688rem;
+    --font-input-button:1.5rem;
+    --font-exchange-card-profile:0.875rem;
+    --font-book-info:0.75rem;
+    
+    --font-family-all: 'Inter';
+    
+    --percent-hundred: 100%;
+}
