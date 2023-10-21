@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: var(--font-family-all);
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--white-color);
   color: var(--white-color);
   *::placeholder {
@@ -9,18 +9,30 @@
   }
 }
 
-header {    
+header {   
+  padding-bottom:  20px;
   border-radius: 0rem 0rem 4rem 4rem;
   background: #4D724D;
   box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Arial';
+  
  & #essentials-navbar{
+  display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-left: 5rem;
     & img{
-      padding-top: 1.5rem ;
+      display: inline-block;
+      padding-top: 0.8rem ;
       padding-left: 1.5rem;
       width: 12rem;
+      
     }
     & #searchbar{
-      width: 40rem;
+      margin-top: 10px;
+      padding-left: 20px;
+      display: inline-block;
+      width: 36rem;
       height: 2rem;
       margin-left: 4rem;
       flex-shrink: 0;
@@ -28,22 +40,33 @@ header {
       border: 1px solid rgba(0, 0, 0, 0.00);
       background: #FFF;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      color: #4D724D;
+    }
+    & .svg-all{
+      margin-top: 10px;
+      margin-left: 30px;
+      display: flex;
+      
     }
     & .svg-container{
+      border-radius: 3.5rem;
+      margin-left: 20px;
       width: 3.5rem;
-      height: 3.5rem;
-      background-color: var(--white-color);
-      
+      height: 2rem;
+      background-color: white;
+      padding-bottom: 5px;
     }
-    & svg{
-      height: 3rem;
-      
-      
-    }
+      & #cart{
+        padding-left: 12px;
+        width: 2rem;
+        
+      }
+      & #profile{
+        padding-left: 8px;
+        width:2.5rem;
+      }  
  }
-  
 }
-
   .icons svg{
     background-color: white;
     margin-right: 30px;
@@ -51,5 +74,119 @@ header {
     width: 60px;
     height: 30px;
   }
+  nav{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    
+    & ul{
+      & li{
+        display: inline-block;
+        margin-right: 70px;
+        margin-left: 70px;
+        align-items: center;
+        text-align: center;
+      }
+      & a{
+        text-decoration: none;
+        
+      }
+    }
+  }
+  .book-exchange{
+    & .filter{
+      display: flex;
+      justify-content: center;
+      & h3{
+        color:#4D724D;
+        margin-right: 30px;
+        font-weight: 300;
+
+        
+      }
+      & button{
+        background-color: #4D724D;
+        border-radius: 10px;
+        border:#4D724D;
+        color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-right:15px ;
+
+      }
+    }
+    margin-top: 40px;
+  }
+  .book-exchange-main{
+    & h3{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .book-exchange-button{
+    margin-top: 40px;
+    color:white;
+    background-color: #86AB87;;
+    border-radius: 50px;
+    width:45%;
+    height: 60px;
+    font-size: 15px;
+    border:none;
+    margin-bottom: 40px;
+  }
+  
+  .exchange-books{
+    padding-bottom: 20px;
+    border-radius: 30px;
+    display: inline-block;
+    color:white;
+    background-color: #4D724D;
+    margin-left: 5%;
+    width: 40%;
+    margin-bottom: 30px;
+    & .undsen-medeelel{
+      display: flex;
+      & p{
+        color: #FBE38B;
+        margin-top: 30px;
+        margin-left: 90px;
+      }
+      & .profile-pic{
+        width: 50px;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      & label{
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+    }
+    & .nomnii-zurag{
+      margin-left:20px;
+      margin-right:20px;
+    }
+  }
+  .book-info-main{
+    display: flex;
+    justify-content: center;
+    font-weight: none;
+    font-size: 12px;
+  
+    
+    & .tags{
+      
+      display: flex;
+      & .ehnii-tag{
+        & h4{font-weight: none;}
+        margin-right: 20px;
+      }
+      
+    }
+  }
+  
 
  
