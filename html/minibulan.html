@@ -1,117 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Put your description here." />
-    <title>MiniiBulan</title>
-</head>
-<body>
-    <header>
-        <img src="tem_logoo.jpg" alt="Logo">
-        <input class="searchBar" type="search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
-    </header>
+<html lang="mn">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/book-exchange.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/bulan.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ном худалдааны вебсайт">
+        <meta name="keywords" content="Ном, ном худалдаа, ном солилцоо">
+        <meta name="author" content="Grenom">
+        <title>Grenom-MiniiBulan</title>
+    </head>
+    <body>
+        <header>
+            <div id="essentials-navbar">
+                <img src="../pictures/logo.png" alt="Logo" width="50">
+                <input id="searchbar" class="searchbar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
+                <div class="svg-all">
+                    <div class="svg-container">
+                        <svg id="cart" xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                    </div>
+                    <div class="svg-container">
+                        <svg id="profile" xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                    </div>
+                </div>
+                          
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Нүүр <br>хуудас</a></li>
+                    <li><a href="book-exchange.html">Ном <br>солилцоо</a></li>
+                    <li><a href="book-sale.html">Ном <br>худалдаа</a></li>
+                    <li><a href="Contact-us.html">Бидний <br>тухай</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="book-exchange">
+            <section class="filter" >
+                <h3>Шүүлтүүр:</h3>
+                    <button class="category-filter-btn" onclick="filterSelection('category')"> Категори: <span>Уран зохиол</span></button>
+                    <button class="condition-filter-btn" onclick="filterSelection('condition')">Эдэлгээ: <span>8/10</span></button>
+                    <button class="price-filter-btnbtn" onclick="filterSelection('price')"> Үнийн дүн: <span>50000₮-аас доош</span></button>
+                    <button class="name-filter-btn" onclick="filterSelection('name')"> <span>"4 биш 4"</span></button>
+            </section>
+        <section class="left">
+            <h3 class="box">Танд ирсэн ном авах хүсэлт</h3>
+            <article class="boxs">
+                <figure>
+                    <img  class="profile-pic" src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
+                </figure>
+                <h4>Гурван бяцхан баавгай</h4>
+                <p>Agiimaa Unurtsolmon</p>
+                <p><time datetime="2020-09-23">2023/09/23</time></p>
+                <p>Дэлгэрэнгүй мэдээлэл харах...</p>
+                <button>Хүлээн авах</button>
+                <button>Татгалзах</button>
+            </article>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Нүүр хуудас</a></li>
-            <li><a href="book-exchange.html">Ном солилцоо</a></li>
-            <li><a href="book-sale.html">Ном худалдаа</a></li>
-            <li><a href="Contact-us.html">Бидний тухай</a></li>
-        </ul>
-    </nav>
-    <main >
-        <section>
-            <p style="background-color:rgba(145, 231, 246, 0.349);">Танд ирсэн ном авах хүсэлт</p>
-            <article style="background-color:rgba(173, 220, 228, 0.349);">
+            <article class="boxs">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img class="profile-pic" src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
-                <p>Гурван бяцхан баавгай</p>
+                <h4>Гурван бяцхан баавгай</h4>
                 <p>Agiimaa Unurtsolmon</p>
-                <p>2023.09.23</p>
+                <p><time datetime="2020-09-23">2023/09/23</time></p>
                 <p>Дэлгэрэнгүй мэдээлэл харах...</p>
-                <button style="color:green;">Хүлээн авах</button>
-                <button style="color:red;">Татгалзах</button>
+                <button">Хүлээн авах</button>
+                <button>Татгалзах</button>
             </article>
-            <article style="background-color:rgba(173, 220, 228, 0.349);">
+            <article class="boxs">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img  class="profile-pic" src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
-                <p>Гурван бяцхан баавгай</p>
+                <h4>Гурван бяцхан баавгай</h4>
                 <p>Agiimaa Unurtsolmon</p>
-                <p>2023.09.23</p>
+                <p><time datetime="2020-09-23">2023/09/23</time></p>
                 <p>Дэлгэрэнгүй мэдээлэл харах...</p>
-                <button style="color:green;">Хүлээн авах</button>
-                <button style="color:red;">Татгалзах</button>
-            </article>
-            <article style="background-color:rgba(173, 220, 228, 0.349);">
-                <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
-                </figure>
-                <p>Гурван бяцхан баавгай</p>
-                <p>Agiimaa Unurtsolmon</p>
-                <p>2023.09.23</p>
-                <p>Дэлгэрэнгүй мэдээлэл харах...</p>
-                <button style="color:green;">Хүлээн авах</button>
-                <button style="color:red;">Татгалзах</button>
+                <button>Хүлээн авах</button>
+                <button>Татгалзах</button>
             </article>
         </section>
 
-        <section>
-            <p style="background-color:rgba(145, 231, 246, 0.349);">Танд ирсэн ном солих хүсэлт</p>
-            <article style="background-color:rgba(173, 220, 228, 0.349);">
+        <section class="right">
+            <h3 class="box">Танд ирсэн ном солих хүсэлт</h3>
+            <article class="boxs">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img class="profile-pic" src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
-                <p>Гурван бяцхан баавгай</p>
+                <h4>Гурван бяцхан баавгай</h4>
                 <p>Agiimaa Unurtsolmon</p>
-                <p>2023.09.23</p>
+                <p><time datetime="2020-09-23">2023/09/23</time></p>
                 <p>Дэлгэрэнгүй мэдээлэл харах...</p>
-                <button style="color:green;">Хүлээн авах</button>
-                <button style="color:red;">Татгалзах</button>
+                <button>Хүлээн авах</button>
+                <button>Татгалзах</button>
             </article>
-            <article style="background-color:rgba(173, 220, 228, 0.349);">
+            <article class="boxs">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img  class="profile-pic" src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
-                <p>Гурван бяцхан баавгай</p>
+                <h4>Гурван бяцхан баавгай</h4>
                 <p>Agiimaa Unurtsolmon</p>
-                <p>2023.09.23</p>
+                <p><time datetime="2023-09-23">2023/09/23</time></p>
                 <p>Дэлгэрэнгүй мэдээлэл харах...</p>
-                <button style="color:green;">Хүлээн авах</button>
-                <button style="color:red;">Татгалзах</button>
+                <button>Хүлээн авах</button>
+                <button>Татгалзах</button>
             </article>
-            <article style="background-color:rgba(173, 220, 228, 0.349);">
+            <article class="boxs">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img  class="profile-pic" src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
-                <p>Гурван бяцхан баавгай</p>
+                <h4>Гурван бяцхан баавгай</h4>
                 <p>Agiimaa Unurtsolmon</p>
-                <p>2023.09.23</p>
+                <p><time datetime="2020-09-23">2023/09/23</time></p>
                 <p>Дэлгэрэнгүй мэдээлэл харах...</p>
-                <button style="color:green;">Хүлээн авах</button>
-                <button style="color:red;">Татгалзах</button>
+                <button>Хүлээн авах</button>
+                <button>Татгалзах</button>
             </article>
 
         </section>
-        <h1>Таны нийтэлсэн номнууд:</h1>
-            <button >Зарах номоо багцлах</button>
-            <button >Солих номоо багцлах</button>
-        <section style="background-color:rgba(145, 231, 246, 0.349);">
-            
+        <h2 class="head2">Таны нийтэлсэн номнууд</h2>
+            <button class="box">Зарах номоо багцлах</button>
+            <button class="box">Солих номоо багцлах</button>
+        <section class="box">
             <h2>Багц 1</h2>
-            <button style="color:green;">Засах</button>
-            <button style="color:red;">Устгах</button>
-            <article>
+            <button>Засах</button>
+            <button>Устгах</button>
+            <article class="inner-box">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
                 <figure>
-                    <img src="nomnii zurag.jpg" alt="nomnii zurag">
+                    <img src="nom_zurag.jpg" alt="nomnii zurag">
                 </figure>
                 <p class="stars">
                     <span class="fa fa-star"></span>
@@ -120,21 +141,21 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </p>
-                <p>Номын нэр: <span>Дүүлэн нис</span></p>
-                <p>Хэвлэгдсэн он: <span>2020</span></p>
+                <h4>Номын нэр: <span>Дүүлэн нис</span></h4>
+                <p>Хэвлэгдсэн он: <time>2020</time></p>
                 <p>Категори:<span>Хөгжил</span></p>
-                <p>Эдэлгээ:<progress>0%</progress></p>
+                <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
                 <p>Хуудасны тоо:<span>150</span></p>
-                <p>Үнэ:20000₮</p>
+                <p>Үнэ:<span>20000₮</span></p>
             </article>
             
-            <article >
+            <article class="inner-box">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
                 <figure>
-                    <img src="nomnii zurag.jpg" alt="nomnii zurag">
+                    <img src="nom_zurag.jpg" alt="nomnii zurag">
                 </figure>
                 <p class="stars">
                     <span class="fa fa-star"></span>
@@ -143,26 +164,26 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </p>
-                <p>Номын нэр: Цойлогсод</p>
-                <p>Хэвлэгдсэн он: 2020</p>
-                <p>Категори:Хөгжил</p>
-                <p>Эдэлгээ:0%</p>
-                <p>Хуудасны тоо:150</p>
-                <p>Үнэ:20000₮</p>
+                <h4>Номын нэр: <span>Цойлогсод</span></h4>
+                <p>Хэвлэгдсэн он: <time>2020</time></p>
+                <p>Категори:<span>Хөгжил</span></p>
+                <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                <p>Хуудасны тоо:<span>150</span></p>
+                <p>Үнэ:<span>20000₮</span></p>
             </article>
             
         </section>
-        <section style="background-color:rgba(145, 231, 246, 0.349);">
-        <h2>Багц 2</h2>
-            <button style="color:green;">Засах</button>
-            <button style="color:red;">Устгах</button>
-            <article >
+        <section class="box">
+            <h2>Багц 2</h2>
+            <button>Засах</button>
+            <button>Устгах</button>
+            <article class="inner-box">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
                 <figure>
-                    <img src="nomnii zurag.jpg" alt="nomnii zurag">
+                    <img src="nom_zurag.jpg" alt="nomnii zurag">
                 </figure>
                 <p class="stars">
                     <span class="fa fa-star"></span>
@@ -171,21 +192,21 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </p>
-                <p>Номын нэр: Дүүлэн нис</p>
-                <p>Хэвлэгдсэн он: 2020</p>
-                <p>Категори:Хөгжил</p>
-                <p>Эдэлгээ:0%</p>
-                <p>Хуудасны тоо:150</p>
-                <p>Үнэ:20000₮</p>
+                <h4>Номын нэр: <span>Дүүлэн нис</span></h4>
+                <p>Хэвлэгдсэн он: <time>2020</time></p>
+                <p>Категори:<span>Хөгжил</span></p>
+                <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                <p>Хуудасны тоо:<span>150</span></p>
+                <p>Үнэ:<span>20000₮</span></p>
             </article>
             
-            <article >
+            <article class="inner-box">
                 <figure>
-                    <img src="hun.jpg" alt="niitelsen hunii zurag">
+                    <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                 </figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
                 <figure>
-                    <img src="nomnii zurag.jpg" alt="nomnii zurag">
+                    <img src="nom_zurag.jpg" alt="nomnii zurag">
                 </figure>
                 <p class="stars">
                     <span class="fa fa-star"></span>
@@ -194,24 +215,70 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </p>
-                <p>Номын нэр: Цойлогсод</p>
-                <p>Хэвлэгдсэн он: 2020</p>
-                <p>Категори:Хөгжил</p>
-                <p>Эдэлгээ:0%</p>
-                <p>Хуудасны тоо:150</p>
-                <p>Үнэ:20000₮</p>
+                <h4>Номын нэр: <span>Цойлогсод</span></h4>
+                <p>Хэвлэгдсэн он: <time>2020</time></p>
+                <p>Категори:<span>Хөгжил</span></p>
+                <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                <p>Хуудасны тоо:<span>150</span></p>
+                <p>Үнэ:<span>20000₮</span></p>
             </article>
             
         </section>
 
-        <section>
-                <article style="background-color:rgba(173, 220, 228, 0.349);">
+                <article class="inner-box">
+                <figure>
+                    <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
+                </figure>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
+                <figure>
+                    <img src="nom_zurag.jpg" alt="nomnii zurag">
+                </figure>
+                    
+                <p class="stars">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <h4>Номын нэр: <span>Дүүлэн нис</span></h4>
+                <p>Хэвлэгдсэн он: <time>2020</time></p>
+                <p>Категори:<span>Хөгжил</span></p>
+                <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                <p>Хуудасны тоо:<span>150</span></p>
+                <p>Үнэ:<span>20000₮</span></p> 
+                </article>
+                
+                <article class="inner-box">
+                <figure>
+                    <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
+                </figure>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
+                <figure>
+                    <img src="nom_zurag.jpg" alt="nomnii zurag">
+                </figure>
+                <p class="stars">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <h4>Номын нэр: <span>Дүүлэн нис</span></h4>
+                <p>Хэвлэгдсэн он: <time>2020</time></p>
+                <p>Категори:<span>Хөгжил</span></p>
+                <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                <p>Хуудасны тоо:<span>150</span></p>
+                <p>Үнэ:<span>20000₮</span></p>
+                    
+                </article>
+                <article class="inner-box">
                     <figure>
-                        <img src="hun.jpg" alt="niitelsen hunii zurag">
+                        <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                     </figure>
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
                     <figure>
-                        <img src="nomnii zurag.jpg" alt="nomnii zurag">
+                        <img src="nom_zurag.jpg" alt="nomnii zurag">
                     </figure>
                     
                     <p class="stars">
@@ -220,23 +287,22 @@
                         <span class="fa fa-star"></span>
                         <span class="fa fa-star"></span>
                         <span class="fa fa-star"></span>
-                    </p>
-                    <p>Номын нэр: Дүүлэн нис</p>
-                    <p>Хэвлэгдсэн он: 2020</p>
-                    <p>Категори:Хөгжил</p>
-                    <p>Эдэлгээ:0%</p>
-                    <p>Хуудасны тоо:150</p>
-                    <p>Үнэ:20000₮</p>
+                        <h4>Номын нэр: <span>Дүүлэн нис</span></h4>
+                        <p>Хэвлэгдсэн он: <time>2020</time></p>
+                        <p>Категори:<span>Хөгжил</span></p>
+                        <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                        <p>Хуудасны тоо:<span>150</span></p>
+                        <p>Үнэ:<span>20000₮</span></p>
                     
                 </article>
                 
-                <article style="background-color:rgba(173, 220, 228, 0.349);">
+                <article class="inner-box">
                     <figure>
-                        <img src="hun.jpg" alt="niitelsen hunii zurag">
+                        <img src="../pictures/Agiimaa.jpg" alt="niitelsen hunii zurag" width="50" height="50">
                     </figure>
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
                     <figure>
-                        <img src="nomnii zurag.jpg" alt="nomnii zurag">
+                        <img src="nom_zurag.jpg" alt="nomnii zurag">
                     </figure>
                     <p class="stars">
                         <span class="fa fa-star"></span>
@@ -245,78 +311,30 @@
                         <span class="fa fa-star"></span>
                         <span class="fa fa-star"></span>
                     </p>
-                    <p>Номын нэр: Цойлогсод</p>
-                    <p>Хэвлэгдсэн он: 2020</p>
-                    <p>Категори:Хөгжил</p>
-                    <p>Эдэлгээ:0%</p>
-                    <p>Хуудасны тоо:150</p>
-                    <p>Үнэ:20000₮</p>
-                    
-                </article>
-                <article style="background-color:rgba(173, 220, 228, 0.349);">
-                    <figure>
-                        <img src="hun.jpg" alt="niitelsen hunii zurag">
-                    </figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
-                    <figure>
-                        <img src="nomnii zurag.jpg" alt="nomnii zurag">
-                    </figure>
-                    
-                    <p class="stars">
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </p>
-                    <p>Номын нэр: Дүүлэн нис</p>
-                    <p>Хэвлэгдсэн он: 2020</p>
-                    <p>Категори:Хөгжил</p>
-                    <p>Эдэлгээ:0%</p>
-                    <p>Хуудасны тоо:150</p>
-                    <p>Үнэ:20000₮</p>
-                    
-                </article>
-                
-                <article style="background-color:rgba(173, 220, 228, 0.349);">
-                    <figure>
-                        <img src="hun.jpg" alt="niitelsen hunii zurag">
-                    </figure>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
-                    <figure>
-                        <img src="nomnii zurag.jpg" alt="nomnii zurag">
-                    </figure>
-                    <p class="stars">
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </p>
-                    <p>Номын нэр: Цойлогсод</p>
-                    <p>Хэвлэгдсэн он: 2020</p>
-                    <p>Категори:Хөгжил</p>
-                    <p>Эдэлгээ:0%</p>
-                    <p>Хуудасны тоо:150</p>
-                    <p>Үнэ:20000₮</p>
-                    
+                    <h4>Номын нэр: <span>Дүүлэн нис</span></h4>
+                    <p>Хэвлэгдсэн он: <time>2020</time></p>
+                    <p>Категори:<span>Хөгжил</span></p>
+                    <p>Эдэлгээ:<progress value="21" max="100">21%</progress></p>
+                    <p>Хуудасны тоо:<span>150</span></p>
+                    <p>Үнэ:<span>20000₮</span></p>
+                        
                 </article>
                 <p><u>Цааш үзэх</u></p>
-            </section>
+
     </main>
     <footer>
         <h3>Creative team in Mongolia</h3>
-        <ul>
-            <li>Contact us:</li>
-            <li>Grenom@gmail.com</li>
-            <li>+976 90305543</li>
-            <li>www.grenom.com</li>
-        </ul>
-        <ul>
-            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="gray" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a></li>
-            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="gray" d="M12.001 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6Zm0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0ZM12.001 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.886 2.886 0 0 0-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.007 9.075 4 9.461 4 12c0 2.475.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.475 0 2.878-.007 4.029-.058c.782-.037 1.308-.142 1.797-.331a2.91 2.91 0 0 0 1.08-.703c.337-.336.538-.649.704-1.08c.19-.492.296-1.018.332-1.8c.052-1.103.058-1.49.058-4.028c0-2.474-.007-2.878-.058-4.029c-.037-.782-.143-1.31-.332-1.798a2.912 2.912 0 0 0-.703-1.08a2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.926 4.006 14.54 4 12 4Zm0-2c2.717 0 3.056.01 4.123.06c1.064.05 1.79.217 2.427.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.884 4.884 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465c-1.067.047-1.406.06-4.123.06c-2.717 0-3.056-.01-4.123-.06c-1.064-.05-1.789-.218-2.427-.465a4.89 4.89 0 0 1-1.772-1.153a4.905 4.905 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428c-.048-1.066-.06-1.405-.06-4.122c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772a4.897 4.897 0 0 1 1.772-1.153c.637-.248 1.362-.415 2.427-.465C8.945 2.013 9.284 2 12.001 2Z"/></svg></a></li>
-            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="gray" d="M8 2H1l8.26 11.014L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886L8 2Zm9 18L5 4h2l12 16h-2Z"/></svg></a></li>
-        </ul>
+        <address>
+            Contact us:
+            <a href="mailto:Grenom@gmail.com">Grenom@gmail.com</a>
+            <a href="tel:+12390305543">+976 90305543</a>
+            <a href="#">www.grenom.com</a>
+        </address>
+        <address>
+            <a href="facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="gray" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+            <a href="instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="gray" d="M12.001 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6Zm0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0ZM12.001 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.886 2.886 0 0 0-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.007 9.075 4 9.461 4 12c0 2.475.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.475 0 2.878-.007 4.029-.058c.782-.037 1.308-.142 1.797-.331a2.91 2.91 0 0 0 1.08-.703c.337-.336.538-.649.704-1.08c.19-.492.296-1.018.332-1.8c.052-1.103.058-1.49.058-4.028c0-2.474-.007-2.878-.058-4.029c-.037-.782-.143-1.31-.332-1.798a2.912 2.912 0 0 0-.703-1.08a2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.926 4.006 14.54 4 12 4Zm0-2c2.717 0 3.056.01 4.123.06c1.064.05 1.79.217 2.427.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.884 4.884 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465c-1.067.047-1.406.06-4.123.06c-2.717 0-3.056-.01-4.123-.06c-1.064-.05-1.789-.218-2.427-.465a4.89 4.89 0 0 1-1.772-1.153a4.905 4.905 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428c-.048-1.066-.06-1.405-.06-4.122c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772a4.897 4.897 0 0 1 1.772-1.153c.637-.248 1.362-.415 2.427-.465C8.945 2.013 9.284 2 12.001 2Z"/></svg></a>        
+            <a href="twitter.com"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="gray" d="M8 2H1l8.26 11.014L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886L8 2Zm9 18L5 4h2l12 16h-2Z"/></svg></a>
+        </address>
         <p>&copy; 2023 Grenom. All rights reserved.</p>
     </footer>
 </body>

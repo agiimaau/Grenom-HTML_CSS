@@ -1,0 +1,79 @@
+.left {
+    width: 50%; 
+    float: left;
+    padding: 20px; 
+    box-sizing: border-box; 
+  
+  }
+  
+  .right{
+    width: 50%; 
+    float: left; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  
+    @media (max-width: 767px) {
+        width: 100%; 
+        float: none; 
+    }
+  }
+  .box { 
+    margin: 20px;
+    padding: 15px;
+    background-color: #4D724D;
+    border-radius:30px;
+    color: #ffffff;
+  }
+  
+  h3 {
+    font-size: 16px; 
+    color: #ffffff;
+  }
+  
+  .boxs {
+    padding: 15px; 
+    background-color: #86AB87; 
+    margin: 20px; 
+    border-radius:30px;
+    & .profile-pic{
+      width: 50px;
+      border-radius: 50%;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+
+    & .undsen-medeelel{
+      display: flex;
+
+    & .p{
+      color: #FBE38B;
+      margin-top: 30px;
+      margin-left: 90px;
+    }
+  }
+    }
+   }
+  .head2 {
+    text-align: center;
+  }
+  
+  .inner-box {
+    width: 45%; 
+    padding: 15px; 
+    background-color: #86AB87; 
+    margin: 20px; 
+    border-radius:30px;
+    color: #ffffff;
+  
+  }
+  
+  .label{
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+  
+  .nomnii-zurag{
+    margin-left:20px;
+    margin-right:20px;
+  }
+  
