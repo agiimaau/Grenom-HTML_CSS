@@ -1,4 +1,8 @@
 
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
   .heading {
     display:flex;
     justify-content: space-between;
@@ -8,7 +12,9 @@
     padding-top:30px;
     padding-left:5%;
     padding-right:5%;
-    background-color: #4D724D;
+    background-color: hsl(120, 19%, 37%);
+    border-radius: 0 0 25px 25px;
+
   }
   .icons svg{
     background-color: white;
@@ -151,31 +157,24 @@ margin-right:25px;
    
   }
 
-  /* .poster-1{
-    margin-right:5%;
-    margin-left:5%;
-  }
 
-  .poster-1 figure{
-    height:725px;
-    width: 625px;
-    padding-left:200px;
-  }
-   */
-
-
-   .poster-1 {
+  .poster-1 {
     margin-right:5%;
     margin-left:5%;
     display: flex;
     align-items: center; /* Center vertically within the article */
     padding-left:250px;
+    height:450px;
+    border-radius:25px;
+    
+
     
   }
+
   
   .content {
     flex: 1; /* Take up half of the available space */
-    padding: 20px; /* Add some spacing */
+    padding: 20px; 
     color:white;
     max-width: 300px;
     
@@ -186,11 +185,11 @@ margin-right:25px;
   }
   
   figure img {
-    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    max-width: 100%; 
   }
 
   .content button{
-  display: flex;
+display: flex;
 flex-direction: column;
 justify-content: center;
 color: #4D724D;
@@ -200,5 +199,190 @@ height: 35px;
 border-color:white;
 
   }
+
+  .poster-2{
+    position: relative;
+    width: 100%;
+    /* overflow: hidden; */
+    
+  }
+  
+  .bolomj{
+    position:absolute;
+    bottom:40%;
+    left:25%;
+    border-radius: 40px;
+    padding-top: 10px;
+    background: rgba(77, 114, 77, 0.70);
+    width: 15rem;
+    height: 300px;
+    color:white;
+    text-align: center;
+    line-height: 2;
+    }
+
+  .poster-2 img{
+      width:100%;
+      max-width: 100%;
+      border-radius: 25px;
+    }
+    /* .white{
+      height:100px;
+      background-color: #9c9c9c;
+      border-radius:0 0 25px 25px;
+      margin-bot:200px;
+    } */
+
+    .home-page-book-header {
+        margin-left:180px;
+        margin-top: 250px;
+    }
+
+    .hemnelt_ondertei_nomnuud{
+      display:grid;
+      grid-template-columns: 100px auto auto auto auto auto;
+       margin-top:40px;
+      align-items: center;
+    }
+
+    .hemnelt_ondertei_nomnuud #book-grid{
+      width: 260px;
+      height: 400px;
+      margin-right:30px;
+      margin-left: 30px;
+      text-align: center;
+      color:white;
+      border-radius: 1.875rem;
+      background-color: #4D724D;
+    }
+
+    #dots-3{
+     margin-left: 10%;
+     margin-top: 5%;
+    }
+    
+
+    .ondor_unelgeetei_nomnuud{
+      display:grid;
+      grid-template-columns: 100px auto auto auto auto auto;
+       margin-top:40px;
+      align-items: center;
+    }
+
+    .ondor_unelgeetei_nomnuud article{
+      width: 260px;
+      height: 400px;
+      margin-right:30px;
+      margin-left: 30px;
+      text-align: center;
+    }
+
+    .ondor_unelgeetei_nomnuud #book-grid{
+      width: 260px;
+      height: 400px;
+      margin-right:30px;
+      margin-left: 30px;
+      text-align: center;
+      color:white;
+      border-radius: 1.875rem;
+      background-color: #4D724D;
+    }
+
+    .shineer_nemegdsen_nomnuud #book-grid{
+      width: 260px;
+      height: 400px;
+      margin-right:30px;
+      margin-left: 30px;
+      text-align: center;
+      color:white;
+      border-radius: 1.875rem;
+      background-color: #4D724D;
+    }
+
+    .shineer_nemegdsen_nomnuud{
+      display:grid;
+      grid-template-columns: 100px auto auto auto auto auto;
+       margin-top:40px;
+      align-items: center;
+    }
+
+    .shineer_nemegdsen_nomnuud article{
+      width: 260px;
+      height: 400px;
+      margin-right:30px;
+      margin-left: 30px;
+      text-align: center;
+    }
+
+
+    #svg-container{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+    }
+
+    .zaavar-zovlomj{
+      color:#4D724D;
+      text-align: center;
+      width: 80%;
+      height: 100%;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Inter;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+    }
+
+    .tutorial-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+    }
+
+    video{
+      width: 100%;
+      border-radius: 2.5rem;
+    }
+
+    footer{
+      width: 100%;
+      background-color: #86AB87;
+      color:white;
+    }
+
+    footer #by-contact a{
+      margin-left: 15%;
+      text-decoration: none;
+      color: white;
+    }
+
+    footer h3{
+      margin-left: 10%;
+      padding-top: 5%;
+    }
+    #by-contact{
+      margin-left:10%;
+      margin-top: 3%;
+    }
+
+    .icons-container{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3%;
+    }
+
+    footer p {
+      width: 100%;
+      height: 3rem;
+      background-color: #4D724D;
+      text-align: center;
+      padding-top: auto;
+  }
+
   
 
