@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--white-color);
   color: var(--white-color);
   *::placeholder {
@@ -139,11 +139,11 @@ header {
   
   .exchange-books{
     padding-bottom: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
     display: inline-block;
     color:white;
     background-color: #4D724D;
-    margin-left: 5%;
+    margin-left: 7%;
     width: 40%;
     margin-bottom: 30px;
     & .undsen-medeelel{
@@ -151,7 +151,7 @@ header {
       & p{
         color: #FBE38B;
         margin-top: 30px;
-        margin-left: 90px;
+        margin-left: 150px;
       }
       & .profile-pic{
         width: 50px;
@@ -174,19 +174,110 @@ header {
     display: flex;
     justify-content: center;
     font-weight: none;
-    font-size: 12px;
+    font-size: 10px;
   
-    
-    & .tags{
-      
-      display: flex;
-      & .ehnii-tag{
-        & h4{font-weight: none;}
-        margin-right: 20px;
+    & .nomnii-medeelel{
+      & .tags{
+        display: flex;
+        & .ehnii-tag{
+          margin-right: 40px;
+          & h4{font-weight: 300;}
+        }
+    }
+      .ehnii-tag p,h4{
+        line-height: 2;
+      }
+      .hoyrdahi-tag p{
+        line-height: 2;
+      }
+      .additional-info {
+        line-height: 1.5;
+      }
+      .book-exchange-request-button{
+        margin-top:20px;
+        border-radius: 20px;
+        padding: 4px;
+        width: 330px;
+        color:#4D724D;
+        font-weight: 700;;
+        background-color: #FFF;
+        border: none;
       }
       
+      
     }
+   
   }
+.change-buttons {
+  margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.switch-btn {
+    margin: 0 5px;
+}
+
+.switch-btn {
+    background-color: #4d724d;
+    color: white;
+    font-size: large ;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.switch-btn:hover {
+    background-color: #357535;
+}
+
+  footer{
+    width: 100%;
+    background-color: #86AB87;
+    color:white;
+    
+  }
+
+  footer #by-contact a{
+    margin-left: 15%;
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+    font-weight: 100;
+    
+  }
+
+  footer h3{
+    margin-left: 10%;
+    padding-top: 5%;
+    font-style: normal;
+    font-size: 30px;
+  }
+  #by-contact{
+    margin-left:10%;
+    margin-top: 3%;
+    font-style: normal;
+  }
+
+  .icons-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+  }
+
+  footer p {
+    padding-top: 20px;
+    width: 100%;
+    height: 3rem;
+    background-color: #4D724D;
+    text-align: center;
+    padding-top: auto;
+}
+
   
 
  
