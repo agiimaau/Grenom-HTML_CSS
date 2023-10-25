@@ -17,7 +17,7 @@ header {
   font-family: 'Arial';
   
  & #essentials-navbar{
-  display: flex;
+      display: flex;
       align-items: center;
       flex-wrap: wrap;
       padding-left: 5rem;
