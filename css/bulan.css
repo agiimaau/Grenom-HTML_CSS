@@ -86,6 +86,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #ffffff;
+    font-size: 15px;
+
+    
 
 }
 
@@ -111,7 +114,26 @@
 
 .imgs{
     flex: 70%;
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height: center;
+}
+* {
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  text-align: center;
+}
+
+.flex-item-left {
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 50%;
 }
 
