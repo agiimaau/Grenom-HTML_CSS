@@ -105,15 +105,4 @@
         }
     }
     }
-    footer {
-    padding: 20px;
-    text-align: center;
-    background: #86AB87;
-    color: white; 
-    & p{
-        background: #4D724D;
-    }
-    & h3{
-        text-align: left;
-    }
-    }
+   
