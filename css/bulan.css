@@ -79,61 +79,87 @@
   
 
   .forms {
-    flex: 30%;
+    flex: 35%;
     background-color: #4D724D;
-    padding: 100px;
+    padding: 90px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 91px 0px rgba(0,0,0,0.25);
     text-align: center;
     color: #ffffff;
     font-size: 15px;
-
-    
-
+    font-weight: 100;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    & .iconss {
+      position: absolute;
+    }
+    & .iconsss {
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+h1 {
+  font-size: 35px
 }
 
+
 .forms input {
-    padding: 10px;
-    margin: 5px 0;
+    padding: 17px;
+    padding-left: 50px;
+    width: 65%;
+    margin: 5px;
     background-color: #ffffff;
     color: #86AB87;
     border: 1px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 .forms input[type="checkbox"] {
     width: auto;
-}
+      }
 
 .forms input[type="submit"] {
     background-color: #86AB87;
     color: #ffffff;
-    cursor: pointer;
     border: none;
     border-radius: 20px;
+    padding: 12px;
+    width: 40%;
+    margin: 5px;
+   
 }
 
-.imgs{
+.imgs1{
     flex: 70%;
     width: 70%;
     height: center;
+
 }
-* {
-  box-sizing: border-box;
+
+.imgs2{
+  flex: 70%;
+  width: 90%;
+  height: center;
+  margin-top: 20%;
+  margin-left: 30px;
 }
+
 .flex-container {
   display: flex;
   flex-direction: row;
   font-size: 20px;
   text-align: center;
+  
+  
 }
 
 .flex-item-left {
   padding: 10px;
   flex: 50%;
+  justify-content: center;
 }
 
 .flex-item-right {
   padding: 10px;
   flex: 50%;
 }
-
