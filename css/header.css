@@ -1,40 +1,307 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--white-color);
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white-color);
+  color: var(--white-color);
+
+  &::placeholder {
     color: var(--white-color);
-    *::placeholder {
-        color: var(--white-color);
-    }
   }
-  
-  header {   
-    padding-bottom:  20px;
-    border-radius: 0rem 0rem 4rem 4rem;
+}
+@media only screen and (max-width: 480px) {
+  /* Styles specific to mobile (vertical) view */
+ 
+  header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 0 2rem 2rem;
     background: #4D724D;
     box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
     font-family: 'Arial';
-    
-   & #essentials-navbar{
-    display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-left: 5rem;
-      & img{
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 0.3rem;
+      padding-right: 0.5rem;
+      
+      & img {
         display: inline-block;
-        padding-top: 0.8rem ;
-        padding-left: 1.5rem;
-        width: 12rem;
-        
+        padding-top: 0.8rem;
+        width: 5rem;
       }
-      & #searchbar{
+  
+      & #searchbar {
+        margin-left: 5px;
         margin-top: 10px;
-        padding-left: 20px;
+        padding: 0 2%;
         display: inline-block;
-        width: 36rem;
-        height: 2rem;
-        margin-left: 4rem;
+        width: 45%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 1rem;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+        font-size: 8px;
+      }
+  
+      & .svg-all {
+        margin-top: 10px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          
+          border-radius: 0.8rem;
+        margin-left: 10px;
+        width: 1.7rem;
+        height: 1rem;
+        background-color: white;
+        padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+            padding-top: 3px;
+          }
+        }
+      }
+  
+      & .svg-container {
+        border-radius: 0.8rem;
+        margin-left: 10px;
+        width: 1.7rem;
+        height: 1rem;
+        background-color: white;
+        padding-bottom: 5px;
+  
+        & #cart {
+          padding-left: 6px;
+          width: 1rem;
+          padding-top: 5px;
+        }
+  
+        & #profile {
+          padding-left: 2px;
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav { 
+    display: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+  }
+  
+  
+  
+ 
+  
+
+
+
+/* Mobile (Horizontal) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Styles specific to mobile (horizontal) view */
+  header {
+    padding-bottom: 20px;
+    border-radius: 0 0 3rem 3rem;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 6rem;
+      }
+  
+      & #searchbar {
+        margin-top: 15px;
+        padding: 0 2%;
+        display: inline-block;
+        width: 45%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 1.7rem;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+        font-size: 12px;
+      }
+  
+      & .svg-all {
+        margin-top: 15px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          
+          border-radius: 3.5rem;
+          margin-left: 10px;
+          width: 2.3rem;
+          height: 1.5rem;
+          background-color: white;
+          padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+            padding-top: 3px;
+          }
+        }
+      }
+  
+      & .svg-container {
+        border-radius: 3.5rem;
+        margin-left: 10px;
+        width: 2.3rem;
+        height: 1.5rem;
+        background-color: white;
+        
+        padding-bottom: 5px;
+        
+        & #cart {
+          padding-top: 6px;
+          padding-left: 8px;
+          width: 22px;
+          
+        }
+  
+        & #profile {
+          padding-left: 3px;
+          width: 29px;
+         
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+}
+
+
+
+/* Computer Screen Position 1 */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding-bottom: 20px;
+    border-radius: 0 0 4rem 4rem;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 9rem;
+      }
+  
+      & #searchbar {
+        margin-top: 10px;
+        padding: 0 2%;
+        display: inline-block;
+        width: 50%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 1.8rem;
         flex-shrink: 0;
         border-radius: 2.625rem;
         border: 1px solid rgba(0, 0, 0, 0.00);
@@ -42,56 +309,228 @@
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         color: #4D724D;
       }
-      & .svg-all{
+  
+      & .svg-all {
         margin-top: 10px;
-        margin-left: 30px;
-        display: flex;
         
+        display: flex;
+        & .svg-container-toggle {
+          
+          border-radius: 3.5rem;
+          margin-left: 15px;
+          
+          width:2.8rem;
+          height: 1.8rem;
+          background-color: white;
+          padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+            padding-top: 2px;
+          }
+        }
       }
-      & .svg-container{
+  
+      & .svg-container {
+
+        border-radius: 3.5rem;
+        margin-left: 15px;
+        width:2.8rem;
+        height: 1.8rem;
+        background-color: white;
+        
+        padding-bottom: 5px;
+        
+        & #cart {
+          padding-top: 6px;
+          padding-left: 8px;
+          width: 30px;
+        }
+  
+        & #profile {
+          padding-left: 5px;
+          width: 35px;
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+}
+
+
+
+/* Computer Screen Position 2 */
+@media only screen and (min-width: 1024px) {
+  /* Styles specific to screen position 2 */
+  header {
+    padding-bottom: 20px;
+    border-radius: 0 0 4rem 4rem;
+    width: 100%;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 12rem;
+      }
+  
+      & #searchbar {
+        margin-top: 10px;
+        padding: 0 2%;
+        display: inline-block;
+        width: 50%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 2rem;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+      }
+  
+      & .svg-all {
+        margin-top: 10px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          display: none;
+          border-radius: 3.5rem;
+          margin-left: 20px;
+          width: 3.5rem;
+          height: 2rem;
+          background-color: white;
+          padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+          }
+        }
+      }
+  
+      & .svg-container {
         border-radius: 3.5rem;
         margin-left: 20px;
         width: 3.5rem;
         height: 2rem;
         background-color: white;
+        
         padding-bottom: 5px;
-      }
-        & #cart{
+        
+        & #cart {
+          padding-top: 6px;
           padding-left: 12px;
           width: 2rem;
-          
         }
-        & #profile{
+  
+        & #profile {
           padding-left: 8px;
-          width:2.5rem;
-        }  
-   }
-  }
-    .icons svg{
-      background-color: white;
-      margin-right: 30px;
-      border-radius: 100%;
-      width: 60px;
-      height: 30px;
-    }
-    nav{
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      
-      & ul{
-        & li{
-          display: inline-block;
-          margin-right: 70px;
-          margin-left: 70px;
-          align-items: center;
-          text-align: center;
-        }
-        & a{
-          text-decoration: none;
-          
+          width: 2.5rem;
         }
       }
     }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: flex;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
