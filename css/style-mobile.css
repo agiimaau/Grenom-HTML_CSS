@@ -1,0 +1,43 @@
+@media screen and (max-width:768px){
+    nav{
+        display:none;
+    }
+
+    #responsive{
+        display: inline;
+    }
+
+    .icons{
+        display:flex;
+        max-width:30%;
+        margin-right: 0px;
+    }
+
+    header img{
+        max-width: 8.375rem;
+        width: 3.375rem;
+        height: 1rem;
+    }
+
+    .searchBar{
+        width: 18rem;
+    }
+
+    main{
+        display:flex;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    
+
+    #by-contact{
+        margin-left: 0;
+        display:flex;
+        padding: auto;
+        min-width: 90%;
+        max-width: 90%;
+    }
+
+
+}

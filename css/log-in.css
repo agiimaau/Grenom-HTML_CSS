@@ -1,0 +1,260 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body{
+    margin:0;
+    padding:0;
+    max-width: 100%;
+  }
+
+  #responsive{
+    display: none;
+  }
+
+  #dropdown{
+    display: none;
+  }
+
+    .heading {
+      display:flex;
+      justify-content: space-between;
+    }
+
+    header {
+      padding-top:1.875rem;
+      padding-left:1%;
+      padding-right:1%;
+      background-color: hsl(120, 19%, 37%);
+      border-radius: 0 0 1.563rem 1.563rem;
+
+    }
+    .icons svg{
+      background-color: white;
+      margin-right: 1.875rem;
+      margin-top:1.875rem;
+      border-radius: 1.563rem;
+      width: 3.75rem;
+      height: 1.875rem;
+    }
+
+    .heading figure img{
+        width: 13.75rem;
+        height: 4.063rem;
+      }
+    
+      .searchBar{
+    border-radius: 2.5rem;
+    border: 0.063rem solid black;
+    background: white;
+    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+    width: 50rem;
+    height: 3.125rem;
+    margin-top:1.25rem;
+    margin-right:1.563rem;
+      }
+    
+      header article label{
+        display:none;
+      }
+    
+      nav ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around; 
+      }
+    
+      nav a {
+        text-decoration: none;
+        color: #fff;
+      }
+      nav li{
+        display: flex;
+        width: 10rem;
+        height: 10.25rem;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border: radius 1.563rem;;
+        text-align: center;
+        font-family: Inter;
+        font-size: 1.688rem;
+        font-weight: 700;
+    
+      }
+    
+      .search-pop-out {
+        position: relative;
+        background-color: #fff;
+        width: 58.75rem;
+        height:28.125rem ;
+        border-radius:1.563rem;
+        margin-left:13%;
+        z-index:1;
+        display:none;
+      }
+      
+      /* Top-left corner */
+      #book-name {
+        position: absolute;
+        top: 6.25rem;
+        left: 6.25rem;
+      }
+      
+      /* Top-right corner */
+      #book-categories {
+        position: absolute;
+        top: 6.25rem;
+        right: 6.25rem;
+      }
+      
+      /* Bottom-left corner */
+      #rating {
+        position: absolute;
+        bottom: 6.25rem;
+        left: 6.25rem;
+      }
+      
+      /* Bottom-right corner */
+      #price {
+        position: absolute;
+        bottom: 6.25rem;
+        right: 6.25rem;
+      }
+    
+      #submit-btn{
+        position:absolute;
+        bottom:10%;
+        left:21.875rem;
+        background-color:#4D724D;
+        width:15.625rem;
+        height:1.875rem;
+      }
+    
+      #book-name-label {
+        position: absolute;
+        top: 4.375rem;
+        left: 7.5rem;
+      }
+    
+      #book-categories-label {
+        position: absolute;
+        top: 4.375rem;
+        right: 18.75rem;
+      }
+    
+      #price-label {
+        position: absolute;
+        bottom: 8.438rem;
+        right: 17.5rem;
+      }
+    
+      #rating-label {
+        position: absolute;
+        bottom: 8.438rem;
+        left: 7.5rem;
+      }
+    
+      .search-pop-out h1{
+        padding-left: 5%;
+      padding-top: 2%;
+    }
+  
+    .search-pop-out input,
+    .search-pop-out select{
+      width: 18.75rem;
+     height: 1.25rem;
+     border-radius:1.563rem;
+     background-color: #86AB87;
+     
+    }
+
+    footer{
+        width: 100%;
+        background-color: #86AB87;
+        color:white;
+      }
+  
+      footer #by-contact a{
+        margin-left: 15%;
+        text-decoration: none;
+        color: white;
+      }
+  
+      footer h3{
+        margin-left: 10%;
+        padding-top: 5%;
+      }
+      #by-contact{
+        margin-left:10%;
+        margin-top: 3%;
+      }
+  
+      .icons-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+      }
+  
+      footer p {
+        width: 100%;
+        height: 3rem;
+        background-color: #4D724D;
+        text-align: center;
+        padding-top: auto;
+    }
+
+        main img{
+            width: 45%;
+        }
+
+        main form{
+            border-radius: 1.5625rem;
+             background: #4D724D;
+             box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.25);
+             height: 45rem;
+             width: 50%;
+             color:#fff;
+             text-align: center;
+             top: 9.5rem;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5.5rem;
+        }
+
+        form section{
+            margin-top: 9.5rem;
+        }
+
+        #input input{
+            width: 29.4375rem;
+            height: 3.75rem;
+            border-radius: 1.25rem;
+            background: #FFF;
+            margin-top: 1rem;
+            border:none
+        }
+
+        #submit input{
+            width: 11.91563rem;
+            height: 2.5rem;
+            margin-top: 2.75rem;
+            color: #4D724D;
+            border-radius: 1.25rem;
+            border:none;
+        }
+
+        form ::placeholder{
+            color: #86AB87;
+          }
+
+    
+
+    
