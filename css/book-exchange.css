@@ -70,14 +70,14 @@
   
   .exchange-books{
     flex-wrap: wrap;
-    padding-bottom: 20px;
-    border-radius: 20px;
+    padding-bottom: 10px;
+    border-radius: 13px;
     display: inline-block;
     color:white;
     background-color: #4D724D;
     min-width: 30%;
     width: 300px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     & .undsen-medeelel{
       display: flex;
       & stars{
@@ -85,20 +85,20 @@
       }
       & p{
         color: #FBE38B;
-        margin-top: 30px;
+        margin-top: 20px;
         font-size: 10px;
         margin-left: 26%;
       }
       & .profile-pic{
         width: 30px;
         border-radius: 50%;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       & label{
         font-size: 10px;
-        margin-top: 30px;
+        margin-top: 20px;
         margin-left: 8px;
       }
     }
