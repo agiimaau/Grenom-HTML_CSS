@@ -1,4 +1,69 @@
-footer{
+@media only screen and (max-width: 480px) {
+  footer{
+    width: 100%;
+    background-color: #86AB87;
+    color:white;
+    font-size: 8.5px;
+    
+    
+  }
+
+  footer #by-contact a{
+    margin-left: 16%;
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+    font-weight: 300;
+    
+    
+  }
+
+  footer h3{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    font-style: normal;
+    font-size: 15px;
+  }
+  #by-contact{
+    flex-wrap:wrap;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3%;
+    font-style: normal;
+    font-weight: 300;
+    gap: 10px;
+  }
+
+  .icons-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    
+    & #by-icons{
+      & svg{
+        width: 20px;
+      }
+    }
+    
+  }
+
+  footer p {
+    padding-top: 20px;
+    width: 100%;
+    height: 2rem;
+    font-weight: 500;
+    background-color: #4D724D;
+    text-align: center;
+    
+}
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  footer{
     width: 100%;
     background-color: #86AB87;
     color:white;
@@ -42,4 +107,52 @@ footer{
     background-color: #4D724D;
     text-align: center;
     padding-top: auto;
+}
+}
+@media only screen and (min-width: 1024px) {
+  footer{
+    width: 100%;
+    background-color: #86AB87;
+    color:white;
+    
+  }
+
+  footer #by-contact a{
+    margin-left: 16%;
+    text-decoration: none;
+    color: white;
+    font-style: normal;
+    font-weight: 300;
+    
+  }
+
+  footer h3{
+    margin-left: 12%;
+    padding-top: 5%;
+    font-style: normal;
+    font-size: 30px;
+  }
+  #by-contact{
+    margin-left:12%;
+    margin-top: 3%;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  .icons-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+  }
+
+  footer p {
+    padding-top: 30px;
+    width: 100%;
+    height: 3rem;
+    font-weight: 500;
+    background-color: #4D724D;
+    text-align: center;
+    padding-top: auto;
+}
 }
