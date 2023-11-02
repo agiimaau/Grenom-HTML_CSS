@@ -1,219 +1,678 @@
-
-.book-sale{
-  & .filter{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-   
-    & h3{
-      color:#4D724D;
-      margin-right: 30px;
-      font-weight: 400;
-      display: inline-block;
-
-      
-    }
-    & .filter-names{
+@media only screen and (max-width: 480px) {
+  
+  .book-sale{
+    & .filter{
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      & button{
-        background-color: #4D724D;
-        border-radius: 10px;
-        border:#4D724D;
-        color: white;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-right:15px ;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        & svg{
-          float:right;
-          cursor: pointer; 
-          margin-left: 15px;
-
-        }
-      }
-    }
-    
-  }
-  margin-top: 40px;
-}
-   
-
-    .book-sale-main{
+     
       & h3{
+        color:#4D724D;
+        margin-right: 15px;
+        font-weight: 400;
+        display: inline-block;
+  
+        
+      }
+      & .filter-names{
         display: flex;
         justify-content: center;
-        
-      }
-    }
-    
-    .book-sale-button{
-      margin-top: 40px;
-      color:white;
-      background-color: #86AB87;;
-      border-radius: 50px;
-      width:45%;
-      height: 60px;
-      font-size: 15px;
-      border:none;
-      margin-bottom: 40px;
-    }
-    .all-sale-books{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5%;
-    }
-    
-    
-    
-    .sale-books{
-      position: relative;
-      flex-wrap: wrap;
-    padding-bottom: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    color:white;
-    background-color: #4D724D;
-    min-width: 30%;
-    width: 500px;
-    margin-bottom: 30px;
-      & .hymdral{
-        background-color: #FBE38B;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-weight: 700;
-        font-size: 15px;
-        color: black;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(20%, -20%); /* To center vertically and align to the right */
+        flex-wrap: wrap;
+        gap: 10px;
+        & button{
+          font-size: 10px;
+          background-color: #4D724D;
+          border-radius: 10px;
+          border:#4D724D;
+          color: white;
+          padding-left: 8px;
+          padding-right: 8px;
+          margin-right:10px ;
+          padding-top: 3px;
+          padding-bottom: 2px;
+          & svg{
+            float:right;
+            cursor: pointer; 
+            margin-left: 10px;
+            
 
-        /* Additional styles for aligning text to the right */
-        text-align: right;
-        line-height: 1; /* To center vertically within the label */
-        
+          }
         }
-        & .une{
+      }
+      
+    }
+    margin-top: 20px;
+  }
+     
+  
+      .book-sale-main{
+        & h3{
           display: flex;
-          justify-content: right;
-          margin-top: 5px;
-          padding-right: 10px;
+          justify-content: center;
+          
         }
-        & p .anhnii-une{
-            font-size: 12px;
-            color: #FBE38B;
-            margin-top: 25px;
-            
-            
-            
-        }
-        & p .zarah-une{
-            font-size: 16px;
-            margin-top: 20px;
-           
-            
-        }
-        & .undsen-medeelel{
-          display: flex;
-          & p{
-            color: #FBE38B;
-            margin-top: 10px;
-            margin-left: 30%;
+      }
+      
+      .book-sale-button{
+        margin-top: 20px;
+        color:white;
+        background-color: #86AB87;;
+        border-radius: 50px;
+        width:45%;
+        height: 50px;
+        font-size: 13px;
+        border:none;
+        margin-bottom: 20px;
+      }
+      .all-sale-books{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+      }
+      
+      
+      
+      .sale-books{
+        position: relative;
+        flex-wrap: wrap;
+      padding-bottom: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      color:white;
+      background-color: #4D724D;
+      min-width: 30%;
+      width: 300px;
+      margin-bottom: 20px;
+        & .hymdral{
+          background-color: #FBE38B;
+          padding: 3px 8px;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 8px;
+          color: black;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(20%, -20%); /* To center vertically and align to the right */
+  
+          /* Additional styles for aligning text to the right */
+          text-align: right;
+          line-height: 1; /* To center vertically within the label */
+          
           }
-          & .profile-pic{
-            width: 50px;
-            border-radius: 50%;
-           
-            margin-left: 20px;
-            margin-bottom: 20px;
+          & .une{
+            display: flex;
+            justify-content: right;
+            margin-top: 5px;
+            padding-right: 10px;
           }
-          & label{
-            margin-top: 10px;
-            margin-left: 20px;
+          & p .anhnii-une{
+              font-size: 6px;
+              color: #FBE38B;
+              margin-top: 10px;
+              
+              
+              
           }
-        }
+          & p .zarah-une{
+              font-size: 9px;
+              margin-top: 8px;
+              margin-left: 3px;
+             
+              
+          }
+          & .undsen-medeelel{
+            display: flex;
+            & stars{
+              width: 20px;
+            }
+            & p{
+              color: #FBE38B;
+              margin-top: 10px;
+              font-size: 10px;
+              margin-left: 26%;
+            }
+            & .profile-pic{
+              width: 30px;
+              border-radius: 50%;
+              margin-left: 20px;
+              margin-bottom: 10px;
+            }
+            & label{
+              font-size: 10px;
+              margin-top: 10px;
+              margin-left: 8px;
+            }
+          }
+          
+      }
+      
+      .book-info-main{
+        display: flex;
+        justify-content: center;
+        font-weight: none;
+        font-size: 8px;
         & .nomnii-zurag{
           margin-left:20px;
-          margin-right:20px;
-        }
-    }
-    .book-info-main{
-      display: flex;
-      justify-content: center;
-      font-weight: none;
-      font-size: 10px;
-    
-      & .nomnii-medeelel{
-        white-space: normal; 
-        width:320px;
-        & .tags{
-          display: flex;
-          justify-content: space-between;
-          
-          & .ehnii-tag{
-            
-            & h4{font-weight: 400;}
+          margin-right:10px;
+          & img{
+            width: 80px !important  ;
           }
-         
+          
+        }
+      
+        & .nomnii-medeelel{
+          white-space: normal; 
+          width:180px;
+          margin-right: 20px;
+          & .tags{
+            display: flex;
+            justify-content: space-between;
+            
+            & .ehnii-tag{
+              
+              & h4{font-weight: 400;}
+            }
+           
+        }
+          .ehnii-tag p,h4{
+            line-height: 2;
+          }
+          .hoyrdahi-tag p{
+            line-height: 2;
+          }
+          .additional-info {
+            
+            line-height: 1.5;
+            word-wrap: break-word;
+            
+          }
+          .book-sale-request-button{
+            margin-top:10px;
+            border-radius: 20px;
+            padding: 2px;
+            width: 180px;
+            color:#4D724D;
+            font-weight: 700;;
+            background-color: #FFF;
+            border: none;
+            font-size: 10px;
+            margin-right: 10px;
+          }
+          
+          
+        }
+       
       }
-        .ehnii-tag p,h4{
-          line-height: 2;
-        }
-        .hoyrdahi-tag p{
-          line-height: 2;
-        }
-        .additional-info {
-          
-          line-height: 1.5;
-          word-wrap: break-word;
-          
-        }
-        .book-sale-request-button{
-          margin-top:20px;
-          border-radius: 20px;
-          padding: 4px;
-          width: 320px;
-          color:#4D724D;
-          font-weight: 700;;
-          background-color: #FFF;
+      
+      .change-buttons {
+        margin-top: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 40px;
+      }
+      
+      .switch-btn {
+          margin: 0 2px;
+      }
+      
+      .switch-btn {
+          background-color: #4d724d;
+          color: white;
+          font-size: 10px ;
           border: none;
-        }
-        
-        
+          padding: 5px 8px;
+          border-radius: 50%;
+          cursor: pointer;
       }
-     
-    }
-  .change-buttons {
-    margin-top: 30px;
+      
+      .switch-btn:hover {
+          background-color: #357535;
+      }
+      .styled-meter{
+        margin-left: 3px;
+      
+      }
+}
+@media only screen and (min-width: 1024px) {
+  .book-sale{
+    & .filter{
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-bottom: 40px;
-  }
+      flex-wrap: wrap;
+      gap: 10px;
+     
+      & h3{
+        color:#4D724D;
+        margin-right: 30px;
+        font-weight: 400;
+        display: inline-block;
   
-  .switch-btn {
-      margin: 0 5px;
-  }
+        
+      }
+      & .filter-names{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        & button{
+          background-color: #4D724D;
+          border-radius: 10px;
+          border:#4D724D;
+          color: white;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-right:15px ;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          & svg{
+            float:right;
+            cursor: pointer; 
+            margin-left: 15px;
   
-  .switch-btn {
-      background-color: #4d724d;
-      color: white;
-      font-size: large ;
-      border: none;
-      padding: 12px 17px;
-      border-radius: 50%;
-      cursor: pointer;
+          }
+        }
+      }
+      
+    }
+    margin-top: 40px;
   }
+     
   
-  .switch-btn:hover {
-      background-color: #357535;
+      .book-sale-main{
+        & h3{
+          display: flex;
+          justify-content: center;
+          
+        }
+      }
+      
+      .book-sale-button{
+        margin-top: 40px;
+        color:white;
+        background-color: #86AB87;;
+        border-radius: 50px;
+        width:45%;
+        height: 60px;
+        font-size: 15px;
+        border:none;
+        margin-bottom: 40px;
+      }
+      .all-sale-books{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+      }
+      
+      
+      
+      .sale-books{
+        position: relative;
+        flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      color:white;
+      background-color: #4D724D;
+      min-width: 30%;
+      width: 500px;
+      margin-bottom: 30px;
+        & .hymdral{
+          background-color: #FBE38B;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 15px;
+          color: black;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(20%, -20%); /* To center vertically and align to the right */
+  
+          /* Additional styles for aligning text to the right */
+          text-align: right;
+          line-height: 1; /* To center vertically within the label */
+          
+          }
+          & .une{
+            display: flex;
+            justify-content: right;
+            margin-top: 5px;
+            padding-right: 10px;
+          }
+          & p .anhnii-une{
+              font-size: 12px;
+              color: #FBE38B;
+              margin-top: 25px;
+              
+              
+              
+          }
+          & p .zarah-une{
+              font-size: 16px;
+              margin-top: 20px;
+             
+              
+          }
+          & .undsen-medeelel{
+            display: flex;
+            & p{
+              color: #FBE38B;
+              margin-top: 10px;
+              margin-left: 30%;
+            }
+            & .profile-pic{
+              width: 50px;
+              border-radius: 50%;
+             
+              margin-left: 20px;
+              margin-bottom: 20px;
+            }
+            & label{
+              margin-top: 10px;
+              margin-left: 20px;
+            }
+          }
+          & .nomnii-zurag{
+            margin-left:20px;
+            margin-right:20px;
+          }
+      }
+      .book-info-main{
+        display: flex;
+        justify-content: center;
+        font-weight: none;
+        font-size: 10px;
+      
+        & .nomnii-medeelel{
+          white-space: normal; 
+          width:320px;
+          & .tags{
+            display: flex;
+            justify-content: space-between;
+            
+            & .ehnii-tag{
+              
+              & h4{font-weight: 400;}
+            }
+           
+        }
+          .ehnii-tag p,h4{
+            line-height: 2;
+          }
+          .hoyrdahi-tag p{
+            line-height: 2;
+          }
+          .additional-info {
+            
+            line-height: 1.5;
+            word-wrap: break-word;
+            
+          }
+          .book-sale-request-button{
+            margin-top:20px;
+            border-radius: 20px;
+            padding: 4px;
+            width: 320px;
+            color:#4D724D;
+            font-weight: 700;;
+            background-color: #FFF;
+            border: none;
+          }
+          
+          
+        }
+       
+      }
+    .change-buttons {
+      margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    
+    .switch-btn {
+        margin: 0 5px;
+    }
+    
+    .switch-btn {
+        background-color: #4d724d;
+        color: white;
+        font-size: large ;
+        border: none;
+        padding: 12px 17px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .switch-btn:hover {
+        background-color: #357535;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .book-sale{
+    & .filter{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+     
+      & h3{
+        color:#4D724D;
+        margin-right: 30px;
+        font-weight: 400;
+        display: inline-block;
+  
+        
+      }
+      & .filter-names{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        & button{
+          background-color: #4D724D;
+          border-radius: 10px;
+          border:#4D724D;
+          color: white;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-right:15px ;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          & svg{
+            float:right;
+            cursor: pointer; 
+            margin-left: 15px;
+  
+          }
+        }
+      }
+      
+    }
+    margin-top: 40px;
   }
+     
+  
+      .book-sale-main{
+        & h3{
+          display: flex;
+          justify-content: center;
+          
+        }
+      }
+      
+      .book-sale-button{
+        margin-top: 40px;
+        color:white;
+        background-color: #86AB87;;
+        border-radius: 50px;
+        width:45%;
+        height: 60px;
+        font-size: 15px;
+        border:none;
+        margin-bottom: 40px;
+      }
+      .all-sale-books{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+      }
+      
+      
+      
+      .sale-books{
+        position: relative;
+        flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      color:white;
+      background-color: #4D724D;
+      min-width: 30%;
+      width: 500px;
+      margin-bottom: 30px;
+        & .hymdral{
+          background-color: #FBE38B;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 15px;
+          color: black;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(20%, -20%); /* To center vertically and align to the right */
+  
+          /* Additional styles for aligning text to the right */
+          text-align: right;
+          line-height: 1; /* To center vertically within the label */
+          
+          }
+          & .une{
+            display: flex;
+            justify-content: right;
+            margin-top: 5px;
+            padding-right: 10px;
+          }
+          & p .anhnii-une{
+              font-size: 12px;
+              color: #FBE38B;
+              margin-top: 25px;
+              
+              
+              
+          }
+          & p .zarah-une{
+              font-size: 16px;
+              margin-top: 20px;
+             
+              
+          }
+          & .undsen-medeelel{
+            display: flex;
+            & p{
+              color: #FBE38B;
+              margin-top: 10px;
+              margin-left: 30%;
+            }
+            & .profile-pic{
+              width: 50px;
+              border-radius: 50%;
+             
+              margin-left: 20px;
+              margin-bottom: 20px;
+            }
+            & label{
+              margin-top: 10px;
+              margin-left: 20px;
+            }
+          }
+          & .nomnii-zurag{
+            margin-left:20px;
+            margin-right:20px;
+          }
+      }
+      .book-info-main{
+        display: flex;
+        justify-content: center;
+        font-weight: none;
+        font-size: 10px;
+      
+        & .nomnii-medeelel{
+          white-space: normal; 
+          width:320px;
+          & .tags{
+            display: flex;
+            justify-content: space-between;
+            
+            & .ehnii-tag{
+              
+              & h4{font-weight: 400;}
+            }
+           
+        }
+          .ehnii-tag p,h4{
+            line-height: 2;
+          }
+          .hoyrdahi-tag p{
+            line-height: 2;
+          }
+          .additional-info {
+            
+            line-height: 1.5;
+            word-wrap: break-word;
+            
+          }
+          .book-sale-request-button{
+            margin-top:20px;
+            border-radius: 20px;
+            padding: 4px;
+            width: 320px;
+            color:#4D724D;
+            font-weight: 700;;
+            background-color: #FFF;
+            border: none;
+          }
+          
+          
+        }
+       
+      }
+    .change-buttons {
+      margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    
+    .switch-btn {
+        margin: 0 5px;
+    }
+    
+    .switch-btn {
+        background-color: #4d724d;
+        color: white;
+        font-size: large ;
+        border: none;
+        padding: 12px 17px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .switch-btn:hover {
+        background-color: #357535;
+    }
+}
+
+
   
     
   

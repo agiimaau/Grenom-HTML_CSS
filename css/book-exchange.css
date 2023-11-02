@@ -71,7 +71,7 @@
   .exchange-books{
     flex-wrap: wrap;
     padding-bottom: 10px;
-    border-radius: 13px;
+    border-radius: 10px;
     display: inline-block;
     color:white;
     background-color: #4D724D;
