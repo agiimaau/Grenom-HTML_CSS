@@ -81,13 +81,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 40px;
     }
 }
 
 
   
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+  @media only screen and (min-width: 501px) and (max-width: 1023px) {
   
     .Cart-btn{
       margin-top: 40px;
@@ -139,42 +138,28 @@
          
         }
   
-      .box1 {
-        display: flex;
-        font-weight: none;
-        font-size: 13px;
-        background-color: #4D724D;
-        width: 90%; 
-        padding: 25px; 
-        margin-top: 20px;
-        margin-bottom: 20px;
-        
-        margin-left: -7%;
-        border-radius:25px;
-        color: #ffffff;
-        
-  
-            & .ehnii-tag{
-  
-              & h4{font-weight: 400;}
-            }
-           
-        }
+        .box1 {
+          display: none
+          }
         .ehnii-tag p,h4, h3{
           line-height: 2.3;
           text-indent: 10px;
         }
   
       .switch-button{
-        margin-top: 0px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
+        justify-content: center;
+      }
+
+      .svg2{
+        width: 80px;
+        height:80px;
+        margin-left:-25px ;
       }
 }
   
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 500px) {
   
     .Cart-btn{
       color:white;
@@ -243,6 +228,9 @@
       }
       .svg{
         display:none;
+      }
+      .svg2{
+        display: none;
       }
       .nom{
         width: 100px;
