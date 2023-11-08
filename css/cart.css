@@ -1,0 +1,242 @@
+@media only screen and (min-width: 1024px) {
+
+  .Cart-btn{
+    margin-top: 40px;
+    color:white;
+    background-color: #86AB87;;
+    border-radius: 15px;
+    width:80%;
+    padding:25px;
+    font-size: 25px;
+    border:none;
+    margin-bottom: 20px;
+    margin-top: 5%;
+    margin-left: 8.5%;
+
+  }
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8%;
+  }
+  
+  .flex-item-left {
+    flex: 50%;
+
+  }
+  
+  .flex-item-right {
+    flex: 50%;
+  }
+  
+  .box {
+    display: flex;
+    font-weight: none;
+    font-size: 13px;
+    background-color: #4D724D;
+    width: 90%; 
+    padding: 25px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    border-radius:25px;
+    color: #ffffff;
+ 
+        & .ehnii-tag{
+
+          & h4{font-weight: 400;}
+        }
+       
+      }
+
+    .box1 {
+      display: flex;
+      font-weight: none;
+      font-size: 13px;
+      background-color: #4D724D;
+      width: 90%; 
+      padding: 25px; 
+      margin-top: 20px;
+      margin-bottom: 20px;
+      
+      margin-left: -7%;
+      border-radius:25px;
+      color: #ffffff;
+      
+
+          & .ehnii-tag{
+
+            & h4{font-weight: 400;}
+          }
+         
+      }
+      .ehnii-tag p,h4, h3{
+        line-height: 2.3;
+        text-indent: 10px;
+      }
+
+    .switch-button{
+      margin-top: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+
+  
+  @media only screen and (min-width: 501px) and (max-width: 1023px) {
+  
+    .Cart-btn{
+      margin-top: 40px;
+      color:white;
+      background-color: #86AB87;;
+      border-radius: 15px;
+      width:80%;
+      padding:25px;
+      font-size: 25px;
+      border:none;
+      margin-bottom: 20px;
+      margin-top: 5%;
+      margin-left: 8.5%;
+  
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8%;
+    }
+    
+    .flex-item-left {
+      flex: 50%;
+  
+    }
+    
+    .flex-item-right {
+      flex: 50%;
+    }
+    
+    .box {
+      display: flex;
+      font-weight: none;
+      font-size: 13px;
+      background-color: #4D724D;
+      width: 90%; 
+      padding: 25px; 
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      border-radius:25px;
+      color: #ffffff;
+   
+          & .ehnii-tag{
+  
+            & h4{font-weight: 400;}
+          }
+         
+        }
+  
+        .box1 {
+          display: none
+          }
+        .ehnii-tag p,h4, h3{
+          line-height: 2.3;
+          text-indent: 10px;
+        }
+  
+      .switch-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .svg2{
+        width: 80px;
+        height:80px;
+        margin-left:-25px ;
+      }
+}
+  
+  @media only screen and (max-width: 500px) {
+  
+    .Cart-btn{
+      color:white;
+      background-color: #86AB87;;
+      border-radius: 13px;
+      padding:15px;
+      font-size: 13px;
+      border:none;
+      margin-bottom: 10px;
+      margin-left: 8.5%;
+      margin-top: 20px;
+      margin-right: 8.5%;
+
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8%;
+    }
+    
+    .flex-item-left {
+      flex: 50%;
+
+    }
+    
+    .flex-item-right {
+      flex: 50%;
+    }
+    
+    .box {
+      display: flex;
+      font-weight: none;
+      font-size: 9px;
+      background-color: #4D724D;
+      width: 90%; 
+      padding: 18px; 
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+    
+      border-radius:12px;
+      color: #ffffff;
+   
+          & .ehnii-tag{
+
+            & h4{font-weight: 300;}
+          }
+         
+      }
+
+      .box1 {
+        display:none
+        }
+        .ehnii-tag p,h4, h3{
+          line-height: 2.3;
+          text-indent: 5px;
+        }
+
+      .switch-button{
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      }
+      .svg{
+        display:none;
+      }
+      .svg2{
+        display: none;
+      }
+      .nom{
+        width: 100px;
+      }
+      .sav{
+        width: 20px;
+        height: 20px;
+      }
+}

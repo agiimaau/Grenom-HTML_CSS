@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href=" css/header.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href=" css/footer.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,20 @@
 <body>
     <header>
         <div id="essentials-navbar">
-            <img src=" pictures/logo.png" alt="Logo" width="50">
+            <img src="pictures/logo.png" alt="Logo" >
             <input id="searchbar" class="searchbar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
             <div class="svg-all">
-                <div class="svg-container">
-                    <svg id="cart" xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                <div class="svg-container-toggle">
+                    <svg id="toggle" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.395508" y="0.0820312" width="22.6508" height="16.5686" rx="8.28431" fill="white"/>
+                        <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>         
                 </div>
                 <div class="svg-container">
-                    <svg id="profile" xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                    <svg id="cart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                </div>
+                <div class="svg-container">
+                    <svg id="profile" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
                 </div>
             </div>
                       
@@ -32,96 +39,127 @@
             </ul>
         </nav>
     </header>
-    <section class="search-pop-out">
-        <form>
-        <h1>Шүүлтүүр</h1>
-        <laber>Номын нэрээр:</laber>
-        <input type="text" name="book-name" id="book-name"><br>
-
-        <laber>Категориор:</laber>
-        <select id="book-categories" name="catergory-lists" value="categories">
-            <option value="history">Түүх</option>
-            <option value="politics">Улс төр</option>
-            <option value="science">Шинжлжх ухаан</option>
-            <option value="literature">Уран зохиол</option>
-            <option value="bussines">Бизнес</option>
-            <option value="computer">Компьютер</option>
-            <option value="health">Эрүүл мэнд</option>
-            <option value="manual">Гарын авлага</option>
-            <option value="children">Хүүхдийн</option>
-            <option value="philosophy">Филсофи</option>
-            <option value="self-development">Хувь хүний хөгжил</option>
-          </select><br>
-           
-          <laber>Эдэлгээгээр:</laber>
-          <input type="range" id="rating" name="rating" min="1" max="10"><br>
-
-          <label>Үнийн дүнгээр:</label>
-          <input type="number" id="price" name="price" min="0" step="5000"><br>
-
-          <input type="submit" id="submit-btn" value="Хайх">
-        </form>
-    </section>
-    <main class="my-requests">
-        <section class="buy-request">
-            <h1>Таны явуулсан ном авах хүсэлт:</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
+    
+    <main>
+        
+        <section>
+            <h1 class="Cart-btn">Таны явуулсан ном авах хүсэлт:</h1>
+            <div class="flex-container">
+            <div class="switch-button">
+            <svg  class="svg" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
             
-            <article class="book-buy">
+                <div class="flex-item-left">
+            <article class="box">
                 <figure>
-                    <img src="somebook.jpg" alt="somebook name">
+                    <img class="nom" src="pictures/4bish4.jpg" alt="somebook name" width="140">
                 </figure>
-                <p>Нийтэлсэн: 2023/09/08</p>
-                <p>Номын нэр: Цойлогсод</p>
-                <p>Хүсэлт явуулсан: 2023/10/08</p>
-                <p>Категори:Хөгжил</p>
-                <p><u>Төлөв: Татгалзсан</u></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
+                <div class="nomnii-medeelel">
+                    <div class="tags">
+                        <div class="ehnii-tag">
+                            <p>Нийтэлсэн: Саруул</p>
+                            <h4>Номын нэр: <span>4 биш 4</span></h4>
+                            <p>Хүсэлт явуулсан: 2023/10/08</p>
+                            <p>Категори: <span>уран зохиол</span></p>
+                            <p>Үлдсэн хугацаа:53:02 цаг </p>
+                            <h3><u>Төлөв:<span>Татгалзсан</span></u></h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <svg class="sav" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="#CE5858" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
             </article>
+            </div>
+            </div>
+            
+            <div class="switch-button">
+            <div class="flex-item-right">
+            <article class="box1">
+                <figure>
+                    <img class="nom" src="pictures/4bish4.jpg" alt="somebook name" width="140">
+                </figure>
+                <div class="nomnii-medeelel">
+                    <div class="tags">
+                        <div class="ehnii-tag">
+                            <p>Нийтэлсэн: Саруул</p>
+                            <h4>Номын нэр: <span>4 биш 4</span></h4>
+                            <p>Хүсэлт явуулсан: 2023/10/08</p>
+                            <p>Категори: <span>уран зохиол</span></p>
+                            <p>Үлдсэн хугацаа:53:02 цаг </p>
+                            <h3><u>Төлөв:<span>Татгалзсан</span></u></h3>
+                        </div>
+                        
+                    </div>
+                </div>
 
-            <article class="book-buy">
-                <figure>
-                    <img src="somebook.jpg" alt="somebook name">
-                </figure>
-                <p>Нийтэлсэн: 2023/09/08</p>
-                <p>Номын нэр: 4 биш 4</p>
-                <p>Хүсэлт явуулсан: 2023/10/08</p>
-                <p>Категори:Компьютер</p>
-                <p><u>Төлөв: Татгалзсан</u></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
+                <svg class="sav" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="#CE5858" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
             </article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
+            </div>
+            
+            <svg class="svg2" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
+            </div>
+        </div>
         </section>
 
-        <section class="swap-request">
-            <h1>Таны явуулсан ном солилцох хүсэлт:</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
-            <article class="book-swap">
+        <section>
+            <h1 class="Cart-btn">Таны явуулсан ном солилцох хүсэлт:</h1>
+            <div class="flex-container">
+            <div class="switch-button">
+            <svg  class="svg" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
+            
+                <div class="flex-item-left">
+            <article class="box">
                 <figure>
-                    <img src="somebook.jpg" alt="somebook name">
+                    <img class="nom" src="pictures/4bish4.jpg" alt="somebook name" width="140">
                 </figure>
-                <p>Нийтэлсэн: 2023/09/08</p>
-                <p>Номын нэр: Цойлогсод</p>
-                <p>Хүсэлт явуулсан: 2023/10/08</p>
-                <p>Категори:Хөгжил</p>
-                <p><u>Төлөв: Татгалзсан</u></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
+                <div class="nomnii-medeelel">
+                    <div class="tags">
+                        <div class="ehnii-tag">
+                            <p>Нийтэлсэн: Саруул</p>
+                            <h4>Номын нэр: <span>4 биш 4</span></h4>
+                            <p>Хүсэлт явуулсан: 2023/10/08</p>
+                            <p>Категори: <span>уран зохиол</span></p>
+                            <p>Үлдсэн хугацаа:53:02 цаг </p>
+                            <h3><u>Төлөв:<span>Татгалзсан</span></u></h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <svg class="sav" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="#CE5858" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
             </article>
+            </div>
+            </div>
+            
+            <div class="switch-button">
+            <div class="flex-item-right">
+            <article class="box1">
+                <figure>
+                    <img  class="nom" src="pictures/4bish4.jpg" alt="somebook name" width="140">
+                </figure>
+                <div class="nomnii-medeelel">
+                    <div class="tags">
+                        <div class="ehnii-tag">
+                            <p>Нийтэлсэн: Саруул</p>
+                            <h4>Номын нэр: <span>4 биш 4</span></h4>
+                            <p>Хүсэлт явуулсан: 2023/10/08</p>
+                            <p>Категори: <span>уран зохиол</span></p>
+                            <p>Үлдсэн хугацаа:53:02 цаг </p>
+                            <h3><u>Төлөв:<span>Татгалзсан</span></u></h3>
+                        </div>
+                        
+                    </div>
+                </div>
 
-            <article class="book-swap">
-                <figure>
-                    <img src="somebook.jpg" alt="somebook name">
-                </figure>
-                <p>Нийтэлсэн: 2023/09/08</p>
-                <p>Номын нэр: Цойлогсод</p>
-                <p>Хүсэлт явуулсан: 2023/10/08</p>
-                <p>Категори:Хөгжил</p>
-                <p><u>Төлөв: Татгалзсан</u></p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="red" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
+                <svg class="sav" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="#CE5858" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
             </article>
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
+            </div>
+            
+            <svg class="svg2" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24"><g transform="rotate(90 12 12)"><g fill="none" stroke="#4d724d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="m15 13l-3-3l-3 3"/></g></g></svg>
+            </div>
+        </div>
         </section>
-    </main>
+    </main><br>
     <footer>
         <h3>Creative team in Mongolia</h3>
         <address id="by-contact">

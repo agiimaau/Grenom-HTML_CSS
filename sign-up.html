@@ -2,11 +2,10 @@
 <html lang="mn">
     <head>
         <link rel="stylesheet" href=" css/footer.css">
-        <link rel="stylesheet" href=" css/bulan.css">
+        <link rel="stylesheet" href=" css/sign_up.css">
         <link rel="stylesheet" href=" css/header.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-        <link rel="stylesheet" href="css/style.css" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Ном худалдааны вебсайт">
@@ -21,14 +20,20 @@
     <body>
         <header>
             <div id="essentials-navbar">
-                <img src=" pictures/logo.png" alt="Logo" width="50">
+                <img src="pictures/logo.png" alt="Logo" >
                 <input id="searchbar" class="searchbar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
                 <div class="svg-all">
-                    <div class="svg-container">
-                        <svg id="cart" xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                    <div class="svg-container-toggle">
+                        <svg id="toggle" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.395508" y="0.0820312" width="22.6508" height="16.5686" rx="8.28431" fill="white"/>
+                            <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>         
                     </div>
                     <div class="svg-container">
-                        <svg id="profile" xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                        <svg id="cart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                    </div>
+                    <div class="svg-container">
+                        <svg id="profile" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
                     </div>
                 </div>
                           
@@ -68,7 +73,7 @@
                         <svg class="iconsss" xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-15 -18 60 70" width="60"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m1 12s4-8 11-8 11 8 11 8"/><path d="m1 12s4 8 11 8 11-8 11-8"/><circle cx="12" cy="12" r="3"/></g></svg><br>
                         
                     <input type="checkbox"> Би нууцлалын бодлогыг хүлээн зөвшөөрч байна.<br><br>
-                    <input type="submit" value="Нэвтрэх"><br>
+                    <input type="submit" value="Бүртгүүлэх"><br>
                     <p><br><br>Аль хэдийн бүртгүүлсэн үү? <a href="log-in.html">Нэвтрэх</a></p><br><br>
                     
             </form>
