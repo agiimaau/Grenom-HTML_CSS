@@ -250,6 +250,7 @@
         margin-right: 30px;
         font-weight: 400;
         display: inline-block;
+        font-size: 30px;
   
         
       }
@@ -260,9 +261,10 @@
         gap: 10px;
         & button{
           background-color: #4D724D;
-          border-radius: 10px;
+          border-radius: 15px;
           border:#4D724D;
           color: white;
+          font-size: 18px;
           padding-left: 15px;
           padding-right: 15px;
           margin-right:15px ;
@@ -295,9 +297,9 @@
         color:white;
         background-color: #86AB87;;
         border-radius: 50px;
-        width:45%;
-        height: 60px;
-        font-size: 15px;
+        width:50%;
+        height: 70px;
+        font-size: 20px;
         border:none;
         margin-bottom: 40px;
       }
@@ -314,24 +316,24 @@
         position: relative;
         flex-wrap: wrap;
       padding-bottom: 20px;
-      border-radius: 20px;
+      border-radius: 25px;
       display: inline-block;
       color:white;
       background-color: #4D724D;
       min-width: 30%;
-      width: 500px;
+      width: 650px;
       margin-bottom: 30px;
         & .hymdral{
           background-color: #FBE38B;
-          padding: 5px 10px;
+          padding: 9px 14px;
           border-radius: 20px;
           font-weight: 700;
-          font-size: 15px;
+          font-size: 20px;
           color: black;
           position: absolute;
           top: 0;
           right: 0;
-          transform: translate(20%, -20%); /* To center vertically and align to the right */
+          transform: translate(25%, -50%); /* To center vertically and align to the right */
   
           /* Additional styles for aligning text to the right */
           text-align: right;
@@ -345,15 +347,16 @@
             padding-right: 10px;
           }
           & p .anhnii-une{
-              font-size: 12px;
+              font-size: 14px;
               color: #FBE38B;
               margin-top: 25px;
+              margin-right: 6px;
               
               
               
           }
           & p .zarah-une{
-              font-size: 16px;
+              font-size: 21px;
               margin-top: 20px;
              
               
@@ -362,8 +365,9 @@
             display: flex;
             & p{
               color: #FBE38B;
-              margin-top: 10px;
-              margin-left: 30%;
+              margin-top: 12px;
+              margin-left: 36%;
+              font-size: 20px;
             }
             & .profile-pic{
               width: 50px;
@@ -375,22 +379,28 @@
             & label{
               margin-top: 10px;
               margin-left: 20px;
+              font-size:18px ;
             }
           }
           & .nomnii-zurag{
             margin-left:20px;
-            margin-right:20px;
+            margin-right:40px;
+            & img{
+              width: 145px;
+            }
+           
           }
       }
       .book-info-main{
         display: flex;
         justify-content: center;
         font-weight: none;
-        font-size: 10px;
+        font-size: 14px;
+  
       
         & .nomnii-medeelel{
           white-space: normal; 
-          width:320px;
+          width:360px;
           & .tags{
             display: flex;
             justify-content: space-between;
@@ -416,12 +426,13 @@
           .book-sale-request-button{
             margin-top:20px;
             border-radius: 20px;
-            padding: 4px;
-            width: 320px;
+            padding: 8px;
+            width: 360px;
             color:#4D724D;
             font-weight: 700;;
             background-color: #FFF;
             border: none;
+            font-size: 18px;
           }
           
           
