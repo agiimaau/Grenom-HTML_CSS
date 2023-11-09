@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href=" css/book-sale.css">
         <link rel="stylesheet" href=" css/footer.css">
+        <link rel="stylesheet" href="css/search-pop-up.css">
         <link rel="stylesheet" href=" css/header.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
@@ -49,42 +50,58 @@
                 <ul>
                     <li ><a href="index.html">Нүүр <br>хуудас</a></li>
                     <li ><a href="book-exchange.html">Ном <br>солилцоо</a></li>
-                    <li ><a href="book-sale.html">Ном <br>худалдаа</a></li>
+                    <li class="active"><a href="book-sale.html">Ном <br>худалдаа</a></li>
                     <li ><a href="Contact-us.html">Бидний <br>тухай</a></li>
                 </ul>
             </nav>
         </header>
-        <!--
         <section class="search-pop-out">
-            <form>
+            <form id="filter-form">
             <h1>Шүүлтүүр</h1>
-            <label>Номын нэрээр:</label>
-            <input type="text" name="book-name" id="book-name-search"><br>
-
-            <label>Категориор:</label>
-            <select id="book-categories-search" name="catergory-lists">
-                <option value="history">Түүх</option>
-                <option value="politics">Улс төр</option>
-                <option value="science">Шинжлжх ухаан</option>
-                <option value="literature">Уран зохиол</option>
-                <option value="bussines">Бизнес</option>
-                <option value="computer">Компьютер</option>
-                <option value="health">Эрүүл мэнд</option>
-                <option value="manual">Гарын авлага</option>
-                <option value="children">Хүүхдийн</option>
-                <option value="philosophy">Филсофи</option>
-                <option value="self-development">Хувь хүний хөгжил</option>
-            </select><br>
+            <div class="all-filters">
+                <div id="ehnii-neg">
+                    <div class="book-name-fil">
+                        <label for="bookname">Номын нэрээр:</label>
+                        <input type="text" name="bookname" id="bookname" >
+                    </div>
+                    <div class="book-cat">
+                        <label for="book-categories">Категориор:</label>
+                        <select id="book-categories" name="catergory-lists" >
+                            <option value="history">Түүх</option>
+                            <option value="politics">Улс төр</option>
+                            <option value="science">Шинжлэх ухаан</option>
+                            <option value="literature">Уран зохиол</option>
+                            <option value="bussines">Бизнес</option>
+                            <option value="computer">Компьютер</option>
+                            <option value="health">Эрүүл мэнд</option>
+                            <option value="manual">Гарын авлага</option>
+                            <option value="children">Хүүхдийн</option>
+                            <option value="philosophy">Филисофи</option>
+                            <option value="self-development">Хувь хүний хөгжил</option>
+                        </select>
+                    </div>
+                </div>
+               
+               <div id="hoyrdahi">
+                    <div class="rating">
+                        <label for="rating">Эдэлгээгээр:</label>
+                        <input type="range" id="rating" name="rating" min="1" max="10" >
+                    </div>
+                    <div class="price">
+                        <label for="price">Үнийн дүнгээр:</label>
+                        <input type="number" id="price" name="price" min="0" step="5000" >
             
-            <label>Эдэлгээгээр:</label>
-            <input type="range" id="rating" name="rating" min="1" max="10"><br>
-
-            <label>Үнийн дүнгээр:</label>
-            <input type="number" id="price" name="price" min="0" step="5000"><br>
-            <input type="submit" id="submit-btn-search" value="Хайх">
-            
+                </div>
+               </div>
+                
+                  
+            </div>
+           
+              <input type="submit" id="submit-btn" value="Хайх" >
             </form>
         </section>
+        <!--
+        
         <section class="book-sale-pop-out">
             <form>
                 <h1>Та зарах номын мэдээллээ оруулна уу.</h1>
@@ -524,4 +541,23 @@
             <p>&copy; 2023 Grenom. All rights reserved.</p>
         </footer>
     </body>
+    <script>
+        var header=document.getElementsByTagName("header")[0];
+        var body=document.getElementsByTagName("main")[0];
+        var searchBar=document.getElementById("searchbar");
+        var searchPopOut = document.querySelector('.search-pop-out');
+        searchPopOut.style.visibility="hidden";
+        searchBar.addEventListener('click', function() {
+        searchPopOut.style.visibility = 'visible';
+        
+       
+        
+    });       
+    
+    body.addEventListener('click', function() {
+        searchPopOut.style.visibility="hidden";
+        });     
+          
+
+    </script>
 </html>

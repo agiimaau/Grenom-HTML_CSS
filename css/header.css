@@ -364,7 +364,8 @@
       & svg{
         position: absolute;
         padding-bottom: 0;
-        left: 92%;
+        
+        left: 90%;
         width: 25px;
         height: 30px;
         font-size: 0px;
@@ -528,10 +529,11 @@
       & svg{
         position: absolute;
         height: 37px;
-        left: 93%;
+        left: 92%;
         width: 32px;
-        padding-left: 2px;
+        
         display:inline-block;
+        padding-right: 5px;
       }
     }
   
@@ -605,10 +607,12 @@
       justify-content: center; /* Center the list items */
   
       & li {
+        padding-top: 5px;
+        padding-bottom: 5px;
         display: inline-block;
         align-items: center;
         text-align: center;
-        margin: 0 20%; /* Adjust the percentage to create space between list items */
+        margin: 0 10%; /* Adjust the percentage to create space between list items */
       }
   
       & li:not(:last-child) {
@@ -621,11 +625,18 @@
       }
     }
   }
+  .active{
+    background-color: #86AB87;;
+    border-radius: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
-#searchbar:focus .search-pop-out {
-visibility: visible;
-}
+
+
 
 
 

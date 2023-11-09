@@ -452,7 +452,7 @@
     color:white;
     background-color: #4D724D;
     min-width: 30%;
-    width: 650px;
+    width: 610px;
     margin-bottom: 30px;
     & .undsen-medeelel{
       display: flex;
@@ -558,11 +558,13 @@
     border-radius: 50%;
     cursor: pointer;
 }
-
 .switch-btn:hover {
-    background-color: #357535;
+  background-color: #357535;
 }
+
+
 }
+
 
   
   

@@ -1,98 +1,353 @@
-
-*
-{
-
-}.search-pop-out{
-    
-    visibility: hidden;
-    top: 78px;
-    left: 29%;
-    position: absolute;
-    padding: 10px;
-    border-radius: 15px;
-    width:44%;
-    
-    
-    background-color: white;
-    & form{
-        & h1{
-            padding-top: 35px;
-            padding-left: 60px;
-            font-size: 30px;
-            
-        }
-    }
-    .all-filters{
+@media only screen and (max-width: 480px) {
+    .search-pop-out{
+        top: 50px;
+        left: 23%;
+        position: absolute;
+        padding: 10px;
+        border-radius: 15px;
+        width:44%;
         display: flex;
         justify-content: center;
-        font-size: 19px;
-        flex-wrap: wrap;
-        gap:10px;
-        margin-top:20px;
-        margin-bottom: 20px;
-        
-        & label{
-            display: block;
-            margin-bottom: 5px;
-            color: #86AB87;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        & form{
+            & h1{
+                padding-top: 35px;
+                
+                font-size: 13px;
+                
+            }
         }
-        & input{
-            height:25px;
-            width: 180px;
-            border:none;
-            border-radius: 13px;
-            background: #86AB87;
+        .all-filters{
+            display: flex;
+            justify-content: center;
+            font-size: 10px;
+            flex-wrap: wrap;
+            gap:10px;
+            margin-top:20px;
+            margin-bottom: 20px;
             
-            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
-            
-        }
-        & select{
-            font-size: 15px;
-            height:25px;
-            border: none;
-            width: 180px;
-            border-radius: 13px;
-            background: #86AB87;
-            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+            & label{
+                display: block;
+                margin-bottom: 5px;
+                color: #86AB87;
+            }
+            & input{
+                height:18px;
+                width: 120px;
+                border:none;
+                border-radius: 13px;
+                background: #86AB87;
+                margin-bottom: 5px;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+                
+            }
+            & select{
+                font-size: 10px;
+                height:18px;
+                border: none;
+                width: 120px;
+                border-radius: 13px;
+                background: #86AB87;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+            }
         }
     }
-}
-
-.book-cat{
-   margin-left: 50px;
-  & select{
-    color: white;
-  }
-}
-
-.price{
-    margin-left: 50px;
-}
-#ehnii-neg{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+    
+    .book-cat{
+      & select{
+        color: white;
+      }
+    }
+    
+   
+    #submit-btn{
+        width: 120px;
+        height: 20px;
+        border-radius: 25px;
+        background-color: #4D724D;
+        border: none;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+    }
+    
+    
+    
+    
     
 }
-#hoyrdahi{
-    display: flex;
-    justify-content: center;
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .search-pop-out{
+        
+        z-index: 4;
+        top: 50px;
+        left: 25%;
+        position: absolute;
+        padding: 10px;
+        border-radius: 15px;
+        width:40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        & form{
+            & h1{
+                padding-top: 35px;
+                font-size: 30px;
+                
+            }
+        }
+        .all-filters{
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            flex-wrap: wrap;
+            gap:10px;
+            margin-top:20px;
+            margin-bottom: 20px;
+            
+            & label{
+                display: block;
+                margin-bottom: 5px;
+                color: #86AB87;
+            }
+            & input{
+                height:25px;
+                width: 180px;
+                border:none;
+                border-radius: 13px;
+                background: #86AB87;
+                margin-bottom: 10px;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+                
+            }
+            & select{
+                font-size: 15px;
+                height:25px;
+                border: none;
+                width: 180px;
+                border-radius: 13px;
+                background: #86AB87;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+            }
+        }
+    }
+    
+    .book-cat{
+       
+      & select{
+        color: white;
+      }
+    }
+    
+   
+   
+    #submit-btn{
+        width: 150px;
+        height: 30px;
+        border-radius: 25px;
+        background-color: #4D724D;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+    }
+    
+    
+    
+    
+    
 }
-#submit-btn{
-    width: 150px;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #4D724D;
-    border: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    margin-left: 40%;
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .search-pop-out{
+        top: 60px;
+        left: 25%;
+        position: absolute;
+        padding: 10px;
+        border-radius: 15px;
+        width:42%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        & form{
+        
+
+            
+            & h1{
+                margin-top: 20px;
+                font-size: 30px;
+                
+            }
+        }
+        .all-filters{
+            
+            display: flex;
+        justify-content: center;
+        flex-direction: column;
+            font-size: 14px;
+            flex-wrap: wrap;
+            gap:10px;
+            margin-top:20px;
+            margin-bottom: 20px;
+            
+            & label{
+                display: block;
+                margin-bottom: 5px;
+                color: #86AB87;
+            }
+            & input{
+                height:25px;
+                width: 180px;
+                border:none;
+                border-radius: 13px;
+                background: #86AB87;
+                margin-bottom: 10px;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+                
+            }
+            & select{
+                font-size: 15px;
+                height:25px;
+                border: none;
+                width: 180px;
+                border-radius: 13px;
+                background: #86AB87;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+            }
+        }
+    }
+    
+    .book-cat{
+       
+      & select{
+        color: white;
+      }
+    }
+    
+    
+    #submit-btn{
+        width: 150px;
+        height: 40px;
+        border-radius: 25px;
+        background-color: #4D724D;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+    }
 }
-
-
-
-
+@media only screen and (min-width: 1024px) {
+    .search-pop-out{
+        top: 78px;
+        left: 29%;
+        position: absolute;
+        padding: 10px;
+        border-radius: 15px;
+        width:44%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        & form{
+            & h1{
+                padding-top: 35px;
+                
+                font-size: 30px;
+                
+            }
+        }
+        .all-filters{
+            display: flex;
+            justify-content: center;
+            font-size: 15px;
+            flex-wrap: wrap;
+            gap:10px;
+            margin-top:20px;
+            margin-bottom: 20px;
+            
+            & label{
+                display: block;
+                margin-bottom: 5px;
+                color: #86AB87;
+            }
+            & input{
+                height:25px;
+                width: 180px;
+                border:none;
+                border-radius: 13px;
+                background: #86AB87;
+                
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+                
+            }
+            & select{
+                font-size: 15px;
+                height:25px;
+                border: none;
+                width: 180px;
+                border-radius: 13px;
+                background: #86AB87;
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+            }
+        }
+    }
+    
+    .book-cat{
+       margin-left: 50px;
+      & select{
+        color: white;
+      }
+    }
+    
+    .price{
+        margin-left: 50px;
+    }
+    #ehnii-neg{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+        
+    }
+    #hoyrdahi{
+        display: flex;
+        justify-content: center;
+    }
+    #submit-btn{
+        width: 150px;
+        height: 30px;
+        border-radius: 25px;
+        background-color: #4D724D;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+        
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+    }
+    
+    
+    
+    
+    
+}
