@@ -9,137 +9,178 @@
         <meta name="author" content="Grenom">
         <title>Grenom-Бидний тухай</title>
         <link rel="stylesheet" type="text/css" href=" css/contact-us.css">
-        <link rel="stylesheet" type="text/css" href=" css/contact-us-mobile.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search-pop-up.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        
     </head>
 <body>
     <header>
-        <section class="heading">
-        <figure><img src="https://raw.githubusercontent.com/agiimaau/Grenom-HTML_CSS/main/pictures/logo.png" alt="Logo"></figure>
-        <article class="searchAndLabel">
-        <label>Хайх:</label>
-        <input class="searchBar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
-         </article>
-         <article class="icons">
-            <svg id="responsive" xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17" fill="none">
-                <rect x="0.395508" y="0.0820312" width="22.6508" height="16.5686" rx="8.28431" fill="white"/>
-                <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
-        </article>
-        </section>
+        <div id="essentials-navbar">
+            <a href="index.html"><img src="pictures/logo.png" alt="Logo" ></a>
+            <div class="search-bar-all">
+                <input id="searchbar" class="searchbar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.5649 32.5654L42.9997 43.0002" stroke="#4D724D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.5217 36.0435C28.6464 36.0435 36.0435 28.6464 36.0435 19.5217C36.0435 10.397 28.6464 3 19.5217 3C10.397 3 3 10.397 3 19.5217C3 28.6464 10.397 36.0435 19.5217 36.0435Z" stroke="#4D724D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+            </div>
+            
+            <div class="svg-all">
+                <div class="svg-container-toggle">
+                    <svg id="toggle" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        
+                        <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>         
+                </div>
+                <div class="svg-container">
+                    <svg id="cart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                </div>
+                <div class="svg-container">
+                    <svg id="profile" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                </div>
+            </div>
+                      
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Нүүр хуудас</a></li>
-                <li><a href="book-exchange.html">Ном солилцоо</a></li>
-                <li><a href="book-sale.html">Ном худалдаа</a></li>
-                <li><a href="Contact-us.html">Бидний тухай</a></li>
+                <li ><a href="index.html">Нүүр <br>хуудас</a></li>
+                <li ><a href="book-exchange.html">Ном <br>солилцоо</a></li>
+                <li ><a href="book-sale.html">Ном <br>худалдаа</a></li>
+                <li class="active-nav"><a href="Contact-us.html">Бидний <br>тухай</a></li>
             </ul>
         </nav>
-
-        <section class="search-pop-out">
-            <form>
-            <h1>Шүүлтүүр</h1>
-            <label id="book-name-label">Номын нэрээр:</label>
-            <input type="text" name="book-name" id="book-name"><br>
+    </header>
     
-            <label id="book-categories-label">Категориор:</label>
-            <select id="book-categories" name="catergory-lists">
-                <option value="history">Түүх</option>
-                <option value="politics">Улс төр</option>
-                <option value="science">Шинжлжх ухаан</option>
-                <option value="literature">Уран зохиол</option>
-                <option value="bussines">Бизнес</option>
-                <option value="computer">Компьютер</option>
-                <option value="health">Эрүүл мэнд</option>
-                <option value="manual">Гарын авлага</option>
-                <option value="children">Хүүхдийн</option>
-                <option value="philosophy">Филсофи</option>
-                <option value="self-development">Хувь хүний хөгжил</option>
-              </select><br>
-               
-              <label id="rating-label">Эдэлгээгээр:</label>
-              <input type="range" id="rating" name="rating" min="1" max="10"><br>
-    
-              <label id="price-label">Үнийн дүнгээр:</label>
-              <input type="number" id="price" name="price" min="0" step="5000"><br>
-    
-              <input type="submit" id="submit-btn" value="Хайх">
-            </form>
-        </section>
-        </header>
-
-    <section class="about-us">
-        <article class="topic">
-            <h2 onclick="toggleContent(this)">Бидний тухай</h2>
-            <p class="hidden-paragraph">Ном шимтэн уншигчдын нэгдлийн цэг болсон Grenom-д тавтай морилно уу!  Манай хуудсаар дамжуулан бүх насны хүмүүс  шинээр мэдлэг олж авдаг юм.</p>
-        </article>
-
-        <article class="topic">
-            <h2 onclick="toggleContent(this)">Бидний түүх</h2>
-            <p class="hidden-paragraph">Grenom нь нэг ашиг сонирхолтой ном сонирхогчдыг холбож, дуртай номоо солилцох, борлуулах платформыг бий болгох хүсэл эрмэлзлээс үүдэлтэй юм. Бүхий л насны уншигчид дуртай номоо амархан олох, хуваалцах, олж авах боломжтой газар хэрэгтэйг ойлгосноор бидний аялал эхэлсэн юм.</p>
-        </article>
-
-        <article class="topic">
-            <h2 onclick="toggleContent(this)">Бидний Зорилго</h2>
-            <p class="hidden-paragraph">Бидний зорилго бол мэдлэгийн хүч чадалд итгэдэг номонд дурлагчдын идэвхтэй нийгэмлэгийг бий болгох явдал юм. Ингэхдээ өөрт байгаа номоо хялбархан солилцож, эдийн засгийн хувьд хамгийн хэмнэлттэйгээр өөрт тохирсон номоо худалдаж авах боломжтой платформыг номонд дурлагсад бүрт нэвтрүүлэх юм.</p>
-        </article>
-
-        <article class="topic">
-            <h2 onclick="toggleContent(this)">Бид танд юу санал болгож байгаа вэ?</h2>
-            <p class="hidden-paragraph"><b>Ном солилцох:</b> Бид танд аль хэдийн уншсан номоо шинэ номоор солих боломжтой хэрэглэгчдэд ээлтэй платформыг санал болгож байна.</p>
-                <p class="hidden-paragraph"><b>Номын зах зээл:</b> Боломжийн үнээр санал болгож буй янз бүрийн сэдвийн урьдчилан ялгасан номуудын өргөн хүрээтэй цуглуулгыг сонирхоорой. Та ховор хэвлэл хайж байгаа эсэхээс үл хамааран эндээс бүгдийг олох болно.</p>
-                <p class="hidden-paragraph"><b>Худалдагчийн дэмжлэг:</b> Та номын тавиураа цэвэрлэх гэж байна уу? Бид танд эелдэг ашигласан номнуудаа сонирхолтой уншигчдад зарах төвөггүй платформыг санал болгож байна. Энэ нь худалдан авагч, худалдагч хоёрын аль алинд нь ашигтай нөхцөл юм.</p>
-        </article>
-
-        <article class="topic">
-            <h2 onclick="toggleContent(this)">Яагаад биднийг сонгох шаардлагатай вэ?</h2>
-            <p class="hidden-paragraph"><b>Өргөн сонголт:</b> Бид өргөн хүрээний, олон төрлийн номыг санал болгож, хүн бүрийн амт, сонирхолд нийцсэн ямар нэг зүйлийг баталгаажуулдаг.</p>
-
-            <p class="hidden-paragraph"><b>Боломжийн үнэ:</b> Бид номыг хүн бүрт хүртээмжтэй болгоно гэдэгт итгэдэг, иймээс манай үнэ төсөвт ээлтэй байдаг.</p>
-                
-            <p class="hidden-paragraph"><b>Хэрэглэгчдэд ээлтэй интерфэйс:</b> Манай вэбсайт нь таны тав тухыг харгалзан бүтээгдсэн бөгөөд ном хайх, үзэх, худалдан авахад хялбар болгодог.</p>
-                
-            <p class="hidden-paragraph"><b>Олон нийтийн оролцоо:</b> Бид зүгээр нэг зах зээл биш; Бид ном уншихын баяр баясгаланг хуваалцах хүсэл эрмэлзэлтэй ном сонирхогчдын нийгэмлэг юм.</p>
-                
-            <p class="hidden-paragraph"><b>Тогтвортой байдал:</b> Та манай ном солилцооны хөтөлбөрт хамрагдсанаар хог хаягдлыг багасгаж, номын дахин хэрэглээг дэмжих замаар илүү тогтвортой ирээдүйд хувь нэмрээ оруулж байна.</p>
-        </article>
-    </section>
-
-    <section class="FAQ">
-        <h2>Их асуугддаг асуултууд</h2>
-        <h3>Номоо хэрхэн солилцох вэ?</h3>
-        <h3>Хэрхэн номоо зарах вэ?</h3>
-        <h3>Миний явуулсан хүсэлт хугацаатай юу?</h3>
-        <h3>Миний номын зар хэр удаан хугацаанд байх вэ?</h3>
-    </section>
-
-    <section class="contact-us">
-        <article class="contact-text">
-        <h2 style="text-align: center; color: #4D724D;">Бидэнтэй холбогдох</h2>
-        <p style="text-align: center; max-width: 70%; margin-left: 15%;">Та өөрийн санал бодол болон ямар нэгэн алдааг бидэнд мэдэгдэнэ үү.
-            Таны санал бидний цаашдын сайжруулалтанд хувь нэмэр болох болно.
-            Баярлалаа.
-        </p>
-        </article>
-        <form>
-            <div class="form-container">
-            <article id="input">
-                <input type="text" placeholder="Нэрээ оруулна уу." required>
-            </article>
-            <article id="input">
-                <input type="text" placeholder="И-мэйлээ оруулна уу." required>
-            </article>
-            <article id="text-area">
-                <textarea style="border: none;" placeholder="Та санал хүсэлтээ бичнэ үү."></textarea>
-            </article>
-            <article id="submit">
-                <input type="submit" value="Илгээх">
-            </article>
+    <section class="search-pop-out">
+        <form id="filter-form">
+        <h1>Шүүлтүүр</h1>
+        <div class="all-filters">
+            <div id="ehnii-neg">
+                <div class="book-name-fil">
+                    <label for="bookname">Номын нэрээр:</label>
+                    <input type="text" name="bookname" id="bookname" >
+                </div>
+                <div class="book-cat">
+                    <label for="book-categories">Категориор:</label>
+                    <select id="book-categories" name="catergory-lists" >
+                        <option value="history">Түүх</option>
+                        <option value="politics">Улс төр</option>
+                        <option value="science">Шинжлэх ухаан</option>
+                        <option value="literature">Уран зохиол</option>
+                        <option value="bussines">Бизнес</option>
+                        <option value="computer">Компьютер</option>
+                        <option value="health">Эрүүл мэнд</option>
+                        <option value="manual">Гарын авлага</option>
+                        <option value="children">Хүүхдийн</option>
+                        <option value="philosophy">Филисофи</option>
+                        <option value="self-development">Хувь хүний хөгжил</option>
+                    </select>
+                </div>
             </div>
-            <img src=" pictures/5-removebg-preview.png">
+           
+           <div id="hoyrdahi">
+                <div class="rating">
+                    <label for="rating">Эдэлгээгээр:</label>
+                    <input type="range" id="rating" name="rating" min="1" max="10" >
+                </div>
+                <div class="price">
+                    <label for="price">Үнийн дүнгээр:</label>
+                    <input type="number" id="price" name="price" min="0" step="5000" >
+        
+            </div>
+           </div>
+            
+              
+        </div>
+       
+          <input type="submit" id="submit-btn" value="Хайх" >
         </form>
     </section>
+    <main class="contact-us-main">
+        <section class="about-us" style="margin-top: 64px;">
+            <article class="topic">
+                <h2 onclick="toggleContent(this)">Бидний тухай</h2>
+                <p class="hidden-paragraph">Ном шимтэн уншигчдын нэгдлийн цэг болсон Grenom-д тавтай морилно уу!  Манай хуудсаар дамжуулан бүх насны хүмүүс  шинээр мэдлэг олж авдаг юм.</p>
+            </article>
+    
+            <article class="topic">
+                <h2 onclick="toggleContent(this)">Бидний түүх</h2>
+                <p class="hidden-paragraph">Grenom нь нэг ашиг сонирхолтой ном сонирхогчдыг холбож, дуртай номоо солилцох, борлуулах платформыг бий болгох хүсэл эрмэлзлээс үүдэлтэй юм. Бүхий л насны уншигчид дуртай номоо амархан олох, хуваалцах, олж авах боломжтой газар хэрэгтэйг ойлгосноор бидний аялал эхэлсэн юм.</p>
+            </article>
+    
+            <article class="topic">
+                <h2 onclick="toggleContent(this)">Бидний Зорилго</h2>
+                <p class="hidden-paragraph">Бидний зорилго бол мэдлэгийн хүч чадалд итгэдэг номонд дурлагчдын идэвхтэй нийгэмлэгийг бий болгох явдал юм. Ингэхдээ өөрт байгаа номоо хялбархан солилцож, эдийн засгийн хувьд хамгийн хэмнэлттэйгээр өөрт тохирсон номоо худалдаж авах боломжтой платформыг номонд дурлагсад бүрт нэвтрүүлэх юм.</p>
+            </article>
+    
+            <article class="topic">
+                <h2 onclick="toggleContent(this)">Бид танд юу санал болгож байгаа вэ?</h2>
+                <p class="hidden-paragraph"><b>Ном солилцох:</b> Бид танд аль хэдийн уншсан номоо шинэ номоор солих боломжтой хэрэглэгчдэд ээлтэй платформыг санал болгож байна.</p>
+                    <p class="hidden-paragraph"><b>Номын зах зээл:</b> Боломжийн үнээр санал болгож буй янз бүрийн сэдвийн урьдчилан ялгасан номуудын өргөн хүрээтэй цуглуулгыг сонирхоорой. Та ховор хэвлэл хайж байгаа эсэхээс үл хамааран эндээс бүгдийг олох болно.</p>
+                    <p class="hidden-paragraph"><b>Худалдагчийн дэмжлэг:</b> Та номын тавиураа цэвэрлэх гэж байна уу? Бид танд эелдэг ашигласан номнуудаа сонирхолтой уншигчдад зарах төвөггүй платформыг санал болгож байна. Энэ нь худалдан авагч, худалдагч хоёрын аль алинд нь ашигтай нөхцөл юм.</p>
+            </article>
+    
+            <article class="topic">
+                <h2 onclick="toggleContent(this)">Яагаад биднийг сонгох шаардлагатай вэ?</h2>
+                <p class="hidden-paragraph"><b>Өргөн сонголт:</b> Бид өргөн хүрээний, олон төрлийн номыг санал болгож, хүн бүрийн амт, сонирхолд нийцсэн ямар нэг зүйлийг баталгаажуулдаг.</p>
+    
+                <p class="hidden-paragraph"><b>Боломжийн үнэ:</b> Бид номыг хүн бүрт хүртээмжтэй болгоно гэдэгт итгэдэг, иймээс манай үнэ төсөвт ээлтэй байдаг.</p>
+                    
+                <p class="hidden-paragraph"><b>Хэрэглэгчдэд ээлтэй интерфэйс:</b> Манай вэбсайт нь таны тав тухыг харгалзан бүтээгдсэн бөгөөд ном хайх, үзэх, худалдан авахад хялбар болгодог.</p>
+                    
+                <p class="hidden-paragraph"><b>Олон нийтийн оролцоо:</b> Бид зүгээр нэг зах зээл биш; Бид ном уншихын баяр баясгаланг хуваалцах хүсэл эрмэлзэлтэй ном сонирхогчдын нийгэмлэг юм.</p>
+                    
+                <p class="hidden-paragraph"><b>Тогтвортой байдал:</b> Та манай ном солилцооны хөтөлбөрт хамрагдсанаар хог хаягдлыг багасгаж, номын дахин хэрэглээг дэмжих замаар илүү тогтвортой ирээдүйд хувь нэмрээ оруулж байна.</p>
+            </article>
+        </section>
+    
+        <section class="FAQ">
+            <h2>Их асуугддаг асуултууд</h2>
+            <h3>Номоо хэрхэн солилцох вэ?</h3>
+            <h3>Хэрхэн номоо зарах вэ?</h3>
+            <h3>Миний явуулсан хүсэлт хугацаатай юу?</h3>
+            <h3>Миний номын зар хэр удаан хугацаанд байх вэ?</h3>
+        </section>
+    
+        <section class="contact-us">
+            <article class="contact-text">
+            <h2 style="text-align: center; color: #4D724D;">Бидэнтэй холбогдох</h2>
+            <p style="text-align: center; max-width: 70%; margin-left: 15%;">Та өөрийн санал бодол болон ямар нэгэн алдааг бидэнд мэдэгдэнэ үү.
+                Таны санал бидний цаашдын сайжруулалтанд хувь нэмэр болох болно.
+                Баярлалаа.
+            </p>
+            </article>
+            <form id="form">
+                <div class="form-container">
+                    <article class="input-name">
+                        <div>
+                            <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-5 -20 50 90" width="60"><g clip-rule="evenodd" fill="#4D724D"  fill-rule="evenodd"><path d="m24 24c5.525 0 10-4.475 10-10s-4.475-10-10-10-10 4.475-10 10 4.475 10 10 10zm8-10c0 4.4204-3.5796 8-8 8s-8-3.5796-8-8 3.5796-8 8-8 8 3.5796 8 8z"/><path d="m6 36c0-4.9653 11.9925-8 18-8s18 3.0347 18 8v6h-36zm2 0c0-.3709.22038-.9789 1.22348-1.7881.98072-.7912 2.44242-1.545 4.21432-2.1969 3.5423-1.3033 7.809-2.015 10.5622-2.015s7.0199.7117 10.5622 2.015c1.7719.6519 3.2336 1.4057 4.2143 2.1969 1.0031.8092 1.2235 1.4172 1.2235 1.7881v4h-32z"/></g></svg>
+                            <input type="text" placeholder="Нэрээ оруулна уу." required>
+                        </div>
+                    </article>
+                    <article class="input-email">
+                        <div>
+                            <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-5 -15 50 80" width="60"><g clip-rule="evenodd" fill="#4D724D" fill-rule="evenodd"><path d="m17 24c3.8675 0 7-3.1325 7-7s-3.1325-7-7-7-7 3.1325-7 7 3.1325 7 7 7zm5-7c0 2.7629-2.2371 5-5 5s-5-2.2371-5-5 2.2371-5 5-5 5 2.2371 5 5z"/><path d="m4 38v-5.6c0-4.256 8.6612-6.4 13-6.4 2.8862 0 7.6851.9487 10.5749 2.8368 2.0597-.557 4.3187-.8368 5.9251-.8368 1.8579 0 4.351.3742 6.4092 1.1307 1.0272.3777 2.0097.8733 2.753 1.5156.7486.6468 1.3378 1.5213 1.3378 2.6204v4.7333zm2-5.6c0-.3174.14556-.7514.76618-1.3154.6329-.5751 1.60704-1.1335 2.84064-1.6201 2.46918-.9739 5.46978-1.4645 7.39318-1.4645s4.924.4906 7.3932 1.4645c1.2336.4866 2.2077 1.045 2.8406 1.6201.6206.564.7662.998.7662 1.3154v3.6h-22zm23.3532-1.9308c1.5125-.3127 3.0302-.4692 4.1468-.4692 1.6465 0 3.9034.3405 5.7191 1.0079.9097.3344 1.6452.7281 2.1355 1.1518.4852.4192.6454.7873.6454 1.107v2.7333h-12v-3.6c0-.7009-.2349-1.3446-.6468-1.9308z"/><path d="m39 20.5c0 3.0387-2.4613 5.5-5.5 5.5s-5.5-2.4613-5.5-5.5c0-3.0388 2.4613-5.5 5.5-5.5s5.5 2.4612 5.5 5.5zm-5.5 3.5c1.9342 0 3.5-1.5658 3.5-3.5s-1.5658-3.5-3.5-3.5-3.5 1.5658-3.5 3.5 1.5658 3.5 3.5 3.5z"/></g></svg>
+                            <input type="text" placeholder="И-мэйлээ оруулна уу." required>
+                        </div>
+                    </article>
+                    <article id="text-area">
+                        <textarea style="border: none;" placeholder="Та санал хүсэлтээ бичнэ үү."></textarea>
+                    </article>
+                    <article id="submit">
+                        <input type="submit" value="Илгээх">
+                    </article>
+                </div>
+                <img src=" pictures/5-removebg-preview.png">
+            </form>
+        </section>
+
+    </main>
+    
 
     <footer>
         <h3>Creative team in Mongolia</h3>
@@ -159,4 +200,5 @@
         <p>&copy; 2023 Grenom. All rights reserved.</p>
     </footer>
 </body>
+<script src="js/contact-us.js"></script>
 </html>

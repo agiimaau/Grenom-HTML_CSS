@@ -5,6 +5,7 @@
         <link rel="stylesheet" href=" css/footer.css">
         <link rel="stylesheet" href="css/search-pop-up.css">
         <link rel="stylesheet" href=" css/header.css">
+        <link rel="stylesheet" href="css/book-sale-pop-out.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,7 @@
                 <ul>
                     <li ><a href="index.html">Нүүр <br>хуудас</a></li>
                     <li ><a href="book-exchange.html">Ном <br>солилцоо</a></li>
-                    <li class="active"><a href="book-sale.html">Ном <br>худалдаа</a></li>
+                    <li class="active-nav"><a href="book-sale.html">Ном <br>худалдаа</a></li>
                     <li ><a href="Contact-us.html">Бидний <br>тухай</a></li>
                 </ul>
             </nav>
@@ -91,52 +92,54 @@
                         <label for="price">Үнийн дүнгээр:</label>
                         <input type="number" id="price" name="price" min="0" step="5000" >
             
-                </div>
-               </div>
-                
-                  
+                    </div>
+               </div> 
             </div>
            
               <input type="submit" id="submit-btn" value="Хайх" >
             </form>
         </section>
-        <!--
+        
         
         <section class="book-sale-pop-out">
-            <form>
-                <h1>Та зарах номын мэдээллээ оруулна уу.</h1>
-                <label>номын нэр</label>
-                <input type="text" class="book-upload" id="book-name">
-                <label>зохиолч</label>
-                <input type="text" class="book-upload" id="book-author">
-                <label>Эдэлгээгээр:</label>
-                <input type="range" id="book-rating" class="book-upload" min="1" max="10">
-                <label>анх авсан үнэ:</label>
-                <input type="text" class="book-upload" id="book-fprice">
-                <label>анх авсан үнэ:</label>
-                <input type="text" class="book-upload" id="book-lprice">
-                <label>Категори:</label>
-                <select id="book-categories" name="catergory-lists" >
-                    <option value="history">Түүх</option>
-                    <option value="politics">Улс төр</option>
-                    <option value="science">Шинжлжх ухаан</option>
-                    <option value="literature">Уран зохиол</option>
-                    <option value="bussines">Бизнес</option>
-                    <option value="computer">Компьютер</option>
-                    <option value="health">Эрүүл мэнд</option>
-                    <option value="manual">Гарын авлага</option>
-                    <option value="children">Хүүхдийн</option>
-                    <option value="philosophy">Филсофи</option>
-                    <option value="self-development">Хувь хүний хөгжил</option>
-                </select>
-                <label>нэмэлт мэдээлэл</label>
-                <textarea class="book-addition-info"></textarea>
-    
-                
-                <input type="submit" id="submit-btn" value="Оруулах" class="book-pop-out-button">
-                <button class="book-pop-out-button">Цуцлах</button>
-            </form>
-        </section>-->
+            
+                <form>
+                        <img src="" alt="">
+                    <h1>Та зарах номын мэдээллээ оруулна уу.</h1>
+                    <label>номын нэр</label>
+                    <input type="text" class="book-upload" id="book-name">
+                    <label>зохиолч</label>
+                    <input type="text" class="book-upload" id="book-author">
+                    <label>Эдэлгээгээр:</label>
+                    <input type="range" id="book-rating" class="book-upload" min="1" max="10">
+                    <label>анх авсан үнэ:</label>
+                    <input type="text" class="book-upload" id="book-fprice">
+                    <label>анх авсан үнэ:</label>
+                    <input type="text" class="book-upload" id="book-lprice">
+                    <label>Категори:</label>
+                    <select id="book-categories" name="catergory-lists" >
+                        <option value="history">Түүх</option>
+                        <option value="politics">Улс төр</option>
+                        <option value="science">Шинжлжх ухаан</option>
+                        <option value="literature">Уран зохиол</option>
+                        <option value="bussines">Бизнес</option>
+                        <option value="computer">Компьютер</option>
+                        <option value="health">Эрүүл мэнд</option>
+                        <option value="manual">Гарын авлага</option>
+                        <option value="children">Хүүхдийн</option>
+                        <option value="philosophy">Филсофи</option>
+                        <option value="self-development">Хувь хүний хөгжил</option>
+                    </select>
+                    <label>нэмэлт мэдээлэл</label>
+                    <textarea class="book-addition-info"></textarea>
+        
+                    
+                    <input type="submit" id="submit-btn" value="Оруулах" class="book-pop-out-button">
+                    <button class="book-pop-out-button">Цуцлах</button>
+                </form>
+            
+            
+        </section>
         <main class="book-sale">
             <section class="filter" >
                 <h3>Шүүлтүүр:</h3>

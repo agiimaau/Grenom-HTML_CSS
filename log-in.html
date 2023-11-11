@@ -10,72 +10,91 @@
         <title>Grenom-Бидний тухай</title>
         <link rel="stylesheet" type="text/css" href=" css/log-in.css">
         <link rel="stylesheet" type="text/css" href=" css/log-in-mobile.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search-pop-up.css">
     </head>
 <body>
     <header>
-        <section class="heading">
-        <figure><img src=" pictures/logo.png" alt="Logo"></figure>
-        <article class="searchAndLabel">
-        <label>Хайх:</label>
-        <input class="searchBar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
-         </article>
-         <article class="icons">
-            <a href="#dropdown" id="svgLink">
-                <svg id="responsive" xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17" fill="none">
-                    <rect x="0.395508" y="0.0820312" width="22.6508" height="16.5686" rx="8.28431" fill="white"/>
-                    <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.67" viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
-        </article>
-        </section>
-        <nav>
-            <div class="dropdown-content" id="dropdown">
-                <a href=" html/index.html">Нүүр хуудас</a>
-                <a href=" html/book-exchange.html">Ном солилцоо</a>
-                <a href=" html/book-sale.html">Ном худалдаа</a>
-                <a href=" html/Contact-us.html">Бидний тухай</a>
+        <div id="essentials-navbar">
+            <a href="index.html"><img src="pictures/logo.png" alt="Logo" ></a>
+            <div class="search-bar-all">
+                <input id="searchbar" class="searchbar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.5649 32.5654L42.9997 43.0002" stroke="#4D724D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.5217 36.0435C28.6464 36.0435 36.0435 28.6464 36.0435 19.5217C36.0435 10.397 28.6464 3 19.5217 3C10.397 3 3 10.397 3 19.5217C3 28.6464 10.397 36.0435 19.5217 36.0435Z" stroke="#4D724D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
             </div>
+            
+            <div class="svg-all">
+                <div class="svg-container-toggle">
+                    <svg id="toggle" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        
+                        <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>         
+                </div>
+                <div class="svg-container">
+                    <svg id="cart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                </div>
+                <div class="svg-container">
+                    <svg id="profile" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                </div>
+            </div>
+                      
+        </div>
+        <nav>
             <ul>
-                <li><a href="index.html">Нүүр хуудас</a></li>
-                <li><a href="book-exchange.html">Ном солилцоо</a></li>
-                <li><a href="book-sale.html">Ном худалдаа</a></li>
-                <li><a href="Contact-us.html">Бидний тухай</a></li>
+                <li ><a href="index.html">Нүүр <br>хуудас</a></li>
+                <li ><a href="book-exchange.html">Ном <br>солилцоо</a></li>
+                <li ><a href="book-sale.html">Ном <br>худалдаа</a></li>
+                <li ><a href="Contact-us.html">Бидний <br>тухай</a></li>
             </ul>
         </nav>
-
-        <section class="search-pop-out">
-            <form>
-            <h1>Шүүлтүүр</h1>
-            <label id="book-name-label">Номын нэрээр:</label>
-            <input type="text" name="book-name" id="book-name"><br>
-    
-            <label id="book-categories-label">Категориор:</label>
-            <select id="book-categories" name="catergory-lists">
-                <option value="history">Түүх</option>
-                <option value="politics">Улс төр</option>
-                <option value="science">Шинжлжх ухаан</option>
-                <option value="literature">Уран зохиол</option>
-                <option value="bussines">Бизнес</option>
-                <option value="computer">Компьютер</option>
-                <option value="health">Эрүүл мэнд</option>
-                <option value="manual">Гарын авлага</option>
-                <option value="children">Хүүхдийн</option>
-                <option value="philosophy">Филсофи</option>
-                <option value="self-development">Хувь хүний хөгжил</option>
-              </select><br>
-               
-              <label id="rating-label">Эдэлгээгээр:</label>
-              <input type="range" id="rating" name="rating" min="1" max="10"><br>
-    
-              <label id="price-label">Үнийн дүнгээр:</label>
-              <input type="number" id="price" name="price" min="0" step="5000"><br>
-    
-              <input type="submit" id="submit-btn" value="Хайх">
-            </form>
-        </section>
-        </header>
+    </header>
+    <section class="search-pop-out">
+        <form id="filter-form">
+        <h1>Шүүлтүүр</h1>
+        <div class="all-filters">
+            <div id="ehnii-neg">
+                <div class="book-name-fil">
+                    <label for="bookname">Номын нэрээр:</label>
+                    <input type="text" name="bookname" id="bookname" >
+                </div>
+                <div class="book-cat">
+                    <label for="book-categories">Категориор:</label>
+                    <select id="book-categories" name="catergory-lists" >
+                        <option value="history">Түүх</option>
+                        <option value="politics">Улс төр</option>
+                        <option value="science">Шинжлэх ухаан</option>
+                        <option value="literature">Уран зохиол</option>
+                        <option value="bussines">Бизнес</option>
+                        <option value="computer">Компьютер</option>
+                        <option value="health">Эрүүл мэнд</option>
+                        <option value="manual">Гарын авлага</option>
+                        <option value="children">Хүүхдийн</option>
+                        <option value="philosophy">Филисофи</option>
+                        <option value="self-development">Хувь хүний хөгжил</option>
+                    </select>
+                </div>
+            </div>
+           
+           <div id="hoyrdahi">
+                <div class="rating">
+                    <label for="rating">Эдэлгээгээр:</label>
+                    <input type="range" id="rating" name="rating" min="1" max="10" >
+                </div>
+                <div class="price">
+                    <label for="price">Үнийн дүнгээр:</label>
+                    <input type="number" id="price" name="price" min="0" step="5000" >
+        
+                </div>
+           </div> 
+        </div>
+       
+          <input type="submit" id="submit-btn" value="Хайх" >
+        </form>
+    </section>
 
    
     <main>
@@ -86,13 +105,20 @@
                 <h1>Нэвтрэх</h1>
       
                 <article id="input">
-                    <input type="text" placeholder="Утасны дугаар" required>
+                    <div>
+                        <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="70" viewBox="-15 -18 60 70" width="70"><path d="m3.51089 2 3.63913.13169c.76651.02773 1.44674.51177 1.74051 1.23851l1.07603 2.66193c.25044.61946.18304 1.32624-.17963 1.88421l-1.37862 2.12116c.81623 1.1721 3.03639 3.9183 5.38719 5.5258l1.7529-1.0788c.4455-.2742.9789-.3556 1.483-.2264l3.4847.8936c.9268.2377 1.5513 1.1265 1.4781 2.1035l-.2237 2.9833c-.0786 1.0469-.9354 1.8684-1.9525 1.7502-13.42555-1.5611-21.29856-19.98873-16.30711-19.9887z" stroke="#4D724D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+                        <input type="text" placeholder="Утасны дугаар" required>
+                    </div>
                 </article>
 
                 <article id="input">
-                    <input type="password" placeholder="Нууц үг" required>
+                    <div>
+                        <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="70" viewBox="-15 -18 60 70" width="70"><g stroke="#4D724D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect height="11" rx="2" width="18" x="3" y="11"/><path d="m7 10.9999v-4.00002c0-2.76143 2.23858-5 5-5 2.7614 0 5 2.23857 5 5v4.00002"/></g></svg>
+                        <input type="password" placeholder="Нууц үг" required>
+                    </div>
+                    
                 </article>
-                    <p>Шинээр<a href="sign-up.html"> бүртгүүлэх</a> үү?</p>
+                    <p class="new">Шинээр<a href="sign-up.html"> бүртгүүлэх</a> үү?</p>
                 <article id="submit">
                     <input type="submit" value="Нэвтрэх">
                 </article>
@@ -117,5 +143,7 @@
         </div>
         <p>&copy; 2023 Grenom. All rights reserved.</p>
     </footer>
+    <script src="js/login.js"></script>
 </body>
+
 </html>
