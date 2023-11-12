@@ -1,640 +1,3 @@
-/* Global styles */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--white-color);
-  color: var(--white-color);
-
-  &::placeholder {
-    color: var(--white-color);
-  }
-}
-@media only screen and (max-width: 480px) {
-  /* Styles specific to mobile (vertical) view */
- 
-  header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 0 0 2rem 2rem;
-    background: #4D724D;
-    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
-    font-family: 'Arial';
-  
-    & #essentials-navbar {
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-      padding-left: 0.3rem;
-      padding-right: 0.5rem;
-      
-      & img {
-        display: inline-block;
-        padding-top: 0.8rem;
-        width: 5rem;
-      }
-      & .search-bar-all{
-        margin-left: 5px;
-        margin-top: 10px;
-        padding: 0 2%;
-        display: inline-block;
-        width: 45%; /* Adjust based on the remaining space */
-        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
-        height: 1rem;
-        flex-shrink: 0;
-        border-radius: 2.625rem;
-        border: 1px solid rgba(0, 0, 0, 0.00);
-        background: #FFF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        color: #4D724D;
-        font-size: 8px;
-        position: relative;
-        justify-content: center;
-        & #searchbar {
-          position: absolute;
-          outline: none;
-          left: 10px;
-          width: 80%;
-          padding-left: 5px;
-          font-size: 8px;
-          height: 2.5rem;
-          border: none;
-          padding-bottom: 22px;
-        }
-        & svg{
-          position: absolute;
-          padding-bottom: 0;
-          left: 87%;
-          width: 16px;
-          height: 16px;
-          font-size: 0px;
-          display:inline-block;
-          
-        }
-      }
-      
-  
-      & .svg-all {
-        margin-top: 10px;
-        
-        display: flex;
-        & .svg-container-toggle {
-          
-          border-radius: 0.8rem;
-        margin-left: 10px;
-        width: 1.7rem;
-        height: 1rem;
-        background-color: white;
-        padding-bottom: 5px;
-          & #toggle{
-            padding-left: 2px;
-            padding-top: 3px;
-          }
-        }
-      }
-  
-      & .svg-container {
-        border-radius: 0.8rem;
-        margin-left: 10px;
-        width: 1.7rem;
-        height: 1rem;
-        background-color: white;
-        padding-bottom: 5px;
-  
-        & #cart {
-          padding-left: 6px;
-          width: 1rem;
-          padding-top: 5px;
-        }
-  
-        & #profile {
-          padding-left: 2px;
-          width: 1.5rem;
-        }
-      }
-    }
-  }
-  
-  /* Icon styles */
-  .icons svg {
-    background-color: white;
-    margin-right: 30px;
-    border-radius: 100%;
-    width: 60px;
-    height: 30px;
-  }
-  
-  /* Navigation styles */
-  nav { 
-    display: none;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: large;
-    
-  
-    & ul {
-      display: none;
-      list-style: none; /* Remove default list styling */
-      padding: 0;
-      justify-content: center; /* Center the list items */
-  
-      & li {
-        display: inline-block;
-        align-items: center;
-        text-align: center;
-        margin: 0 25%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & li:not(:last-child) {
-        margin-right: 50%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & a {
-        text-decoration: none;
-        color: inherit; /* Inherit parent color */
-      }
-    }
-  }
-  }
-  
-  
-  
- 
-  
-
-
-
-/* Mobile (Horizontal) */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  /* Styles specific to mobile (horizontal) view */
-  header {
-    padding-bottom: 20px;
-    border-radius: 0 0 3rem 3rem;
-    background: #4D724D;
-    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
-    font-family: 'Arial';
-  
-    & #essentials-navbar {
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      
-      & img {
-        display: inline-block;
-        padding-top: 0.8rem;
-        width: 6rem;
-      }
-      & .search-bar-all{
-        margin-top: 15px;
-        width: 45%; /* Adjust based on the remaining space */
-        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
-        height: 1.7rem;
-        flex-shrink: 0;
-        border-radius: 2.625rem;
-        border: 1px solid rgba(0, 0, 0, 0.00);
-        background: #FFF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        color: #4D724D;
-       
-        position: relative;
-        justify-content: center;
-        & #searchbar {
-       
-          position: absolute;
-          outline: none;
-          left: 5px;
-          width: 80%;
-          padding-left: 12px;
-          font-size: 14px;
-          height: 2.5rem;
-          border: none;
-          padding-bottom: 13px;
-          
-        }
-        & svg{
-          position: absolute;
-          height: 28px;
-          left: 84%;
-          width: 25px;
-          padding-left: 2px;
-          display:inline-block;
-        }
-    }
-  
-      & .svg-all {
-        margin-top: 15px;
-        
-        display: flex;
-        & .svg-container-toggle {
-          
-          border-radius: 3.5rem;
-          margin-left: 10px;
-          width: 2.3rem;
-          height: 1.5rem;
-          background-color: white;
-          padding-bottom: 5px;
-          & #toggle{
-            padding-left: 2px;
-            padding-top: 3px;
-          }
-        }
-      }
-  
-      & .svg-container {
-        border-radius: 3.5rem;
-        margin-left: 10px;
-        width: 2.3rem;
-        height: 1.5rem;
-        background-color: white;
-        
-        padding-bottom: 5px;
-        
-        & #cart {
-          padding-top: 6px;
-          padding-left: 8px;
-          width: 22px;
-          
-        }
-  
-        & #profile {
-          padding-left: 3px;
-          width: 29px;
-         
-        }
-      }
-    }
-  }
-  
-  /* Icon styles */
-  .icons svg {
-    background-color: white;
-    margin-right: 30px;
-    border-radius: 100%;
-    width: 60px;
-    height: 30px;
-  }
-  
-  /* Navigation styles */
-  nav {
-    margin-top: 20px;
-    display: none;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: large;
-    
-  
-    & ul {
-      display: none;
-      list-style: none; /* Remove default list styling */
-      padding: 0;
-      justify-content: center; /* Center the list items */
-  
-      & li {
-        display: inline-block;
-        align-items: center;
-        text-align: center;
-        margin: 0 25%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & li:not(:last-child) {
-        margin-right: 50%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & a {
-        text-decoration: none;
-        color: inherit; /* Inherit parent color */
-      }
-    }
-  }
-}
-
-
-
-/* Computer Screen Position 1 */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  header {
-    padding-bottom: 20px;
-    border-radius: 0 0 4rem 4rem;
-    background: #4D724D;
-    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
-    font-family: 'Arial';
-  
-    & #essentials-navbar {
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      
-      & img {
-        display: inline-block;
-        padding-top: 0.8rem;
-        width: 9rem;
-      }
-      & .search-bar-all{
-        margin-top: 10px;
-        width: 50%; /* Adjust based on the remaining space */
-        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
-        height: 1.8rem;
-        flex-shrink: 0;
-        border-radius: 2.625rem;
-        border: 1px solid rgba(0, 0, 0, 0.00);
-        background: #FFF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        color: #4D724D;
-        position: relative;
-        justify-content: center;
-      & #searchbar {
-        position: absolute;
-        outline: none;
-        left: 20px;
-        width: 87%;
-        padding-left: 5px;
-        font-size: 15px;
-        height: 2.5rem;
-        border: none;
-        padding-bottom: 8px;
-      }
-      & svg{
-        position: absolute;
-        padding-bottom: 0;
-        
-        left: 90%;
-        width: 25px;
-        height: 30px;
-        font-size: 0px;
-        display:inline-block;
-        
-      }
-    }
-      & .svg-all {
-        margin-top: 10px;
-        
-        display: flex;
-        & .svg-container-toggle {
-          
-          border-radius: 3.5rem;
-          margin-left: 15px;
-          
-          width:2.8rem;
-          height: 1.8rem;
-          background-color: white;
-          padding-bottom: 5px;
-          & #toggle{
-            padding-left: 1px;
-            padding-top: 2px;
-            width: 45px;
-            background-color: none;
-          }
-        }
-        & svg{
-        
-        left: 70%;
-        width: 27px;
-        padding-left: 2px;
-        display:inline-block;
-      }
-      }
-  
-      & .svg-container {
-
-        border-radius: 3.5rem;
-        margin-left: 15px;
-        width:2.8rem;
-        height: 1.8rem;
-        background-color: white;
-        
-        padding-bottom: 5px;
-        
-        & #cart {
-          padding-top: 6px;
-          padding-left: 8px;
-          width: 30px;
-        }
-  
-        & #profile {
-          padding-left: 5px;
-          width: 35px;
-        }
-      }
-    }
-  }
-  
-  /* Icon styles */
-  .icons svg {
-    background-color: white;
-    margin-right: 30px;
-    border-radius: 100%;
-    width: 60px;
-    height: 30px;
-  }
-  
-  /* Navigation styles */
-  nav {
-    margin-top: 30px;
-    display: none;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: large;
-    
-  
-    & ul {
-      display: none;
-      list-style: none; /* Remove default list styling */
-      padding: 0;
-      justify-content: center; /* Center the list items */
-  
-      & li {
-        display: inline-block;
-        align-items: center;
-        text-align: center;
-        margin: 0 25%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & li:not(:last-child) {
-        margin-right: 50%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & a {
-        text-decoration: none;
-        color: inherit; /* Inherit parent color */
-      }
-    }
-  }
-  #exchange-li a{
-    background-color: yellowgreen;
-    
-  }
-}
-
-
-
-/* Computer Screen Position 2 */
-@media only screen and (min-width: 1024px) {
-  /* Styles specific to screen position 2 */
-  header {
-    padding-bottom: 20px;
-    border-radius: 0 0 4rem 4rem;
-    width: 100%;
-    background: #4D724D;
-    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
-    font-family: 'Arial';
-  
-    & #essentials-navbar {
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      
-      & img {
-        display: inline-block;
-        padding-top: 0.8rem;
-        width: 14rem;
-      }
-      & .search-bar-all{
-        margin-top: 10px;
-        width: 50%; /* Adjust based on the remaining space */
-        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
-        height: 2.5rem;
-        font-size: 18px;
-        flex-shrink: 0;
-        border-radius: 2.625rem;
-        border: 1px solid rgba(0, 0, 0, 0.00);
-        background: #FFF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        color: #4D724D;
-        position: relative;
-        justify-content: center;
-      & #searchbar {
-       
-        position: absolute;
-        outline: none;
-        left: 20px;
-        width: 90%;
-        padding-left: 10px;
-        font-size: 18px;
-        height: 2.5rem;
-        border: none;
-
-        
-      }
-      & svg{
-        position: absolute;
-        height: 37px;
-        left: 92%;
-        width: 32px;
-        
-        display:inline-block;
-        padding-right: 5px;
-      }
-    }
-  
-      & .svg-all {
-        margin-top: 10px;
-        
-        display: flex;
-        & .svg-container-toggle {
-          display: none;
-          border-radius: 3.5rem;
-          margin-left: 30px;
-          width: 4rem;
-          height: 2.5rem;
-          background-color: white;
-          padding-bottom: 5px;
-          & #toggle{
-            padding-left: 2px;
-          }
-        }
-      }
-  
-      & .svg-container {
-        border-radius: 3.5rem;
-        margin-left: 20px;
-        width: 4rem;
-        height: 2.5rem;
-        background-color: white;
-        
-        padding-bottom: 5px;
-        
-        & #cart {
-          padding-top: 8px;
-          padding-left: 15px;
-          width: 2rem;
-        }
-  
-        & #profile {
-          padding-top: 2px;
-          padding-left: 11px;
-          width: 2.5rem;
-        }
-      }
-    }
-  }
-  
-  /* Icon styles */
-  .icons svg {
-    background-color: white;
-    margin-right: 30px;
-    border-radius: 100%;
-    width: 60px;
-    height: 30px;
-  }
-  
-  /* Navigation styles */
-  nav {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 21px;
-    padding-bottom: 10px;
-    
-    
-  
-    & ul {
-      display: flex;
-      list-style: none; /* Remove default list styling */
-      padding: 0;
-      justify-content: center; /* Center the list items */
-  
-      & li {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        display: inline-block;
-        align-items: center;
-        text-align: center;
-        margin: 0 10%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & li:not(:last-child) {
-        margin-right: 50%; /* Adjust the percentage to create space between list items */
-      }
-  
-      & a {
-        text-decoration: none;
-        color: inherit; /* Inherit parent color */
-      }
-    }
-  }
-  .active{
-    background-color: #86AB87;;
-    border-radius: 13px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
-
 
 *{
   font-family: Arial, Helvetica, sans-serif;
@@ -645,247 +8,117 @@ body{
   padding:0;
 }
 
-  /* .heading {
-    display:flex;
-    justify-content: space-between;
-  } */
+.poster-1 {
+  margin-top: 2%;
+ 
+  display: flex;
+  align-items: center; /* Center vertically within the article */
+  justify-content: center;
+  padding-left:15.625rem;
+  height:28.125rem;
+  border-radius:1.563rem;
+}
 
-  /* header {
-    padding-top:1.875rem;
-    padding-left:1%;
-    padding-right:1%;
-    background-color: hsl(120, 19%, 37%);
-    border-radius: 0 0 1.563rem 1.563rem;
-
-  } */
-  .icons svg{
-    background-color: white;
-    margin-right: 1.875rem;
-    margin-top:1.875rem;
-    border-radius: 1.563rem;
-    width: 3.75rem;
-    height: 1.875rem;
-  }
-
-  .heading #poster img{
-    width: 13.75rem;
-    height: 4.063rem;
-  }
-
-  #book-figure{
-    margin-top: 10%;
-    margin-left: 15%;
-  }
-
-  .book-grid h3{
-    margin-top:3%
-  }
-
-  #prices{
-    margin-top: 2%;
-  }
-
-  .searchbar{
+  
+.content {
   position: relative;
-  border-radius: 2.5rem;
-  border: 0.063rem solid black;
-  background: white;
-  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
-  width: 50rem;
-  height: 3.125rem;
-  margin-top:1.25rem;
-  margin-right:1.563rem;
-  }
-
-  /* header article label{
-    display:none;
-  } */
-
-  nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around; 
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #fff;
-  }
-  /* nav li{
-    display: flex;
-    width: 10rem;
-    height: 10.25rem;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    border: radius 1.563rem;;
-    text-align: center;
-    font-family: Inter;
-    font-size: 1.688rem;
-    font-weight: 700;
-
-  } */
-
-  .search-pop-out {
-    display: none;
-    position: fixed;
-    background-color:#fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 58.75rem;
-    height:28.125rem ;
-    border-radius:1.563rem;
-    z-index: 999;
-  }
-  
-  /* Top-left corner */
-  #book-name {
-    position: absolute;
-    top: 6.25rem;
-    left: 6.25rem;
-  }
-  
-  /* Top-right corner */
-  #book-categories {
-    position: absolute;
-    top: 6.25rem;
-    right: 6.25rem;
-  }
-  
-  /* Bottom-left corner */
-  #rating {
-    position: absolute;
-    bottom: 6.25rem;
-    left: 6.25rem;
-  }
-  
-  /* Bottom-right corner */
-  #price {
-    position: absolute;
-    bottom: 6.25rem;
-    right: 6.25rem;
-  }
-
-  #submit-btn{
-    position:absolute;
-    bottom:10%;
-    left:21.875rem;
-    background-color:#4D724D;
-    width:15.625rem;
-    height:1.875rem;
-  }
-
-  #book-name-label {
-    position: absolute;
-    top: 4.375rem;
-    left: 7.5rem;
-  }
-
-  #book-categories-label {
-    position: absolute;
-    top: 4.375rem;
-    right: 18.75rem;
-  }
-
-  #price-label {
-    position: absolute;
-    bottom: 8.438rem;
-    right: 17.5rem;
-  }
-
-  #rating-label {
-    position: absolute;
-    bottom: 8.438rem;
-    left: 7.5rem;
-  }
-
-  .search-pop-out h1{
-    padding-left: 5%;
-    padding-top: 2%;
-  }
-
-  .search-pop-out input,
-  .search-pop-out select{
-    width: 18.75rem;
-   height: 1.25rem;
-   border-radius:1.563rem;
-   background-color: #86AB87;
-   
-  }
-
-
-  .poster-1 {
-  margin-top: 3%;
-    margin-left:20%;
-    display: flex;
-    align-items: center; /* Center vertically within the article */
-    justify-content: center;
-    padding-left:15.625rem;
-    height:28.125rem;
-    border-radius:1.563rem;
-    
-
-    
-  }
-
-  
-  .content {
-    flex: 1; /* Take up half of the available space */
-    padding: 1.25rem; 
-    color:white;
-    max-width: 18.75rem;
-    
-  }
-  
-  figure {
-    flex: 1; /* Take up the other half of the available space */
-  }
-  
-  figure img {
-    max-width: 100%; 
-  }
-
-  .content button{
-display: flex;
-flex-direction: column;
-justify-content: center;
-color: #4D724D;
-text-align: justify;
-border-radius:1.563rem;
-height: 2.188rem;
-border-color:white;
-
-  }
-
-  .poster-2{
-    position: relative;
+  width: 45%;
+  line-height: 1.5;
+  margin-bottom: 10%;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & h1{
     width: 100%;
-    /* overflow: hidden; */
-    
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  & p{
+    width:85%;
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
   
-  .bolomj{
-    position:absolute;
-    bottom:40%;
-    left:25%;
-    border-radius: 3.75rem;
-    padding-top: 0.625rem;
-    background: rgba(77, 114, 77, 0.70);
-    width: 15rem;
-    height: 18.75rem;
-    color:white;
-    text-align: center;
-    line-height: 2;
-    }
+  
+  
+  
+}
 
-  .poster-2 img{
-      width:100%;
-      max-width: 100%;
-      border-radius: 1.563rem;
-    }
+figure {
+  flex: 1; /* Take up the other half of the available space */
+}
+
+figure img {
+  max-width: 100%; 
+}
+
+.content button{
+position: absolute;
+right: 0;
+font-weight: 500;
+color:#4D724D;
+text-align: center;
+border-radius:1rem;
+height: 2.188rem;
+background-color:white;
+border: none;
+outline: none;
+width: 9rem;
+margin-right: 15%;
+
+}
+
+.tsagaan-huree{
+  background-color: white;
+  width: 100%;
+  height: 8rem;
+  position: absolute;
+  bottom: -30px;
+  z-index: -10;
+  border-radius: 0 0 4rem 4rem;
+}
+.poster-2{
+  z-index: -18;
+  position: relative;
+  width: 100%;
+  
+  & img{
+    width: 100%;
+    border-radius: 0 0 4rem 4rem;
+  }
+  
+  
+}
+
+.bolomj{
+  position:absolute;
+  bottom:30%;
+  left:20%;
+  border-radius: 2rem;
+  padding-top: 0.625rem;
+  background: rgba(77, 114, 77, 0.70);
+  width:25%;
+  height: 18.75rem;
+  color:white;
+  text-align: center;
+  line-height: 2;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: justify;
+  & h1{
+    width: 90%;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 2rem;
+  }
+  
+  }
+
+  
     /* .white{
       height:6.25rem;
       background-color: #9c9c9c;
@@ -1037,46 +270,8 @@ border-color:white;
       border-radius: 2.5rem;
     }
 
-    footer{
-      width: 100%;
-      background-color: #86AB87;
-      color:white;
-    }
-
-    footer #by-contact a{
-      margin-left: 15%;
-      text-decoration: none;
-      color: white;
-    }
-
-    footer h3{
-      margin-left: 10%;
-      padding-top: 5%;
-    }
-    #by-contact{
-      margin-left:10%;
-      margin-top: 3%;
-    }
-
-    .icons-container{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 3%;
-    }
-
-    footer p {
-      width: 100%;
-      height: 3rem;
-      background-color: #4D724D;
-      text-align: center;
-      padding-top: auto;
-  }
-
-  s {
-    color:gray;
-    font-size: 0.75rem;
-  }
+    
+  
 
 
   .sale-indicator {
