@@ -2,6 +2,7 @@
 const leftArrow = document.getElementById('saving-book-arrow-left');
 const rightArrow = document.getElementById('saving-book-arrow-right');
 const bookContainers = document.querySelectorAll('.book-container-saving');
+
 let currentPosition = 0;
 const totalContainers = bookContainers.length;
 
@@ -19,6 +20,10 @@ function showDivs() {
         }
     });
 }
+
+
+
+
 
 
 
