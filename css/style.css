@@ -1,3 +1,640 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white-color);
+  color: var(--white-color);
+
+  &::placeholder {
+    color: var(--white-color);
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* Styles specific to mobile (vertical) view */
+ 
+  header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0 0 2rem 2rem;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 0.3rem;
+      padding-right: 0.5rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 5rem;
+      }
+      & .search-bar-all{
+        margin-left: 5px;
+        margin-top: 10px;
+        padding: 0 2%;
+        display: inline-block;
+        width: 45%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 1rem;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+        font-size: 8px;
+        position: relative;
+        justify-content: center;
+        & #searchbar {
+          position: absolute;
+          outline: none;
+          left: 10px;
+          width: 80%;
+          padding-left: 5px;
+          font-size: 8px;
+          height: 2.5rem;
+          border: none;
+          padding-bottom: 22px;
+        }
+        & svg{
+          position: absolute;
+          padding-bottom: 0;
+          left: 87%;
+          width: 16px;
+          height: 16px;
+          font-size: 0px;
+          display:inline-block;
+          
+        }
+      }
+      
+  
+      & .svg-all {
+        margin-top: 10px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          
+          border-radius: 0.8rem;
+        margin-left: 10px;
+        width: 1.7rem;
+        height: 1rem;
+        background-color: white;
+        padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+            padding-top: 3px;
+          }
+        }
+      }
+  
+      & .svg-container {
+        border-radius: 0.8rem;
+        margin-left: 10px;
+        width: 1.7rem;
+        height: 1rem;
+        background-color: white;
+        padding-bottom: 5px;
+  
+        & #cart {
+          padding-left: 6px;
+          width: 1rem;
+          padding-top: 5px;
+        }
+  
+        & #profile {
+          padding-left: 2px;
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav { 
+    display: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+  }
+  
+  
+  
+ 
+  
+
+
+
+/* Mobile (Horizontal) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* Styles specific to mobile (horizontal) view */
+  header {
+    padding-bottom: 20px;
+    border-radius: 0 0 3rem 3rem;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 6rem;
+      }
+      & .search-bar-all{
+        margin-top: 15px;
+        width: 45%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 1.7rem;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+       
+        position: relative;
+        justify-content: center;
+        & #searchbar {
+       
+          position: absolute;
+          outline: none;
+          left: 5px;
+          width: 80%;
+          padding-left: 12px;
+          font-size: 14px;
+          height: 2.5rem;
+          border: none;
+          padding-bottom: 13px;
+          
+        }
+        & svg{
+          position: absolute;
+          height: 28px;
+          left: 84%;
+          width: 25px;
+          padding-left: 2px;
+          display:inline-block;
+        }
+    }
+  
+      & .svg-all {
+        margin-top: 15px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          
+          border-radius: 3.5rem;
+          margin-left: 10px;
+          width: 2.3rem;
+          height: 1.5rem;
+          background-color: white;
+          padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+            padding-top: 3px;
+          }
+        }
+      }
+  
+      & .svg-container {
+        border-radius: 3.5rem;
+        margin-left: 10px;
+        width: 2.3rem;
+        height: 1.5rem;
+        background-color: white;
+        
+        padding-bottom: 5px;
+        
+        & #cart {
+          padding-top: 6px;
+          padding-left: 8px;
+          width: 22px;
+          
+        }
+  
+        & #profile {
+          padding-left: 3px;
+          width: 29px;
+         
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+}
+
+
+
+/* Computer Screen Position 1 */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding-bottom: 20px;
+    border-radius: 0 0 4rem 4rem;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 9rem;
+      }
+      & .search-bar-all{
+        margin-top: 10px;
+        width: 50%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 1.8rem;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+        position: relative;
+        justify-content: center;
+      & #searchbar {
+        position: absolute;
+        outline: none;
+        left: 20px;
+        width: 87%;
+        padding-left: 5px;
+        font-size: 15px;
+        height: 2.5rem;
+        border: none;
+        padding-bottom: 8px;
+      }
+      & svg{
+        position: absolute;
+        padding-bottom: 0;
+        
+        left: 90%;
+        width: 25px;
+        height: 30px;
+        font-size: 0px;
+        display:inline-block;
+        
+      }
+    }
+      & .svg-all {
+        margin-top: 10px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          
+          border-radius: 3.5rem;
+          margin-left: 15px;
+          
+          width:2.8rem;
+          height: 1.8rem;
+          background-color: white;
+          padding-bottom: 5px;
+          & #toggle{
+            padding-left: 1px;
+            padding-top: 2px;
+            width: 45px;
+            background-color: none;
+          }
+        }
+        & svg{
+        
+        left: 70%;
+        width: 27px;
+        padding-left: 2px;
+        display:inline-block;
+      }
+      }
+  
+      & .svg-container {
+
+        border-radius: 3.5rem;
+        margin-left: 15px;
+        width:2.8rem;
+        height: 1.8rem;
+        background-color: white;
+        
+        padding-bottom: 5px;
+        
+        & #cart {
+          padding-top: 6px;
+          padding-left: 8px;
+          width: 30px;
+        }
+  
+        & #profile {
+          padding-left: 5px;
+          width: 35px;
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-top: 30px;
+    display: none;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    
+  
+    & ul {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 25%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+  #exchange-li a{
+    background-color: yellowgreen;
+    
+  }
+}
+
+
+
+/* Computer Screen Position 2 */
+@media only screen and (min-width: 1024px) {
+  /* Styles specific to screen position 2 */
+  header {
+    padding-bottom: 20px;
+    border-radius: 0 0 4rem 4rem;
+    width: 100%;
+    background: #4D724D;
+    box-shadow: 0px 4px 78px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Arial';
+  
+    & #essentials-navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      
+      & img {
+        display: inline-block;
+        padding-top: 0.8rem;
+        width: 14rem;
+      }
+      & .search-bar-all{
+        margin-top: 10px;
+        width: 50%; /* Adjust based on the remaining space */
+        max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
+        height: 2.5rem;
+        font-size: 18px;
+        flex-shrink: 0;
+        border-radius: 2.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #4D724D;
+        position: relative;
+        justify-content: center;
+      & #searchbar {
+       
+        position: absolute;
+        outline: none;
+        left: 20px;
+        width: 90%;
+        padding-left: 10px;
+        font-size: 18px;
+        height: 2.5rem;
+        border: none;
+
+        
+      }
+      & svg{
+        position: absolute;
+        height: 37px;
+        left: 92%;
+        width: 32px;
+        
+        display:inline-block;
+        padding-right: 5px;
+      }
+    }
+  
+      & .svg-all {
+        margin-top: 10px;
+        
+        display: flex;
+        & .svg-container-toggle {
+          display: none;
+          border-radius: 3.5rem;
+          margin-left: 30px;
+          width: 4rem;
+          height: 2.5rem;
+          background-color: white;
+          padding-bottom: 5px;
+          & #toggle{
+            padding-left: 2px;
+          }
+        }
+      }
+  
+      & .svg-container {
+        border-radius: 3.5rem;
+        margin-left: 20px;
+        width: 4rem;
+        height: 2.5rem;
+        background-color: white;
+        
+        padding-bottom: 5px;
+        
+        & #cart {
+          padding-top: 8px;
+          padding-left: 15px;
+          width: 2rem;
+        }
+  
+        & #profile {
+          padding-top: 2px;
+          padding-left: 11px;
+          width: 2.5rem;
+        }
+      }
+    }
+  }
+  
+  /* Icon styles */
+  .icons svg {
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 100%;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    padding-bottom: 10px;
+    
+    
+  
+    & ul {
+      display: flex;
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      justify-content: center; /* Center the list items */
+  
+      & li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        margin: 0 10%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & li:not(:last-child) {
+        margin-right: 50%; /* Adjust the percentage to create space between list items */
+      }
+  
+      & a {
+        text-decoration: none;
+        color: inherit; /* Inherit parent color */
+      }
+    }
+  }
+  .active{
+    background-color: #86AB87;;
+    border-radius: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
 
 *{
   font-family: Arial, Helvetica, sans-serif;
@@ -8,19 +645,19 @@ body{
   padding:0;
 }
 
-  .heading {
+  /* .heading {
     display:flex;
     justify-content: space-between;
-  }
+  } */
 
-  header {
+  /* header {
     padding-top:1.875rem;
     padding-left:1%;
     padding-right:1%;
     background-color: hsl(120, 19%, 37%);
     border-radius: 0 0 1.563rem 1.563rem;
 
-  }
+  } */
   .icons svg{
     background-color: white;
     margin-right: 1.875rem;
@@ -30,25 +667,39 @@ body{
     height: 1.875rem;
   }
 
-  .heading figure img{
+  .heading #poster img{
     width: 13.75rem;
     height: 4.063rem;
   }
 
-  .searchBar{
-border-radius: 2.5rem;
-border: 0.063rem solid black;
-background: white;
-box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
-width: 50rem;
-height: 3.125rem;
-margin-top:1.25rem;
-margin-right:1.563rem;
+  #book-figure{
+    margin-top: 10%;
+    margin-left: 15%;
   }
 
-  header article label{
-    display:none;
+  .book-grid h3{
+    margin-top:3%
   }
+
+  #prices{
+    margin-top: 2%;
+  }
+
+  .searchbar{
+  position: relative;
+  border-radius: 2.5rem;
+  border: 0.063rem solid black;
+  background: white;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  width: 50rem;
+  height: 3.125rem;
+  margin-top:1.25rem;
+  margin-right:1.563rem;
+  }
+
+  /* header article label{
+    display:none;
+  } */
 
   nav ul{
     list-style: none;
@@ -62,7 +713,7 @@ margin-right:1.563rem;
     text-decoration: none;
     color: #fff;
   }
-  nav li{
+  /* nav li{
     display: flex;
     width: 10rem;
     height: 10.25rem;
@@ -75,16 +726,19 @@ margin-right:1.563rem;
     font-size: 1.688rem;
     font-weight: 700;
 
-  }
+  } */
 
   .search-pop-out {
-    position: relative;
-    background-color: #fff;
+    display: none;
+    position: fixed;
+    background-color:#fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 58.75rem;
     height:28.125rem ;
     border-radius:1.563rem;
-    margin-left:13%;
-    display:none;
+    z-index: 999;
   }
   
   /* Top-left corner */
@@ -164,10 +818,11 @@ margin-right:1.563rem;
 
 
   .poster-1 {
-    margin-right:5%;
-    margin-left:5%;
+  margin-top: 3%;
+    margin-left:20%;
     display: flex;
     align-items: center; /* Center vertically within the article */
+    justify-content: center;
     padding-left:15.625rem;
     height:28.125rem;
     border-radius:1.563rem;
@@ -239,20 +894,23 @@ border-color:white;
     } */
 
     .home-page-book-header {
-        margin-left:11.25rem;
-        margin-top: 15.625rem;
+        /* margin-left:11.25rem;
+        margin-top: 15.625rem; */
+        text-align: center;
+        margin: 2rem 0rem;
     }
 
-    /* bugdend ni hamaaraltai */
-    .book-container{
-      display: flex;
+     /* hemnelt ondortei nomnuud */
+    .book-container-saving{
+      display: none;
       justify-content: center;
       align-items: center;
       min-width: 90%;
       width: 90%;
+      transition: opacity 1s;
     }
 
-/* hemnelt ondortei nomnuud */
+
 
     .hemnelt_ondertei_nomnuud{
       display: flex;
@@ -261,7 +919,7 @@ border-color:white;
       margin-top: 5%;
     }
 
-    .hemnelt_ondertei_nomnuud #book-grid{
+    .hemnelt_ondertei_nomnuud .book-grid{
       position:relative;
       width: 16.25rem;
       height: 25rem;
@@ -273,17 +931,27 @@ border-color:white;
       background-color: #4D724D;
     }
 
-    /* shineer nemegdsen nomnuud*/
+    
 
-    .shineer_nemegdsen_nomnuud{
+    /* Ondor unelgeetei nomnuud*/
+
+    .book-container-high-rate{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      min-width: 90%;
+      width: 90%;
+      transition: opacity 1s;
+    }
+
+    .ondor_unelgeetei_nomnuud{
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 5%;
     }
 
-    .shineer_nemegdsen_nomnuud #book-grid{
-      position:relative;
+    .ondor_unelgeetei_nomnuud .book-grid{
       width: 16.25rem;
       height: 25rem;
       margin-right:1.875rem;
@@ -294,25 +962,40 @@ border-color:white;
       background-color: #4D724D;
     }
 
-/* ondor unelgeetei nomnuud */
+    
 
-.ondor_unelgeetei_nomnuud{
+/* Shineer nemegdsen nomnuud */
+
+.book-container-new{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-width: 90%;
+  width: 90%;
+  transition: opacity 1s;
+}
+
+.shineer_nemegdsen_nomnuud{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5%;
 }
 
-    .ondor_unelgeetei_nomnuud #book-grid{
-      width: 16.25rem;
-      height: 25rem;
-      margin-right:1.875rem;
-      margin-left: 1.875rem;
-      text-align: center;
-      color:white;
-      border-radius: 1.875rem;
-      background-color: #4D724D;
-    }
+.shineer_nemegdsen_nomnuud .book-grid{
+  position:relative;
+  width: 16.25rem;
+  height: 25rem;
+  margin-right:1.875rem;
+  margin-left: 1.875rem;
+  text-align: center;
+  color:white;
+  border-radius: 1.875rem;
+  background-color: #4D724D;
+}
+
+
+   
 
 
 
@@ -397,16 +1080,19 @@ border-color:white;
 
 
   .sale-indicator {
-    width: 5rem;
-    height: 5rem; 
-    background-color: #FBE38B; 
-    border-radius: 50%; 
-    position: absolute;
-    top:-3.125rem;
-    left:-3.125rem;
-    z-index: 1;
-    color: #8DB48E;
-}
+      width: 5rem;
+      height: 5rem;
+      background-color: #FBE38B;
+      border-radius: 50%;
+      position: absolute;
+      top: -10%;
+      left: -20%;
+      z-index: 1;
+      color: #8DB48E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
 section article figure{
   max-width:11.25rem;
@@ -418,5 +1104,59 @@ section article figure img{
   width:100%;
 }
 
-  
 
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .poster-1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0rem;
+  }
+  .book-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+   .book-grid {
+    margin: 16px !important;
+    width: 40%;
+  }
+  .mobile-child {
+    display: none;
+  }
+
+  #svg-container {
+    margin-left: -32px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .poster-1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem;
+  }
+  .book-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0rem;
+  }
+  .book-grid {
+    margin: 16px !important;
+    width: 150px !important;
+    height: 250px !important;
+  }
+  .mobile-child {
+    display: none;
+  }
+  h1 {
+    font-size: 18px;
+  }
+
+  #svg-container {
+    margin-left: -48px !important;
+  }
+}
