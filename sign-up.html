@@ -1,83 +1,139 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
     <head>
-        <link rel="stylesheet" href=" css/footer.css">
-        <link rel="stylesheet" href=" css/sign_up.css">
-        <link rel="stylesheet" href=" css/header.css">
+        <link rel="stylesheet" type="text/css" href=" css/sign_up.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/search-pop-up.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Ном худалдааны вебсайт">
         <meta name="keywords" content="Ном, ном худалдаа, ном солилцоо">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <meta name="author" content="Grenom">
-
         <title>Grenom-sign up</title>
     </head>
-    <body>
-        <header>
-            <div id="essentials-navbar">
-                <img src="pictures/logo.png" alt="Logo" >
+<body>
+    <header>
+        <div id="essentials-navbar">
+            <a href="index.html"><img src="pictures/logo.png" alt="Logo" ></a>
+            <div class="search-bar-all">
                 <input id="searchbar" class="searchbar" type="search" placeholder="Та хайх зүйлээ энд бичнэ үү.">
-                <div class="svg-all">
-                    <div class="svg-container-toggle">
-                        <svg id="toggle" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.395508" y="0.0820312" width="22.6508" height="16.5686" rx="8.28431" fill="white"/>
-                            <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>         
-                    </div>
-                    <div class="svg-container">
-                        <svg id="cart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
-                    </div>
-                    <div class="svg-container">
-                        <svg id="profile" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
-                    </div>
-                </div>
-                          
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.5649 32.5654L42.9997 43.0002" stroke="#4D724D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.5217 36.0435C28.6464 36.0435 36.0435 28.6464 36.0435 19.5217C36.0435 10.397 28.6464 3 19.5217 3C10.397 3 3 10.397 3 19.5217C3 28.6464 10.397 36.0435 19.5217 36.0435Z" stroke="#4D724D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Нүүр <br>хуудас</a></li>
-                    <li><a href="book-exchange.html">Ном <br>солилцоо</a></li>
-                    <li><a href="book-sale.html">Ном <br>худалдаа</a></li>
-                    <li><a href="Contact-us.html">Бидний <br>тухай</a></li>
-                </ul>
-            </nav>
-        </header>
-    <main class="flex-container">
-        <figure class="flex-item-left ">
-            <img src=" pictures/2-removebg-preview.png" alt="zurag" class="imgs2">
-        </figure>
-        <section class="forms" class="flex-item-right">
-            <form>
-                <h1>Бүртгүүлэх</h1><br><br><br><br>
-                    
-                      <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-5 -15 50 80" width="60"><g clip-rule="evenodd" fill="#4D724D" fill-rule="evenodd"><path d="m17 24c3.8675 0 7-3.1325 7-7s-3.1325-7-7-7-7 3.1325-7 7 3.1325 7 7 7zm5-7c0 2.7629-2.2371 5-5 5s-5-2.2371-5-5 2.2371-5 5-5 5 2.2371 5 5z"/><path d="m4 38v-5.6c0-4.256 8.6612-6.4 13-6.4 2.8862 0 7.6851.9487 10.5749 2.8368 2.0597-.557 4.3187-.8368 5.9251-.8368 1.8579 0 4.351.3742 6.4092 1.1307 1.0272.3777 2.0097.8733 2.753 1.5156.7486.6468 1.3378 1.5213 1.3378 2.6204v4.7333zm2-5.6c0-.3174.14556-.7514.76618-1.3154.6329-.5751 1.60704-1.1335 2.84064-1.6201 2.46918-.9739 5.46978-1.4645 7.39318-1.4645s4.924.4906 7.3932 1.4645c1.2336.4866 2.2077 1.045 2.8406 1.6201.6206.564.7662.998.7662 1.3154v3.6h-22zm23.3532-1.9308c1.5125-.3127 3.0302-.4692 4.1468-.4692 1.6465 0 3.9034.3405 5.7191 1.0079.9097.3344 1.6452.7281 2.1355 1.1518.4852.4192.6454.7873.6454 1.107v2.7333h-12v-3.6c0-.7009-.2349-1.3446-.6468-1.9308z"/><path d="m39 20.5c0 3.0387-2.4613 5.5-5.5 5.5s-5.5-2.4613-5.5-5.5c0-3.0388 2.4613-5.5 5.5-5.5s5.5 2.4612 5.5 5.5zm-5.5 3.5c1.9342 0 3.5-1.5658 3.5-3.5s-1.5658-3.5-3.5-3.5-3.5 1.5658-3.5 3.5 1.5658 3.5 3.5 3.5z"/></g></svg>
-
-                        <input type="text"placeholder="Овог" required><br>
-
-                        <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-5 -20 50 90" width="60"><g clip-rule="evenodd" fill="#4D724D"  fill-rule="evenodd"><path d="m24 24c5.525 0 10-4.475 10-10s-4.475-10-10-10-10 4.475-10 10 4.475 10 10 10zm8-10c0 4.4204-3.5796 8-8 8s-8-3.5796-8-8 3.5796-8 8-8 8 3.5796 8 8z"/><path d="m6 36c0-4.9653 11.9925-8 18-8s18 3.0347 18 8v6h-36zm2 0c0-.3709.22038-.9789 1.22348-1.7881.98072-.7912 2.44242-1.545 4.21432-2.1969 3.5423-1.3033 7.809-2.015 10.5622-2.015s7.0199.7117 10.5622 2.015c1.7719.6519 3.2336 1.4057 4.2143 2.1969 1.0031.8092 1.2235 1.4172 1.2235 1.7881v4h-32z"/></g></svg>
-
-                        <input type="text" placeholder="Нэр" required><br>
-
-                        <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="70" viewBox="-15 -18 60 70" width="70"><path d="m3.51089 2 3.63913.13169c.76651.02773 1.44674.51177 1.74051 1.23851l1.07603 2.66193c.25044.61946.18304 1.32624-.17963 1.88421l-1.37862 2.12116c.81623 1.1721 3.03639 3.9183 5.38719 5.5258l1.7529-1.0788c.4455-.2742.9789-.3556 1.483-.2264l3.4847.8936c.9268.2377 1.5513 1.1265 1.4781 2.1035l-.2237 2.9833c-.0786 1.0469-.9354 1.8684-1.9525 1.7502-13.42555-1.5611-21.29856-19.98873-16.30711-19.9887z" stroke="#4D724D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
-
-                        <input type="digits"placeholder="Утасны дугаар" required><br>
-
-                        <svg class="iconss" xmlns="http://www.w3.org/2000/svg" fill="none" height="70" viewBox="-15 -18 60 70" width="70"><g stroke="#4D724D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect height="11" rx="2" width="18" x="3" y="11"/><path d="m7 10.9999v-4.00002c0-2.76143 2.23858-5 5-5 2.7614 0 5 2.23857 5 5v4.00002"/></g></svg>
-
-                        <input type="password"  placeholder="Нууц үг" required>
-                        <svg class="iconsss" xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-15 -18 60 70" width="60"><g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m1 12s4-8 11-8 11 8 11 8"/><path d="m1 12s4 8 11 8 11-8 11-8"/><circle cx="12" cy="12" r="3"/></g></svg><br>
+            
+            <div class="svg-all">
+                <div class="svg-container-toggle">
+                    <svg id="toggle" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         
-                    <input type="checkbox"> Би нууцлалын бодлогыг хүлээн зөвшөөрч байна.<br><br>
-                    <input type="submit" value="Бүртгүүлэх"><br>
-                    <p><br><br>Аль хэдийн бүртгүүлсэн үү? <a href="log-in.html">Нэвтрэх</a></p><br><br>
-                    
+                        <path d="M7 5H16M7 8.5H16M7 12H16" stroke="#4D724D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>         
+                </div>
+                <div class="svg-container">
+                    <svg id="cart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512"><path fill="#4d724d" d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32l51.9 207.5C91 492 116.6 512 146 512h284c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32h-85.6L365.3 12.9c-6.1-11.7-20.6-16.3-32.4-10.2s-16.3 20.6-10.2 32.4L404.3 192H171.7l81.6-156.9zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16v-96c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+                </div>
+                <div class="svg-container">
+                    <svg id="profile" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#4d724d" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                </div>
+            </div>
+                      
+        </div>
+        <nav>
+            <ul>
+                <li ><a href="index.html">Нүүр <br>хуудас</a></li>
+                <li ><a href="book-exchange.html">Ном <br>солилцоо</a></li>
+                <li ><a href="book-sale.html">Ном <br>худалдаа</a></li>
+                <li ><a href="Contact-us.html">Бидний <br>тухай</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="search-pop-out">
+        <form id="filter-form">
+        <h1>Шүүлтүүр</h1>
+        <div class="all-filters">
+            <div id="ehnii-neg">
+                <div class="book-name-fil">
+                    <label for="bookname">Номын нэрээр:</label>
+                    <input type="text" name="bookname" id="bookname" >
+                </div>
+                <div class="book-cat">
+                    <label for="book-categories">Категориор:</label>
+                    <select id="book-categories" name="catergory-lists" >
+                        <option value="history">Түүх</option>
+                        <option value="politics">Улс төр</option>
+                        <option value="science">Шинжлэх ухаан</option>
+                        <option value="literature">Уран зохиол</option>
+                        <option value="bussines">Бизнес</option>
+                        <option value="computer">Компьютер</option>
+                        <option value="health">Эрүүл мэнд</option>
+                        <option value="manual">Гарын авлага</option>
+                        <option value="children">Хүүхдийн</option>
+                        <option value="philosophy">Филисофи</option>
+                        <option value="self-development">Хувь хүний хөгжил</option>
+                    </select>
+                </div>
+            </div>
+           
+           <div id="hoyrdahi">
+                <div class="rating">
+                    <label for="rating">Эдэлгээгээр:</label>
+                    <input type="range" id="rating" name="rating" min="1" max="10" >
+                </div>
+                <div class="price">
+                    <label for="price">Үнийн дүнгээр:</label>
+                    <input type="number" id="price" name="price" min="0" step="5000" >
+        
+                </div>
+           </div> 
+        </div>
+       
+          <input type="submit" id="submit-btn" value="Хайх" >
+        </form>
+    </section>
+    <main>
+            <img src=" pictures/2-removebg-preview.png" alt="sign up poster">
+        
+            <form>
+                <section>
+                <h1>Бүртгүүлэх</h1>
+                    <article id="inputs"> 
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-5 -15 50 80" width="60"><g clip-rule="evenodd" fill="#4D724D" fill-rule="evenodd"><path d="m17 24c3.8675 0 7-3.1325 7-7s-3.1325-7-7-7-7 3.1325-7 7 3.1325 7 7 7zm5-7c0 2.7629-2.2371 5-5 5s-5-2.2371-5-5 2.2371-5 5-5 5 2.2371 5 5z"/><path d="m4 38v-5.6c0-4.256 8.6612-6.4 13-6.4 2.8862 0 7.6851.9487 10.5749 2.8368 2.0597-.557 4.3187-.8368 5.9251-.8368 1.8579 0 4.351.3742 6.4092 1.1307 1.0272.3777 2.0097.8733 2.753 1.5156.7486.6468 1.3378 1.5213 1.3378 2.6204v4.7333zm2-5.6c0-.3174.14556-.7514.76618-1.3154.6329-.5751 1.60704-1.1335 2.84064-1.6201 2.46918-.9739 5.46978-1.4645 7.39318-1.4645s4.924.4906 7.3932 1.4645c1.2336.4866 2.2077 1.045 2.8406 1.6201.6206.564.7662.998.7662 1.3154v3.6h-22zm23.3532-1.9308c1.5125-.3127 3.0302-.4692 4.1468-.4692 1.6465 0 3.9034.3405 5.7191 1.0079.9097.3344 1.6452.7281 2.1355 1.1518.4852.4192.6454.7873.6454 1.107v2.7333h-12v-3.6c0-.7009-.2349-1.3446-.6468-1.9308z"/><path d="m39 20.5c0 3.0387-2.4613 5.5-5.5 5.5s-5.5-2.4613-5.5-5.5c0-3.0388 2.4613-5.5 5.5-5.5s5.5 2.4612 5.5 5.5zm-5.5 3.5c1.9342 0 3.5-1.5658 3.5-3.5s-1.5658-3.5-3.5-3.5-3.5 1.5658-3.5 3.5 1.5658 3.5 3.5 3.5z"/></g></svg>
+                        <input type="text" placeholder="  Овог" required>
+                        </div>
+                    </article>
+                    <article id="inputs">
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="60" viewBox="-5 -20 50 90" width="60"><g clip-rule="evenodd" fill="#4D724D"  fill-rule="evenodd"><path d="m24 24c5.525 0 10-4.475 10-10s-4.475-10-10-10-10 4.475-10 10 4.475 10 10 10zm8-10c0 4.4204-3.5796 8-8 8s-8-3.5796-8-8 3.5796-8 8-8 8 3.5796 8 8z"/><path d="m6 36c0-4.9653 11.9925-8 18-8s18 3.0347 18 8v6h-36zm2 0c0-.3709.22038-.9789 1.22348-1.7881.98072-.7912 2.44242-1.545 4.21432-2.1969 3.5423-1.3033 7.809-2.015 10.5622-2.015s7.0199.7117 10.5622 2.015c1.7719.6519 3.2336 1.4057 4.2143 2.1969 1.0031.8092 1.2235 1.4172 1.2235 1.7881v4h-32z"/></g></svg>
+                        <input type="text" placeholder="  Нэр" required>
+                        </div>
+                    </article>
+                    <article id="inputs">
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="70" viewBox="-15 -18 60 70" width="70"><path d="m3.51089 2 3.63913.13169c.76651.02773 1.44674.51177 1.74051 1.23851l1.07603 2.66193c.25044.61946.18304 1.32624-.17963 1.88421l-1.37862 2.12116c.81623 1.1721 3.03639 3.9183 5.38719 5.5258l1.7529-1.0788c.4455-.2742.9789-.3556 1.483-.2264l3.4847.8936c.9268.2377 1.5513 1.1265 1.4781 2.1035l-.2237 2.9833c-.0786 1.0469-.9354 1.8684-1.9525 1.7502-13.42555-1.5611-21.29856-19.98873-16.30711-19.9887z" stroke="#4D724D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+                        <input type="digits"placeholder="Утасны дугаар" required>
+                        </div>
+                    </article>
+                    <article id="inputs">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="70" viewBox="-15 -18 60 70" width="70"><g stroke="#4D724D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect height="11" rx="2" width="18" x="3" y="11"/><path d="m7 10.9999v-4.00002c0-2.76143 2.23858-5 5-5 2.7614 0 5 2.23857 5 5v4.00002"/></g></svg>
+                            <input type="password" placeholder="Нууц үг" required>
+                        </div>
+                        
+                    </article><br>
+                    <div>
+                    <input type="checkbox"> Би нууцлалын бодлогыг хүлээн зөвшөөрч байна.
+                    </div><br><br>
+                    <article id="submit">
+                    <input type="submit" value="Бүртгэл үүсгэх"><br><br><br><br>
+                    </article>
+                    <p><br><br><br>Аль хэдийн бүртгүүлсэн үү? <a href="log-in.html">Нэвтрэх</a></p>
+                </section>
             </form>
-        </section> 
     </main>
     <footer>
         <h3>Creative team in Mongolia</h3>
@@ -97,4 +153,23 @@
         <p>&copy; 2023 Grenom. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    var header=document.getElementsByTagName("header")[0];
+    var body=document.getElementsByTagName("main")[0];
+    var searchBar=document.getElementById("searchbar");
+    var searchPopOut = document.querySelector('.search-pop-out');
+    searchPopOut.style.visibility="hidden";
+    searchBar.addEventListener('click', function() {
+    searchPopOut.style.visibility = 'visible';
+    
+   
+    
+});       
+
+body.addEventListener('click', function() {
+    searchPopOut.style.visibility="hidden";
+    });     
+      
+
+</script>
 </html>

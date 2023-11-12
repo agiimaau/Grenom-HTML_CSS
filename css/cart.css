@@ -86,7 +86,7 @@
 
 
   
-  @media only screen and (min-width: 501px) and (max-width: 1023px) {
+  @media only screen and (min-width: 567px) and (max-width: 1023px) {
   
     .Cart-btn{
       margin-top: 40px;
@@ -159,7 +159,7 @@
       }
 }
   
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 566px) {
   
     .Cart-btn{
       color:white;
