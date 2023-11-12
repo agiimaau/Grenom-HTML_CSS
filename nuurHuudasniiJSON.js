@@ -2,7 +2,7 @@ const books = [
     {
         id: 1,
         topic: "saving",
-        image: "../Grenom-HTML_CSS/pictures/4bish4.jpg",
+        image: " pictures/4bish4.jpg",
         name: "4 биш 4",
         price: 20000,
         salePrice: 5000,
@@ -12,7 +12,7 @@ const books = [
     {
         id: 2,
         topic: "saving",
-        image: "../Grenom-HTML_CSS/pictures/harizm.jpg",
+        image: " pictures/harizm.jpg",
         name: "Харизм",
         price: 20000,
         salePrice: 5000,
@@ -22,7 +22,7 @@ const books = [
     {
         id: 3,
         topic: "saving",
-        image: "../Grenom-HTML_CSS/pictures/tsagaan boroo.jpg",
+        image: " pictures/tsagaan boroo.jpg",
         name: "Цагаан бороо",
         price: 20000,
         salePrice: 5000,
@@ -32,7 +32,7 @@ const books = [
     {
         id: 4,
         topic: "saving",
-        image: "../Grenom-HTML_CSS/pictures/ad uzegdeh zorig.jpg",
+        image: " pictures/ad uzegdeh zorig.jpg",
         name: "Ад үзэгдэх зориг",
         price: 20000,
         salePrice: 5000,
@@ -42,7 +42,7 @@ const books = [
     {
         id: 5,
         topic: "high-rate",
-        image: "../Grenom-HTML_CSS/pictures/4bish4.jpg",
+        image: " pictures/4bish4.jpg",
         name: "4 биш 4",
         price: 20000,
         wear: 8,
@@ -69,7 +69,7 @@ const books = [
     {
         id: 8,
         topic: "high-rate",
-        image: "../Grenom-HTML_CSS/pictures/ad uzegdeh zorig.jpg",
+        image: " pictures/ad uzegdeh zorig.jpg",
         name: "Ад үзэгдэх зориг",
         price: 20000,
         wear: 8,
@@ -88,7 +88,7 @@ const books = [
     {
         id: 10,
         topic: "new",
-        image: "../Grenom-HTML_CSS/pictures/harizm.jpg",
+        image: " pictures/harizm.jpg",
         name: "4 биш 4",
         price: 20000,
         wear: 8,
@@ -106,7 +106,7 @@ const books = [
     {
         id: 12,
         topic: "new",
-        image: "../Grenom-HTML_CSS/pictures/4bish4.jpg",
+        image: " pictures/4bish4.jpg",
         name: "Цагаан бороо",
         price: 20000,
         wear: 8,
