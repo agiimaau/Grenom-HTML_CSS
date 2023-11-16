@@ -1,572 +1,637 @@
-
 @media only screen and (max-width: 480px) {
-  .book-exchange{
-    & .filter{
+  .book-exchange {
+    & .filter {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-     
-      & h3{
-        color:#4D724D;
+
+      & h3 {
+        color: #4D724D;
         margin-right: 15px;
         font-weight: 400;
         display: inline-block;
 
-        
+
       }
-      & .filter-names{
+
+      & .filter-names {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        & button{
+
+        & button {
           font-size: 10px;
           background-color: #4D724D;
           border-radius: 10px;
-          border:#4D724D;
+          border: #4D724D;
           color: white;
           padding-left: 8px;
           padding-right: 8px;
-          margin-right:10px ;
+          margin-right: 10px;
           padding-top: 3px;
           padding-bottom: 2px;
-          & svg{
-            float:right;
-            cursor: pointer; 
+
+          & svg {
+            float: right;
+            cursor: pointer;
             margin-left: 10px;
-            
+
 
           }
         }
       }
-      
+
     }
+
     margin-top: 20px;
   }
-  .book-exchange-main{
-    & h3{
+
+  .book-exchange-main {
+    & h3 {
       display: flex;
       justify-content: center;
     }
   }
-  .book-exchange-button{
+
+  .book-exchange-button {
     margin-top: 20px;
-    color:white;
-    background-color: #86AB87;;
+    color: white;
+    background-color: #86AB87;
+    ;
     border-radius: 50px;
-    width:45%;
+    width: 45%;
     height: 50px;
     font-size: 13px;
-    border:none;
+    border: none;
     margin-bottom: 20px;
   }
-  .all-exchange-books{
+
+  .all-exchange-books {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5%;
   }
-  
-  .exchange-books{
+
+  .exchange-books {
     flex-wrap: wrap;
     padding-bottom: 10px;
     border-radius: 10px;
     display: inline-block;
-    color:white;
+    color: white;
     background-color: #4D724D;
     min-width: 30%;
     width: 300px;
     margin-bottom: 20px;
-    & .undsen-medeelel{
+
+    & .undsen-medeelel {
       display: flex;
-      & stars{
+
+      & stars {
         width: 20px;
       }
-      & p{
+
+      & p {
         color: #FBE38B;
         margin-top: 20px;
         font-size: 10px;
         margin-left: 26%;
       }
-      & .profile-pic{
+
+      & .profile-pic {
         width: 30px;
         border-radius: 50%;
         margin-top: 10px;
         margin-left: 20px;
         margin-bottom: 10px;
       }
-      & label{
+
+      & label {
         font-size: 10px;
         margin-top: 20px;
         margin-left: 8px;
       }
     }
-    & .nomnii-zurag{
-      margin-left:20px;
-      margin-right:10px;
+
+    & .nomnii-zurag {
+      margin-left: 20px;
+      margin-right: 10px;
       width: 80px;
 
     }
   }
 
-  .book-info-main{
+  .book-info-main {
     display: flex;
     justify-content: center;
-    
+
     font-weight: none;
     font-size: 8px;
-  
-    & .nomnii-medeelel{
-      white-space: normal; 
-      width:180px;
+
+    & .nomnii-medeelel {
+      white-space: normal;
+      width: 180px;
       margin-right: 20px;
-      & .tags{
+
+      & .tags {
         display: flex;
         justify-content: space-between;
-        
-        & .ehnii-tag{
-          
-          & h4{font-weight: 400;}
+
+        & .ehnii-tag {
+
+          & h4 {
+            font-weight: 400;
+          }
         }
-       
-    }
-      .ehnii-tag p,h4{
+
+      }
+
+      .ehnii-tag p,
+      h4 {
         line-height: 2;
       }
-      .hoyrdahi-tag p{
+
+      .hoyrdahi-tag p {
         line-height: 2;
       }
+
       .additional-info {
-        
+
         line-height: 1.5;
         word-wrap: break-word;
-        
+
       }
-      .book-exchange-request-button{
-        margin-top:10px;
+
+      .book-exchange-request-button {
+        margin-top: 10px;
         border-radius: 20px;
         padding: 2px;
         width: 180px;
-        color:#4D724D;
-        font-weight: 700;;
+        color: #4D724D;
+        font-weight: 700;
+        ;
         background-color: #FFF;
         border: none;
         font-size: 10px;
         margin-right: 10px;
       }
-      
-      
-    }
-   
-  }
-.styled-meter{
-  margin-left: 3px;
 
-}
-  
-  
-  
-.change-buttons {
-  margin-top: 0px;
+
+    }
+
+  }
+
+  .styled-meter {
+    margin-left: 3px;
+
+  }
+
+
+
+  .change-buttons {
+    margin-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-}
+  }
 
-.switch-btn {
+  .switch-btn {
     margin: 0 2px;
-}
+  }
 
-.switch-btn {
+  .switch-btn {
     background-color: #4d724d;
     color: white;
-    font-size: 10px ;
+    font-size: 10px;
     border: none;
     padding: 5px 8px;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  .switch-btn:hover {
+    background-color: #357535;
+  }
 }
 
-.switch-btn:hover {
-    background-color: #357535;
-}
-}
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
-  .book-exchange{
-    & .filter{
+  .book-exchange {
+    & .filter {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-     
-      & h3{
-        color:#4D724D;
+
+      & h3 {
+        color: #4D724D;
         margin-right: 30px;
         font-weight: 400;
         display: inline-block;
 
-        
+
       }
-      & .filter-names{
+
+      & .filter-names {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        & button{
+
+        & button {
           background-color: #4D724D;
           border-radius: 10px;
-          border:#4D724D;
+          border: #4D724D;
           color: white;
           padding-left: 15px;
           padding-right: 15px;
-          margin-right:15px ;
+          margin-right: 15px;
           padding-top: 3px;
           padding-bottom: 3px;
-          & svg{
-            float:right;
-            cursor: pointer; 
+
+          & svg {
+            float: right;
+            cursor: pointer;
             margin-left: 15px;
 
           }
         }
       }
-      
+
     }
+
     margin-top: 40px;
   }
-  .book-exchange-main{
-    & h3{
+
+  .book-exchange-main {
+    & h3 {
       display: flex;
       justify-content: center;
     }
   }
-  .book-exchange-button{
+
+  .book-exchange-button {
     margin-top: 40px;
-    color:white;
-    background-color: #86AB87;;
+    color: white;
+    background-color: #86AB87;
+    ;
     border-radius: 50px;
-    width:45%;
+    width: 45%;
     height: 60px;
     font-size: 15px;
-    border:none;
+    border: none;
     margin-bottom: 40px;
   }
-  .all-exchange-books{
+
+  .all-exchange-books {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5%;
   }
-  
-  .exchange-books{
+
+  .exchange-books {
     flex-wrap: wrap;
     padding-bottom: 20px;
     border-radius: 20px;
     display: inline-block;
-    color:white;
+    color: white;
     background-color: #4D724D;
     min-width: 30%;
     width: 500px;
     margin-bottom: 30px;
-    & .undsen-medeelel{
+
+    & .undsen-medeelel {
       display: flex;
-      & p{
+
+      & p {
         color: #FBE38B;
         margin-top: 30px;
         margin-left: 30%;
       }
-      & .profile-pic{
+
+      & .profile-pic {
         width: 50px;
         border-radius: 50%;
         margin-top: 20px;
         margin-left: 20px;
         margin-bottom: 20px;
       }
-      & label{
+
+      & label {
         margin-top: 30px;
         margin-left: 20px;
       }
     }
-    & .nomnii-zurag{
-      margin-left:20px;
-      margin-right:20px;
+
+    & .nomnii-zurag {
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 
-  .book-info-main{
+  .book-info-main {
     display: flex;
     justify-content: center;
     font-weight: none;
     font-size: 10px;
-  
-    & .nomnii-medeelel{
-      white-space: normal; 
-      width:320px;
-      & .tags{
+
+    & .nomnii-medeelel {
+      white-space: normal;
+      width: 320px;
+
+      & .tags {
         display: flex;
         justify-content: space-between;
-        
-        & .ehnii-tag{
-          
-          & h4{font-weight: 400;}
+
+        & .ehnii-tag {
+
+          & h4 {
+            font-weight: 400;
+          }
         }
-       
-    }
-      .ehnii-tag p,h4{
+
+      }
+
+      .ehnii-tag p,
+      h4 {
         line-height: 2;
       }
-      .hoyrdahi-tag p{
+
+      .hoyrdahi-tag p {
         line-height: 2;
       }
+
       .additional-info {
-        
+
         line-height: 1.5;
         word-wrap: break-word;
-        
+
       }
-      .book-exchange-request-button{
-        margin-top:20px;
+
+      .book-exchange-request-button {
+        margin-top: 20px;
         border-radius: 20px;
         padding: 4px;
         width: 320px;
-        color:#4D724D;
-        font-weight: 700;;
+        color: #4D724D;
+        font-weight: 700;
+        ;
         background-color: #FFF;
         border: none;
       }
-      
-      
-    }
-   
-  }
-.styled-meter{
-  margin-left: 5px;
 
-}
-  
-  
-  
-.change-buttons {
-  margin-top: 30px;
+
+    }
+
+  }
+
+  .styled-meter {
+    margin-left: 5px;
+
+  }
+
+
+
+  .change-buttons {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-}
+  }
 
-.switch-btn {
+  .switch-btn {
     margin: 0 5px;
-}
+  }
 
-.switch-btn {
+  .switch-btn {
     background-color: #4d724d;
     color: white;
-    font-size: large ;
+    font-size: large;
     border: none;
     padding: 12px 17px;
     border-radius: 50%;
     cursor: pointer;
-}
+  }
 
-.switch-btn:hover {
+  .switch-btn:hover {
     background-color: #357535;
-}
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  .book-exchange{
-    & .filter{
+  .book-exchange {
+    & .filter {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-     
-      & h3{
-        color:#4D724D;
+
+      & h3 {
+        color: #4D724D;
         margin-right: 30px;
         font-weight: 400;
         display: inline-block;
         font-size: 30px;
-        
+
       }
-      & .filter-names{
+
+      & .filter-names {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        & button{
+
+        & button {
           background-color: #4D724D;
           border-radius: 15px;
-          border:#4D724D;
+          border: #4D724D;
           font-size: 18px;
           color: white;
           padding-left: 15px;
           padding-right: 15px;
-          margin-right:15px ;
+          margin-right: 15px;
           padding-top: 3px;
           padding-bottom: 3px;
-          & svg{
+
+          & svg {
             padding-top: 2px;
-            float:right;
-            cursor: pointer; 
+            float: right;
+            cursor: pointer;
             margin-left: 15px;
 
           }
         }
       }
-      
+
     }
+
     margin-top: 40px;
   }
-  .book-exchange-main{
-    & h3{
+
+  .book-exchange-main {
+    & h3 {
       display: flex;
       justify-content: center;
     }
   }
-  .book-exchange-button{
+
+  .book-exchange-button {
     margin-top: 40px;
-    color:white;
-    background-color: #86AB87;;
+    color: white;
+    background-color: #86AB87;
+    ;
     border-radius: 50px;
-    width:50%;
+    width: 50%;
     height: 70px;
     font-size: 20px;
-    border:none;
+    border: none;
     margin-bottom: 40px;
   }
-  .all-exchange-books{
+
+  .all-exchange-books {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5%;
   }
-  
-  .exchange-books{
+
+  .exchange-books {
     flex-wrap: wrap;
     padding-bottom: 20px;
     border-radius: 25px;
     display: inline-block;
-    color:white;
+    color: white;
     background-color: #4D724D;
     min-width: 30%;
     width: 610px;
     margin-bottom: 30px;
-    & .undsen-medeelel{
+
+    & .undsen-medeelel {
       display: flex;
-      & p{
+
+      & p {
         color: #FBE38B;
         margin-top: 30px;
         margin-left: 36%;
         font-size: 20px;
-        
+
       }
-      & .profile-pic{
+
+      & .profile-pic {
         width: 50px;
         border-radius: 50%;
         margin-top: 20px;
         margin-left: 20px;
         margin-bottom: 20px;
       }
-      & label{
+
+      & label {
         margin-top: 35px;
         margin-left: 20px;
-        font-size:18px ;
+        font-size: 18px;
       }
     }
-    & .nomnii-zurag{
-      margin-left:20px;
-      margin-right:40px;
+
+    & .nomnii-zurag {
+      margin-left: 20px;
+      margin-right: 40px;
       width: 145px;
     }
   }
 
-  .book-info-main{
+  .book-info-main {
     display: flex;
     justify-content: center;
     font-weight: none;
     font-size: 14px;
-  
-    & .nomnii-medeelel{
-      white-space: normal; 
-      width:360px;
-      & .tags{
+
+    & .nomnii-medeelel {
+      white-space: normal;
+      width: 360px;
+
+      & .tags {
         display: flex;
         justify-content: space-between;
-        
-        & .ehnii-tag{
-          
-          & h4{font-weight: 400;}
+
+        & .ehnii-tag {
+
+          & h4 {
+            font-weight: 400;
+          }
         }
-       
-    }
-      .ehnii-tag p,h4{
+
+      }
+
+      .ehnii-tag p,
+      h4 {
         line-height: 2;
       }
-      .hoyrdahi-tag p{
+
+      .hoyrdahi-tag p {
         line-height: 2;
       }
+
       .additional-info {
-        
+
         line-height: 1.5;
         word-wrap: break-word;
-        
+
       }
-      .book-exchange-request-button{
-        margin-top:20px;
+
+      .book-exchange-request-button {
+        margin-top: 20px;
         border-radius: 20px;
         padding: 8px;
         width: 360px;
-        color:#4D724D;
-        font-weight: 700;;
+        color: #4D724D;
+        font-weight: 700;
+        ;
         background-color: #FFF;
         border: none;
         font-size: 18px;
       }
-      
-      
-    }
-   
-  }
-.styled-meter{
-  margin-left: 5px;
 
-}
-  
-  
-  
-.change-buttons {
-  margin-top: 30px;
+
+    }
+
+  }
+
+  .styled-meter {
+    margin-left: 5px;
+
+  }
+
+
+
+  .change-buttons {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-}
+  }
 
-.switch-btn {
+  .switch-btn {
     margin: 0 5px;
-}
+  }
 
-.switch-btn {
+  .switch-btn {
     background-color: #4d724d;
     color: white;
-    font-size: large ;
+    font-size: large;
     border: none;
     padding: 16px 21px;
     border-radius: 50%;
     cursor: pointer;
-}
-.switch-btn:hover {
-  background-color: #357535;
-}
+  }
+
+  .switch-btn:hover {
+    background-color: #357535;
+  }
 
 
 }
-
-
-  
-  
-
- 

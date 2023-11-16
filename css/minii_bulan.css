@@ -166,6 +166,11 @@
             margin-left: 75%;
             cursor: pointer;
         }
+        & label{
+            font-size: 10px;
+            margin-top: 20px;
+            margin-left: 8px;
+          }
 
     }
 
@@ -176,6 +181,7 @@
         margin-left: 20px;
         margin-bottom: 20px;
     }
+
 
     main h1 {
         font-weight: bolder;
@@ -219,7 +225,7 @@
 
     .btn-ustgah {
 
-        background-color: #CE5858;
+        background-color: #cb6b6b;
         border-radius: 10px;
         padding: 10px;
         border: none;
@@ -292,7 +298,7 @@
         margin-bottom: 30px;
         margin-left: 46.5%;
         cursor: pointer;
-    }
+}
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1023px) {
@@ -517,7 +523,7 @@
 
     & .btn-ustgah {
 
-        background-color: #CE5858;
+        background-color: #cb6b6b;
         border-radius: 10px;
         padding: 8px;
         border: none;
@@ -816,7 +822,7 @@
 
     .btn-ustgah {
 
-        background-color: #CE5858;
+        background-color: #cb6b6b;
         border-radius: 10px;
         padding: 10px;
         border: none;
@@ -1113,7 +1119,7 @@
 
     .btn-ustgah {
 
-        background-color: #CE5858;
+        background-color: #cb6b6b;
         border-radius: 10px;
         padding: 8px;
         border: none;
