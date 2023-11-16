@@ -7,427 +7,1535 @@ body{
   margin:0;
   padding:0;
 }
-
-.poster-1 {
-  margin-top: 2%;
- 
-  display: flex;
-  align-items: center; /* Center vertically within the article */
-  justify-content: center;
-  padding-left:15.625rem;
-  height:28.125rem;
-  border-radius:1.563rem;
-}
-
-  
-.content {
-  position: relative;
-  width: 45%;
-  line-height: 1.5;
-  margin-bottom: 10%;
-  color:white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  & h1{
-    width: 100%;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  & p{
-    width:85%;
-    text-align: justify;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  
-  
-  
-}
-
-figure {
-  flex: 1; /* Take up the other half of the available space */
-}
-
-figure img {
-  max-width: 100%; 
-}
-
-.content button{
-position: absolute;
-right: 0;
-font-weight: 500;
-color:#4D724D;
-text-align: center;
-border-radius:1rem;
-height: 2.188rem;
-background-color:white;
-border: none;
-outline: none;
-width: 9rem;
-margin-right: 15%;
-
-}
-
-.tsagaan-huree{
-  background-color: white;
-  width: 100%;
-  height: 8rem;
-  position: absolute;
-  bottom: 60px;
-  z-index: -10;
-  border-radius: 0 0 4rem 4rem;
-}
-.poster-2{
-  z-index: -18;
-  position: relative;
-  width: 100%;
- 
-  
-  & img{
-    width: 100%;
-    border-radius: 0 0 4rem 4rem;
-    box-shadow: 0px 6px 100px 10px rgba(0, 0, 0, 0.25);
-  }
-  
-  
-}
-
-.bolomj{
-  position:absolute;
-  bottom:30%;
-  left:13%;
-  border-radius: 3rem;
-  padding-top: 0.625rem;
-  background: rgba(77, 114, 77, 0.70);
-  width:25%;
-  height: 25rem;
-  color:white;
-  text-align: center;
-  line-height: 2;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: justify;
-  & h1{
-    width: 90%;
-    font-weight: 600;
+@media only screen and (max-width: 480px) {
+  .poster-1 {
+    margin-top: 2%;
+    display: flex;
+    align-items: center; /* Center vertically within the article */
+    justify-content: center;
     text-align: center;
-    line-height: 1;
-    margin-top: 2.5rem;
-    font-size: 2.2rem;
-  }
-  & ul li{
-    font-size: 1.5rem;
+    padding-left:6.25rem;
+    height:28.125rem;
+    border-radius:1.563rem;
   }
   
-}
-#nogoon-chimeg{
-  
-  
-  position: absolute;
-  bottom:-15rem;
-  z-index: -10;
-  left: 0;
-
-  
-}
-
-  
-    /* .white{
-      height:6.25rem;
-      background-color: #9c9c9c;
-      border-radius:0 0 1.563rem 1.563rem;
-      margin-bot:12.5rem;
-    } */
-
-.home-page-book-header {
-  
-  
-  text-align: center;
-  
-}
-#hemnelt-undur-header{
-  display: flex;
-  margin-left: 15%;
-  margin-top: 8rem; 
-  justify-content: start;
-  text-align: center;
-  & svg{
-    width: 5rem;
-    margin-top: -2.5rem;
-    margin-left: 1rem;
     
-  }
-}
-
-     /* hemnelt ondortei nomnuud */
-.book-container-saving{
-  display: none;
-  justify-content: center;
-  align-items: center;
-  min-width: 90%;
-  width: 90%;
-  transition: opacity 1s;
-}
-
-
-
-.hemnelt_ondertei_nomnuud{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2%;
-}
-
-.hemnelt_ondertei_nomnuud .book-grid{
-  position:relative;
-  width: 16.25rem;
-  height: 25rem;
-  margin-right:1.875rem;
-  margin-left: 1.875rem;
-  text-align: center;
-  color:white;
-  border-radius: 1.875rem;
-  background-color: #4D724D;
-  & div figure img {
-    height: 4rem;
-  }
-}
-
-    
-
-    /* Ondor unelgeetei nomnuud*/
-
-    .book-container-high-rate{
-      display: none;
-      justify-content: center;
-      align-items: center;
-      min-width: 90%;
-      width: 90%;
-      transition: opacity 1s;
-    }
-
-    .ondor_unelgeetei_nomnuud{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
-
-    .ondor_unelgeetei_nomnuud .book-grid{
-      width: 16.25rem;
-      height: 25rem;
-      margin-right:1.875rem;
-      margin-left: 1.875rem;
-      text-align: center;
-      color:white;
-      border-radius: 1.875rem;
-      background-color: #4D724D;
-    }
-
-    
-
-/* Shineer nemegdsen nomnuud */
-
-.book-container-new{
-  display: none;
-  justify-content: center;
-  align-items: center;
-  min-width: 90%;
-  width: 90%;
-  transition: opacity 1s;
-}
-
-.shineer_nemegdsen_nomnuud{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1%;
-}
-
-.shineer_nemegdsen_nomnuud .book-grid{
-  position:relative;
-  width: 16.25rem;
-  height: 25rem;
-  margin-right:1.875rem;
-  margin-left: 1.875rem;
-  text-align: center;
-  color:white;
-  border-radius: 1.875rem;
-  background-color: #4D724D;
-}
-
-
-   
-
-
-
-    #svg-container{
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      width: 3.125rem;
-    }
-
-    #dots-3{
-      margin-left: 3%;
-      
-     }
-
-    .zaavar-zovlomj{
-      color:#4D724D;
-      text-align: center;
-      width: 80%;
-      height: 100%;
-      text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-      font-family: Inter;
-      font-size: 2rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-top: 2rem;
-      & h1{
-        margin-bottom: 3rem;
-      }
-      & iframe{
-        width: 90%;
-        border-radius: 2rem;
-        height: 40rem;
-      }
-
-    }
-
-    .tutorial-container{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 3%;
-      margin-bottom: 5%;
-    }
-
-    video{
-      width: 100%;
-      border-radius: 2.5rem;
-    }
-
-    
-  
-
-
-  .sale-indicator {
-      width: 5rem;
-      height: 5rem;
-      background-color: #FBE38B;
-      border-radius: 50%;
-      position: absolute;
-      top: -10%;
-      left: -20%;
-      z-index: 1;
-      color: #8DB48E;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-section article figure{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-section article figure img{
-  
-  height:14rem;
-  width:11rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-.book-grid{
-  & h3{
-    margin-bottom: 0.6rem;
-  }
-  & label{
-    margin-bottom: 50px;
-    margin-left: 1.3rem;
-    font-size: 1rem;
-  }
-  & meter{
-  margin-right: 0;
-  width: 4rem;
-
-  }
-  & svg{
-    margin-left: 0;
-    
-    
-  }
-}
-#prices{
-  font-size: 1rem;
-  & s{
-    color: rgb(196, 192, 192);
-  }
-  & p{
-    font-size: 1.3rem;
-  }
-}
-
-
-
-@media (min-width: 700px) and (max-width: 1024px) {
-  .poster-1 {
+  .content {
+    position: relative;
+    width: 45%;
+    line-height: 1.5;
+    margin-bottom: 10%;
+    color:white;
     display: flex;
-    justify-content: space-between;
-    padding-left: 0rem;
-  }
-  .book-container {
-    display: flex;
-    flex-flow: row wrap;
-  }
-   .book-grid {
-    margin: 16px !important;
-    width: 40%;
-  }
-  .mobile-child {
-    display: none;
-  }
-
-  #svg-container {
-    margin-left: -32px !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .poster-1 {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0rem;
     flex-direction: column;
-    align-items: center;
-    margin: 0rem;
+    justify-content: center;
+    & h1{
+      width: 100%;
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+    & p{
+      width:87%;
+      text-align: justify;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    
+    
+    
   }
-  .book-container {
+  
+  figure {
+    flex: 1; /* Take up the other half of the available space */
+  }
+  
+  figure img {
+    max-width: 100%; 
+  }
+  
+  .content button{
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+  color:#4D724D;
+  text-align: center;
+  border-radius:1rem;
+  height: 1.88rem;
+  background-color:white;
+  border: none;
+  outline: none;
+  width: 7rem;
+  margin-right: 15%;
+  
+  }
+  
+  .tsagaan-huree{
+    background-color: white;
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 10rem;
+    z-index: -10;
+    border-radius: 0 0 4rem 4rem;
+  }
+  .poster-2{
+    z-index: -18;
+    position: relative;
+    width: 100%;
+   
+    
+    & img{
+      width: 100%;
+      border-radius: 0 0 4rem 4rem;
+      box-shadow: 0px 6px 100px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    
+  }
+  
+  .bolomj{
+    position:absolute;
+    bottom:30%;
+    left:13%;
+    border-radius: 2.3rem;
+    padding-top: 0.625rem;
+    background: rgba(77, 114, 77, 0.70);
+    width:30%;
+    height: 18rem;
+    color:white;
+    text-align: center;
+    line-height: 2;
+    list-style: none;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 0rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+    & h1{
+      width: 90%;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1;
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+    }
+    & ul li{
+      font-size: 1rem;
+    }
+    
   }
-  .book-grid {
-    margin: 16px !important;
-    width: 150px !important;
-    height: 250px !important;
+  #nogoon-chimeg{
+    
+    width: 15rem;
+    position: absolute;
+    bottom:-15rem;
+    z-index: -10;
+    left: 0;
+  
+    
   }
-  .mobile-child {
+  
+    
+      /* .white{
+        height:6.25rem;
+        background-color: #9c9c9c;
+        border-radius:0 0 1.563rem 1.563rem;
+        margin-bot:12.5rem;
+      } */
+  
+  .home-page-book-header {
+    
+    
+    text-align: center;
+    
+  }
+  #hemnelt-undur-header{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 6rem; 
+    justify-content: start;
+    text-align: center;
+    font-size:0.8rem;
+    & svg{
+      width: 4rem;
+      margin-top: -2.5rem;
+      margin-left: 1rem;
+      
+    }
+  }
+  
+       /* hemnelt ondortei nomnuud */
+  .book-container-saving{
     display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
   }
-  h1 {
-    font-size: 18px;
+  
+  
+  
+  .hemnelt_ondertei_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3%;
   }
-
-  #svg-container {
-    margin-left: -48px !important;
+  
+  .hemnelt_ondertei_nomnuud .book-grid{
+    position:relative;
+    width: 13rem;
+    padding-bottom: 2rem;
+    margin-right:0.8rem;
+    margin-left: 0.8rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+    & div figure img {
+      height: 4rem;
+    }
+  }
+  
+      
+  
+      /* Ondor unelgeetei nomnuud*/
+  
+      .book-container-high-rate{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        min-width: 90%;
+        width: 90%;
+        transition: opacity 1s;
+      }
+  
+      .ondor_unelgeetei_nomnuud{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+  
+      .ondor_unelgeetei_nomnuud .book-grid{
+        width: 12rem;
+        padding-bottom: 2rem;
+        margin-right:0.8rem;
+        margin-left: 0.8rem;
+        text-align: center;
+        color:white;
+        border-radius: 1.875rem;
+        background-color: #4D724D;
+      }
+  
+      
+  
+  /* Shineer nemegdsen nomnuud */
+  
+  .book-container-new{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  .shineer_nemegdsen_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+  }
+  
+  .shineer_nemegdsen_nomnuud .book-grid{
+    position:relative;
+    width: 12rem;
+    padding-bottom: 2rem;
+    margin-right:0.8rem;
+    margin-left: 0.8rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+  }
+  
+  
+     
+  
+  
+  
+      #svg-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.125rem;
+      }
+  
+      #dots-3{
+        margin-left: 3%;
+        
+       }
+  
+       
+      .zaavar-zovlomj{
+        position: relative;
+        color:#4D724D;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        font-family: Inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 2rem;
+        & h1{
+          margin-bottom: 3rem;
+        }
+        & iframe{
+          width: 85%;
+          border-radius: 2rem;
+          height: 30rem;
+        }
+        & svg{
+          width: 16rem;
+          position: absolute;
+          right: 0;
+          bottom:-16rem;
+          z-index: -10;
+  
+        }
+  
+      }
+  
+      .tutorial-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
+      }
+  
+      video{
+        width: 100%;
+        border-radius: 2rem;
+      }
+  
+      
+    
+  
+  
+    .sale-indicator {
+        width: 3rem;
+        height: 3rem;
+        background-color: #FBE38B;
+        border-radius: 50%;
+        position: absolute;
+        top: -5%;
+        left: -10%;
+        font-size: 0.7rem;
+        z-index: 1;
+        color: #8DB48E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+  section article figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section article figure img{
+    
+    height:11rem;
+    width:9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .book-grid{
+    & h3{
+      margin-bottom: 0.3rem;
+    }
+    & label{
+      margin-bottom: 50px;
+      margin-left: 1.3rem;
+      font-size: 0.7rem;
+    }
+    & meter{
+    margin-right: 0;
+    width: 3rem;
+  
+    }
+    & svg{
+      margin-left: 0;
+      font-size: 1rem;
+      
+      
+    }
+  }
+  #prices{
+    font-size: 1rem;
+    & s{
+      color: rgb(196, 192, 192);
+    }
+    & p{
+      font-size: 1.3rem;
+    }
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .poster-1 {
+    margin-top: 2%;
+    display: flex;
+    align-items: center; /* Center vertically within the article */
+    justify-content: center;
+    text-align: center;
+    padding-left:4rem;
+    height:22.125rem;
+    border-radius:1.563rem;
+  }
+  
+    
+  .content {
+    position: relative;
+    width: 45%;
+    line-height: 1.5;
+    margin-bottom: 7%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & h1{
+      width: 100%;
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+    & p{
+      width:87%;
+      text-align: justify;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    
+    
+    
+  }
+  
+  figure {
+    flex: 1; /* Take up the other half of the available space */
+  }
+  
+  figure img {
+    max-width: 100%; 
+  }
+  
+  .content button{
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+  color:#4D724D;
+  text-align: center;
+  border-radius:1rem;
+  height: 1.88rem;
+  background-color:white;
+  border: none;
+  outline: none;
+  width: 7rem;
+  margin-right: 15%;
+  
+  }
+  
+  .tsagaan-huree{
+    background-color: white;
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    bottom: 15rem;
+    z-index: -10;
+    border-radius: 0 0 3rem 3rem;
+  }
+  .poster-2{
+    z-index: -18;
+    position: relative;
+    width: 100%;
+   
+    
+    & img{
+      width: 100%;
+      border-radius: 0 0 4rem 4rem;
+      box-shadow: 0px 6px 100px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    
+  }
+  
+  .bolomj{
+    position:absolute;
+    bottom:30%;
+    left:13%;
+    border-radius: 2.3rem;
+    padding-top: 0.625rem;
+    background: rgba(77, 114, 77, 0.70);
+    width:30%;
+    height: 18rem;
+    color:white;
+    text-align: center;
+    line-height: 2;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+    & h1{
+      width: 90%;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1;
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+    }
+    & ul li{
+      font-size: 1rem;
+    }
+    
+  }
+  #nogoon-chimeg{
+    
+    width: 15rem;
+    position: absolute;
+    bottom:-15rem;
+    z-index: -10;
+    left: 0;
+  
+    
+  }
+  
+    
+      /* .white{
+        height:6.25rem;
+        background-color: #9c9c9c;
+        border-radius:0 0 1.563rem 1.563rem;
+        margin-bot:12.5rem;
+      } */
+  
+  .home-page-book-header {
+    
+    
+    text-align: center;
+    
+  }
+  #hemnelt-undur-header{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 6rem; 
+    justify-content: start;
+    text-align: center;
+    font-size:0.8rem;
+    & svg{
+      width: 4rem;
+      margin-top: -2.5rem;
+      margin-left: 1rem;
+      
+    }
+  }
+  
+       /* hemnelt ondortei nomnuud */
+  .book-container-saving{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  
+  
+  .hemnelt_ondertei_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3%;
+  }
+  
+  .hemnelt_ondertei_nomnuud .book-grid{
+    position:relative;
+    width: 13rem;
+    padding-bottom: 2rem;
+    margin-right:0.8rem;
+    margin-left: 0.8rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+    & div figure img {
+      height: 4rem;
+    }
+  }
+  
+      
+  
+      /* Ondor unelgeetei nomnuud*/
+  
+      .book-container-high-rate{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        min-width: 90%;
+        width: 90%;
+        transition: opacity 1s;
+      }
+  
+      .ondor_unelgeetei_nomnuud{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+  
+      .ondor_unelgeetei_nomnuud .book-grid{
+        width: 12rem;
+        padding-bottom: 2rem;
+        margin-right:0.8rem;
+        margin-left: 0.8rem;
+        text-align: center;
+        color:white;
+        border-radius: 1.875rem;
+        background-color: #4D724D;
+      }
+  
+      
+  
+  /* Shineer nemegdsen nomnuud */
+  
+  .book-container-new{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  .shineer_nemegdsen_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+  }
+  
+  .shineer_nemegdsen_nomnuud .book-grid{
+    position:relative;
+    width: 12rem;
+    padding-bottom: 2rem;
+    margin-right:0.8rem;
+    margin-left: 0.8rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+  }
+  
+  
+     
+  
+  
+  
+      #svg-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.125rem;
+      }
+  
+      #dots-3{
+        margin-left: 3%;
+        
+       }
+  
+       
+      .zaavar-zovlomj{
+        position: relative;
+        color:#4D724D;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        font-family: Inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 2rem;
+        & h1{
+          margin-bottom: 3rem;
+        }
+        & iframe{
+          width: 85%;
+          border-radius: 2rem;
+          height: 30rem;
+        }
+        & svg{
+          width: 16rem;
+          position: absolute;
+          right: 0;
+          bottom:-16rem;
+          z-index: -10;
+  
+        }
+  
+      }
+  
+      .tutorial-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
+      }
+  
+      video{
+        width: 100%;
+        border-radius: 2rem;
+      }
+  
+      
+    
+  
+  
+    .sale-indicator {
+        width: 3rem;
+        height: 3rem;
+        background-color: #FBE38B;
+        border-radius: 50%;
+        position: absolute;
+        top: -5%;
+        left: -10%;
+        font-size: 0.7rem;
+        z-index: 1;
+        color: #8DB48E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+  section article figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section article figure img{
+    
+    height:11rem;
+    width:9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .book-grid{
+    & h3{
+      margin-bottom: 0.3rem;
+    }
+    & label{
+      margin-bottom: 50px;
+      margin-left: 1.3rem;
+      font-size: 0.7rem;
+    }
+    & meter{
+    margin-right: 0;
+    width: 3rem;
+  
+    }
+    & svg{
+      margin-left: 0;
+      font-size: 1rem;
+      
+      
+    }
+  }
+  #prices{
+    font-size: 1rem;
+    & s{
+      color: rgb(196, 192, 192);
+    }
+    & p{
+      font-size: 1.3rem;
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .poster-1 {
+    margin-top: 2%;
+    display: flex;
+    align-items: center; /* Center vertically within the article */
+    justify-content: center;
+    text-align: center;
+    padding-left:6.25rem;
+    height:28.125rem;
+    border-radius:1.563rem;
+  }
+  
+    
+  .content {
+    position: relative;
+    width: 45%;
+    line-height: 1.5;
+    margin-bottom: 10%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & h1{
+      width: 100%;
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+    & p{
+      width:87%;
+      text-align: justify;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    
+    
+    
+  }
+  
+  figure {
+    flex: 1; /* Take up the other half of the available space */
+  }
+  
+  figure img {
+    max-width: 100%; 
+  }
+  
+  .content button{
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+  color:#4D724D;
+  text-align: center;
+  border-radius:1rem;
+  height: 1.88rem;
+  background-color:white;
+  border: none;
+  outline: none;
+  width: 7rem;
+  margin-right: 15%;
+  
+  }
+  
+  .tsagaan-huree{
+    background-color: white;
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 10rem;
+    z-index: -10;
+    border-radius: 0 0 4rem 4rem;
+  }
+  .poster-2{
+    z-index: -18;
+    position: relative;
+    width: 100%;
+   
+    
+    & img{
+      width: 100%;
+      border-radius: 0 0 4rem 4rem;
+      box-shadow: 0px 6px 100px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    
+  }
+  
+  .bolomj{
+    position:absolute;
+    bottom:30%;
+    left:13%;
+    border-radius: 2.3rem;
+    padding-top: 0.625rem;
+    background: rgba(77, 114, 77, 0.70);
+    width:30%;
+    height: 18rem;
+    color:white;
+    text-align: center;
+    line-height: 2;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+    & h1{
+      width: 90%;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1;
+      margin-top: 2.5rem;
+      font-size: 1.5rem;
+    }
+    & ul li{
+      font-size: 1rem;
+    }
+    
+  }
+  #nogoon-chimeg{
+    
+    width: 15rem;
+    position: absolute;
+    bottom:-15rem;
+    z-index: -10;
+    left: 0;
+  
+    
+  }
+  
+    
+      /* .white{
+        height:6.25rem;
+        background-color: #9c9c9c;
+        border-radius:0 0 1.563rem 1.563rem;
+        margin-bot:12.5rem;
+      } */
+  
+  .home-page-book-header {
+    
+    
+    text-align: center;
+    
+  }
+  #hemnelt-undur-header{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 6rem; 
+    justify-content: start;
+    text-align: center;
+    font-size:0.8rem;
+    & svg{
+      width: 4rem;
+      margin-top: -2.5rem;
+      margin-left: 1rem;
+      
+    }
+  }
+  
+       /* hemnelt ondortei nomnuud */
+  .book-container-saving{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  
+  
+  .hemnelt_ondertei_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3%;
+  }
+  
+  .hemnelt_ondertei_nomnuud .book-grid{
+    position:relative;
+    width: 13rem;
+    padding-bottom: 2rem;
+    margin-right:0.8rem;
+    margin-left: 0.8rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+    & div figure img {
+      height: 4rem;
+    }
+  }
+  
+      
+  
+      /* Ondor unelgeetei nomnuud*/
+  
+      .book-container-high-rate{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        min-width: 90%;
+        width: 90%;
+        transition: opacity 1s;
+      }
+  
+      .ondor_unelgeetei_nomnuud{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+  
+      .ondor_unelgeetei_nomnuud .book-grid{
+        width: 12rem;
+        padding-bottom: 2rem;
+        margin-right:0.8rem;
+        margin-left: 0.8rem;
+        text-align: center;
+        color:white;
+        border-radius: 1.875rem;
+        background-color: #4D724D;
+      }
+  
+      
+  
+  /* Shineer nemegdsen nomnuud */
+  
+  .book-container-new{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  .shineer_nemegdsen_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+  }
+  
+  .shineer_nemegdsen_nomnuud .book-grid{
+    position:relative;
+    width: 12rem;
+    padding-bottom: 2rem;
+    margin-right:0.8rem;
+    margin-left: 0.8rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+  }
+  
+  
+     
+  
+  
+  
+      #svg-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.125rem;
+      }
+  
+      #dots-3{
+        margin-left: 3%;
+        
+       }
+  
+       
+      .zaavar-zovlomj{
+        position: relative;
+        color:#4D724D;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        font-family: Inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 2rem;
+        & h1{
+          margin-bottom: 3rem;
+        }
+        & iframe{
+          width: 85%;
+          border-radius: 2rem;
+          height: 30rem;
+        }
+        & svg{
+          width: 16rem;
+          position: absolute;
+          right: 0;
+          bottom:-16rem;
+          z-index: -10;
+  
+        }
+  
+      }
+  
+      .tutorial-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
+      }
+  
+      video{
+        width: 100%;
+        border-radius: 2rem;
+      }
+  
+      
+    
+  
+  
+    .sale-indicator {
+        width: 3rem;
+        height: 3rem;
+        background-color: #FBE38B;
+        border-radius: 50%;
+        position: absolute;
+        top: -5%;
+        left: -10%;
+        font-size: 0.7rem;
+        z-index: 1;
+        color: #8DB48E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+  section article figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section article figure img{
+    
+    height:11rem;
+    width:9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .book-grid{
+    & h3{
+      margin-bottom: 0.3rem;
+    }
+    & label{
+      margin-bottom: 50px;
+      margin-left: 1.3rem;
+      font-size: 0.7rem;
+    }
+    & meter{
+    margin-right: 0;
+    width: 3rem;
+  
+    }
+    & svg{
+      margin-left: 0;
+      font-size: 1rem;
+      
+      
+    }
+  }
+  #prices{
+    font-size: 1rem;
+    & s{
+      color: rgb(196, 192, 192);
+    }
+    & p{
+      font-size: 1.3rem;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .poster-1 {
+    margin-top: 2%;
+   
+    display: flex;
+    align-items: center; /* Center vertically within the article */
+    justify-content: center;
+    padding-left:15.625rem;
+    height:28.125rem;
+    border-radius:1.563rem;
+  }
+  
+    
+  .content {
+    position: relative;
+    width: 45%;
+    line-height: 1.5;
+    margin-bottom: 10%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & h1{
+      width: 100%;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    & p{
+      width:85%;
+      text-align: justify;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    
+    
+    
+  }
+  
+  figure {
+    flex: 1; /* Take up the other half of the available space */
+  }
+  
+  figure img {
+    max-width: 100%; 
+  }
+  
+  .content button{
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+  color:#4D724D;
+  text-align: center;
+  border-radius:1rem;
+  height: 2.188rem;
+  background-color:white;
+  border: none;
+  outline: none;
+  width: 9rem;
+  margin-right: 15%;
+  
+  }
+  
+  .tsagaan-huree{
+    background-color: white;
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 60px;
+    z-index: -10;
+    border-radius: 0 0 4rem 4rem;
+  }
+  .poster-2{
+    z-index: -18;
+    position: relative;
+    width: 100%;
+   
+    
+    & img{
+      width: 100%;
+      border-radius: 0 0 4rem 4rem;
+      box-shadow: 0px 6px 100px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    
+  }
+  
+  .bolomj{
+    position:absolute;
+    bottom:30%;
+    left:13%;
+    border-radius: 3rem;
+    padding-top: 0.625rem;
+    background: rgba(77, 114, 77, 0.70);
+    width:30%;
+    height: 25rem;
+    color:white;
+    text-align: center;
+    line-height: 2;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+    & h1{
+      width: 90%;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1;
+      margin-top: 2.5rem;
+      font-size: 2.2rem;
+    }
+    & ul li{
+      font-size: 1.5rem;
+    }
+    
+  }
+  #nogoon-chimeg{
+    
+    
+    position: absolute;
+    bottom:-15rem;
+    z-index: -10;
+    left: 0;
+  
+    
+  }
+  
+    
+      /* .white{
+        height:6.25rem;
+        background-color: #9c9c9c;
+        border-radius:0 0 1.563rem 1.563rem;
+        margin-bot:12.5rem;
+      } */
+  
+  .home-page-book-header {
+    
+    
+    text-align: center;
+    
+  }
+  #hemnelt-undur-header{
+    display: flex;
+    margin-left: 15%;
+    margin-top: 8rem; 
+    justify-content: start;
+    text-align: center;
+    & svg{
+      width: 5rem;
+      margin-top: -2.5rem;
+      margin-left: 1rem;
+      
+    }
+  }
+  
+       /* hemnelt ondortei nomnuud */
+  .book-container-saving{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  
+  
+  .hemnelt_ondertei_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+  }
+  
+  .hemnelt_ondertei_nomnuud .book-grid{
+    position:relative;
+    width: 16.25rem;
+
+    height: 24rem;
+    padding-bottom: 1rem;
+    margin-right:1.875rem;
+    margin-left: 1.875rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+    & div figure img {
+      height: 4rem;
+    }
+  }
+  
+      
+  
+      /* Ondor unelgeetei nomnuud*/
+  
+      .book-container-high-rate{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        min-width: 90%;
+        width: 90%;
+        transition: opacity 1s;
+      }
+  
+      .ondor_unelgeetei_nomnuud{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+  
+      .ondor_unelgeetei_nomnuud .book-grid{
+        width: 16.25rem;
+        height: 24rem;
+    padding-bottom: 1rem;
+        margin-right:1.875rem;
+        margin-left: 1.875rem;
+        text-align: center;
+        color:white;
+        border-radius: 1.875rem;
+        background-color: #4D724D;
+      }
+  
+      
+  
+  /* Shineer nemegdsen nomnuud */
+  
+  .book-container-new{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    width: 90%;
+    transition: opacity 1s;
+  }
+  
+  .shineer_nemegdsen_nomnuud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+  }
+  
+  .shineer_nemegdsen_nomnuud .book-grid{
+    position:relative;
+    width: 16.25rem;
+    height: 24rem;
+    padding-bottom: 1rem;
+    margin-right:1.875rem;
+    margin-left: 1.875rem;
+    text-align: center;
+    color:white;
+    border-radius: 1.875rem;
+    background-color: #4D724D;
+  }
+  
+  
+     
+  
+  
+  
+      #svg-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.125rem;
+      }
+  
+      #dots-3{
+        margin-left: 3%;
+        
+       }
+  
+       
+      .zaavar-zovlomj{
+        position: relative;
+        color:#4D724D;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        font-family: Inter;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 2rem;
+        & h1{
+          margin-bottom: 3rem;
+        }
+        & iframe{
+          width: 72%;
+          border-radius: 2rem;
+          height: 40rem;
+        }
+        & svg{
+          position: absolute;
+          right: 0;
+          bottom:-16rem;
+          z-index: -10;
+  
+        }
+  
+      }
+  
+      .tutorial-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 5%;
+      }
+  
+      video{
+        width: 100%;
+        border-radius: 2.5rem;
+      }
+  
+      
+    
+  
+  
+    .sale-indicator {
+        width: 5rem;
+        height: 5rem;
+        background-color: #FBE38B;
+        border-radius: 50%;
+        position: absolute;
+        top: -10%;
+        left: -20%;
+        z-index: 1;
+        color: #8DB48E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+  section article figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section article figure img{
+    
+    
+    width:12rem;
+    height: 14rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .book-grid{
+    & h3{
+      margin-bottom: 0.6rem;
+    }
+    & label{
+      margin-bottom: 50px;
+      margin-left: 1.3rem;
+      font-size: 1rem;
+    }
+    & meter{
+    margin-right: 0;
+    width: 4rem;
+  
+    }
+    & svg{
+      margin-left: 0;
+      
+      
+    }
+  }
+  #prices{
+    font-size: 1rem;
+    & s{
+      color: rgb(196, 192, 192);
+    }
+    & p{
+      font-size: 1.3rem;
+    }
+  }
+}
+
+
+
+
