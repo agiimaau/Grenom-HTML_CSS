@@ -651,6 +651,9 @@
     padding-bottom: 5px;
   }
 }
+nav ul li:hover{
+  color:#e6efe6;
+}
 
 
 

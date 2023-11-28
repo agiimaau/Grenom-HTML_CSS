@@ -9,13 +9,13 @@ body{
 }
 @media only screen and (max-width: 480px) {
   .poster-1 {
-    margin-top: 2%;
+    margin-top: 0.2%;
     display: flex;
     align-items: center; /* Center vertically within the article */
     justify-content: center;
     text-align: center;
-    padding-left:6.25rem;
-    height:28.125rem;
+    padding-left:2.25rem;
+    height:14rem;
     border-radius:1.563rem;
   }
   
@@ -31,14 +31,14 @@ body{
     justify-content: center;
     & h1{
       width: 100%;
-      font-size: 1.4rem;
-      margin-bottom: 2rem;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
       text-align: justify;
     }
     & p{
       width:87%;
       text-align: justify;
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       margin-bottom: 2rem;
     }
     
@@ -49,6 +49,7 @@ body{
   
   figure {
     flex: 1; /* Take up the other half of the available space */
+    z-index: 10;
   }
   
   figure img {
@@ -56,17 +57,18 @@ body{
   }
   
   .content button{
+    font-size: 0.5rem;
   position: absolute;
   right: 0;
   font-weight: 500;
   color:#4D724D;
   text-align: center;
   border-radius:1rem;
-  height: 1.88rem;
+  height: 1rem;
   background-color:white;
   border: none;
   outline: none;
-  width: 7rem;
+  width: 4rem;
   margin-right: 15%;
   
   }
@@ -76,20 +78,21 @@ body{
     width: 100%;
     height: 8rem;
     position: absolute;
-    bottom: 10rem;
-    z-index: -10;
-    border-radius: 0 0 4rem 4rem;
+    bottom: 19.3rem;
+    z-index: -17;
+    border-radius: 0 0 3rem 3rem;
   }
   .poster-2{
-    z-index: -18;
+    z-index: -10;
     position: relative;
     width: 100%;
+    margin-top: -28px;
    
     
     & img{
       width: 100%;
       border-radius: 0 0 4rem 4rem;
-      box-shadow: 0px 6px 100px 10px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.25);
     }
     
     
@@ -99,11 +102,11 @@ body{
     position:absolute;
     bottom:30%;
     left:13%;
-    border-radius: 2.3rem;
+    border-radius: 1rem;
     padding-top: 0.625rem;
     background: rgba(77, 114, 77, 0.70);
     width:30%;
-    height: 18rem;
+    height: 8rem;
     color:white;
     text-align: center;
     line-height: 2;
@@ -117,20 +120,20 @@ body{
       font-weight: 600;
       text-align: center;
       line-height: 1;
-      margin-top: 2.5rem;
-      font-size: 1.5rem;
+      margin-top: 0.4rem;
+      font-size: 0.7rem;
     }
     & ul li{
-      font-size: 1rem;
+      font-size: 0.5rem;
     }
     
   }
   #nogoon-chimeg{
     
-    width: 15rem;
+    width: 7rem;
     position: absolute;
-    bottom:-15rem;
-    z-index: -10;
+    bottom:-14rem;
+    z-index: -21;
     left: 0;
   
     
@@ -152,13 +155,14 @@ body{
   }
   #hemnelt-undur-header{
     display: flex;
+    height: 2.5rem;
     margin-left: 10%;
-    margin-top: 6rem; 
+    margin-top: 3rem; 
     justify-content: start;
     text-align: center;
-    font-size:0.8rem;
+    font-size:0.5rem;
     & svg{
-      width: 4rem;
+      width: 2.5rem;
       margin-top: -2.5rem;
       margin-left: 1rem;
       
@@ -167,11 +171,12 @@ body{
   
        /* hemnelt ondortei nomnuud */
   .book-container-saving{
+    flex-wrap: wrap;
     display: none;
     justify-content: center;
     align-items: center;
-    min-width: 90%;
-    width: 90%;
+    min-width: 83%;
+    width: 83%;
     transition: opacity 1s;
   }
   
@@ -181,18 +186,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0.3%;
+   
   }
   
   .hemnelt_ondertei_nomnuud .book-grid{
     position:relative;
-    width: 13rem;
+    width:9.5rem;
+    height: 14rem;
     padding-bottom: 2rem;
-    margin-right:0.8rem;
-    margin-left: 0.8rem;
+    margin-bottom: 1rem;
+    margin-right:0.3rem;
+    margin-left: 0.3rem;
     text-align: center;
     color:white;
-    border-radius: 1.875rem;
+    border-radius: 0.8rem;
     background-color: #4D724D;
     & div figure img {
       height: 4rem;
@@ -204,11 +211,12 @@ body{
       /* Ondor unelgeetei nomnuud*/
   
       .book-container-high-rate{
+        flex-wrap: wrap;
         display: none;
         justify-content: center;
         align-items: center;
-        min-width: 90%;
-        width: 90%;
+        min-width: 83%;
+        width: 83%;
         transition: opacity 1s;
       }
   
@@ -220,13 +228,15 @@ body{
       }
   
       .ondor_unelgeetei_nomnuud .book-grid{
-        width: 12rem;
+        width:9.5rem;
+        height: 14rem;
+        margin-bottom: 1rem;
         padding-bottom: 2rem;
-        margin-right:0.8rem;
-        margin-left: 0.8rem;
+        margin-right:0.3rem;
+        margin-left: 0.3rem;
         text-align: center;
         color:white;
-        border-radius: 1.875rem;
+        border-radius:0.8rem;
         background-color: #4D724D;
       }
   
@@ -235,11 +245,12 @@ body{
   /* Shineer nemegdsen nomnuud */
   
   .book-container-new{
+    flex-wrap: wrap;
     display: none;
     justify-content: center;
     align-items: center;
-    min-width: 90%;
-    width: 90%;
+    min-width: 83%;
+    width: 83%;
     transition: opacity 1s;
   }
   
@@ -252,13 +263,15 @@ body{
   
   .shineer_nemegdsen_nomnuud .book-grid{
     position:relative;
-    width: 12rem;
+    width:9.5rem;
+    height: 14rem;
+    margin-bottom: 1rem;
     padding-bottom: 2rem;
-    margin-right:0.8rem;
-    margin-left: 0.8rem;
+    margin-right:0.3rem;
+    margin-left: 0.3rem;
     text-align: center;
     color:white;
-    border-radius: 1.875rem;
+    border-radius: 0.8rem;
     background-color: #4D724D;
   }
   
@@ -275,7 +288,7 @@ body{
       }
   
       #dots-3{
-        margin-left: 3%;
+              width: 2rem;
         
        }
   
@@ -288,18 +301,18 @@ body{
         height: 100%;
         text-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
         font-family: Inter;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        margin-top: 2rem;
+        margin-top: 1rem;
         & h1{
-          margin-bottom: 3rem;
+          margin-bottom: 1rem;
         }
         & iframe{
           width: 85%;
-          border-radius: 2rem;
-          height: 30rem;
+          border-radius: 0.5rem;
+          height: 10rem;
         }
         & svg{
           width: 16rem;
@@ -348,18 +361,20 @@ body{
   section article figure{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
   }
   
   section article figure img{
     
-    height:11rem;
-    width:9rem;
+    height:8rem;
+    width:6rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
   .book-grid{
     & h3{
+      font-size: 1rem;
       margin-bottom: 0.3rem;
     }
     & label{
@@ -369,25 +384,31 @@ body{
     }
     & meter{
     margin-right: 0;
-    width: 3rem;
+    width: 2rem;
   
     }
     & svg{
       margin-left: 0;
-      font-size: 1rem;
+      font-size: 0.5rem;
+      
+      
       
       
     }
   }
   #prices{
-    font-size: 1rem;
+    font-size: 0.7rem;
     & s{
       color: rgb(196, 192, 192);
     }
     & p{
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
+  #high-rate-books-arrow-right, #high-rate-books-arrow-left,#saving-book-arrow-right,#saving-book-arrow-left,#new-books-arrow-right,#new-books-arrow-left{
+    width: 2rem;
+  }
+
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .poster-1 {
@@ -712,14 +733,14 @@ body{
   
   
     .sale-indicator {
-        width: 3rem;
-        height: 3rem;
+        width: 1.5rem;
+        height: 1.5rem;
         background-color: #FBE38B;
         border-radius: 50%;
         position: absolute;
         top: -5%;
         left: -10%;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         z-index: 1;
         color: #8DB48E;
         display: flex;
@@ -742,6 +763,7 @@ body{
   }
   .book-grid{
     & h3{
+      
       margin-bottom: 0.3rem;
     }
     & label{

@@ -13,6 +13,9 @@ const searchPopOut = document.querySelector('.search-pop-out');
 
 let shouldRemain = false;
 
+// Hide the search pop-out initially
+searchPopOut.style.display = 'none';
+
 searchBar.addEventListener('click', function(event) {
     shouldRemain = true;
     searchPopOut.style.display = 'block';
