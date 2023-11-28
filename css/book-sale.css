@@ -50,11 +50,13 @@
         & h3{
           display: flex;
           justify-content: center;
+          cursor: pointer;
           
         }
       }
       
       .book-sale-button{
+        cursor: pointer;
         margin-top: 20px;
         color:white;
         background-color: #86AB87;;

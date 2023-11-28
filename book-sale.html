@@ -2,6 +2,7 @@
 <html lang="mn">
     <head>
         <link rel="stylesheet" href=" css/book-sale.css">
+        
         <link rel="stylesheet" href=" css/footer.css">
         <link rel="stylesheet" href="css/search-pop-up.css">
         <link rel="stylesheet" href=" css/header.css">
@@ -120,38 +121,98 @@
         <section class="book-sale-pop-out">
             
                 <form>
-                        <img src="" alt="">
-                    <h1>Та зарах номын мэдээллээ оруулна уу.</h1>
-                    <label>номын нэр</label>
-                    <input type="text" class="book-upload" id="book-name">
-                    <label>зохиолч</label>
-                    <input type="text" class="book-upload" id="book-author">
-                    <label>Эдэлгээгээр:</label>
-                    <input type="range" id="book-rating" class="book-upload" min="1" max="10">
-                    <label>анх авсан үнэ:</label>
-                    <input type="text" class="book-upload" id="book-fprice">
-                    <label>анх авсан үнэ:</label>
-                    <input type="text" class="book-upload" id="book-lprice">
-                    <label>Категори:</label>
-                    <select id="book-categories" name="catergory-lists" >
-                        <option value="history">Түүх</option>
-                        <option value="politics">Улс төр</option>
-                        <option value="science">Шинжлжх ухаан</option>
-                        <option value="literature">Уран зохиол</option>
-                        <option value="bussines">Бизнес</option>
-                        <option value="computer">Компьютер</option>
-                        <option value="health">Эрүүл мэнд</option>
-                        <option value="manual">Гарын авлага</option>
-                        <option value="children">Хүүхдийн</option>
-                        <option value="philosophy">Филсофи</option>
-                        <option value="self-development">Хувь хүний хөгжил</option>
-                    </select>
-                    <label>нэмэлт мэдээлэл</label>
-                    <textarea class="book-addition-info"></textarea>
-        
                     
-                    <input type="submit" id="submit-btn" value="Оруулах" class="book-pop-out-button">
+                    
+                    <h1>Та зарах номын мэдээллээ оруулна уу.</h1>
+                    <div class="grid-container">
+                        <div class="item-1">
+                            <label for="img">Зургаа сонгоно уу:</label>
+                            <input type="file" id="img" name="img" accept="image/*">
+                        </div>
+                    
+                        <div class="item-2">
+                            <label>Номын нэр:</label>
+                            <input type="text" class="book-upload" id="book-name">
+                        </div>
+                        <div class="item-3">
+                            <label>Зохиолч:</label>
+                            <input type="text" class="book-upload" id="book-author">    
+                        </div>
+                        <div class="item-4"> 
+                            <label>Эдэлгээгээр:</label>
+                            <input type="range" id="book-rating" class="book-upload" min="1" max="10">
+                        </div>
+                        <div class="item-5"> 
+                            <label>Анх авсан үнэ:</label>
+                            <input type="text" class="book-upload" id="book-fprice">
+                        </div>
+                        <div class="item-6">
+                            <label>Одоо зарах үнэ:</label>
+                            <input type="text" class="book-upload" id="book-lprice">      
+                        </div>
+                        <div class="item-7">
+                            <label>Категори:</label>
+                            <select id="book-categories" name="catergory-lists" >
+                                <option value="history">Түүх</option>
+                                <option value="politics">Улс төр</option>
+                                <option value="science">Шинжлжх ухаан</option>
+                                <option value="literature">Уран зохиол</option>
+                                <option value="bussines">Бизнес</option>
+                                <option value="computer">Компьютер</option>
+                                <option value="health">Эрүүл мэнд</option>
+                                <option value="manual">Гарын авлага</option>
+                                <option value="children">Хүүхдийн</option>
+                                <option value="philosophy">Филсофи</option>
+                                <option value="self-development">Хувь хүний хөгжил</option>
+                            </select>    
+                        </div>
+                        <div class="item-8"> 
+                            <label>Нэмэлт мэдээлэл</label>
+                            <textarea class="book-addition-info"></textarea>
+                        </div>
+                        <div class="item-9">
+                            <p>Номын үнэлгээ:</p>
+                            <div class="rating-od">
+                                <label>
+                                  <input type="radio" name="stars-od" value="1" />
+                                  <span class="icon">★</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="stars-od" value="2" />
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="stars-od" value="3" />
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>   
+                                </label>
+                                <label>
+                                  <input type="radio" name="stars-od" value="4" />
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="stars-od" value="5" />
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                  <span class="icon">★</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="buttons">
+                        
+                    <input type="submit" id="=popsubmit-btn" value="Оруулах" class="book-pop-out-button">
                     <button class="book-pop-out-button">Цуцлах</button>
+                    </div>
                 </form>
             
             
@@ -183,7 +244,7 @@
                 </div>
             </section>
             <section class="book-sale-main">
-                <h3><button class="book-sale-button">Та зарах номоо энд дарж оруулна уу.</button></h3>
+                <h3><button class="book-sale-button" onclick="togglePopOut()">Та зарах номоо энд дарж оруулна уу.</button></h3>
                 <div class="all-sale-books">
                 <article class="sale-books">
                     <label class="hymdral">50%</label>
@@ -560,23 +621,6 @@
             <p>&copy; 2023 Grenom. All rights reserved.</p>
         </footer>
     </body>
-    <script>
-        var header=document.getElementsByTagName("header")[0];
-        var body=document.getElementsByTagName("main")[0];
-        var searchBar=document.getElementById("searchbar");
-        var searchPopOut = document.querySelector('.search-pop-out');
-        searchPopOut.style.visibility="hidden";
-        searchBar.addEventListener('click', function() {
-        searchPopOut.style.visibility = 'visible';
-        
-       
-        
-    });       
+    <script src="js/book-sale.js"></script>
     
-    body.addEventListener('click', function() {
-        searchPopOut.style.visibility="hidden";
-        });     
-          
-
-    </script>
 </html>
