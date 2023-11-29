@@ -1,315 +1,525 @@
-:root{
-  /*colors*/
-  --white-color: #fff;
-  --color-bg : #000;
-  --dark-green-color: #4D724D;
-  --light-green-color: #86AB87;
-  --bg-red-color: #CE5858;
-  --bg-btn-color: #cb6b6b;
-  /*book exchange*/
-  --font-navbar:1.688rem;
-  --font-input-button:1.5rem;
-  --font-exchange-card-profile:0.875rem;
-  --font-book-info:0.75rem;
-  
-  --font-family-all: 'Inter';
-  
-  --percent-hundred: 100%;
+:root {
+    --color-background: #86AB87;
+    --color-background-h3: #4D724D;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-date: #584C4C;
+    --color-red1: #CE5858;
+    --color-red2: #cb6b6b;
 }
 
-  .notif {
-      width: 25px;
-      height: 25px;
-      margin-top: 26px;
-      margin-left: -10px;
-      background-color: #86AB87;
-      color: #fff;
-      border-radius: 50%;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.notif {
+    width: 25px;
+    height: 25px;
+    margin-top: 26px;
+    margin-left: -10px;
+    background-color: var(--color-background);
+    color: var(--color-white);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      & h4 {
-          font-weight: 300;
-      }
+    & h4 {
+        font-weight: 300;
+    }
+}
 
-  }
+.h3 {
+    margin-top: 40px;
+    color: var(--color-white);
+    background-color: var(--color-background-h3);
+    border-radius: 15px;
+    width: 550px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 25px;
+    font-weight: 350;
+}
 
-  .h3 {
-      margin-top: 40px;
-      color: white;
-      background-color: #4D724D;
-      border-radius: 15px;
-      width: 550px;
-      font-size: 15px;
-      margin-bottom: 20px;
-      padding: 25px;
-      font-weight: 350;
-  }
+.articles {
+    padding-bottom: 10px;
+    border-radius: 20px;
+    color: var(--color-black);
+    background-color: var(--color-background);
+    min-width: 40%;
+    width: 550px;
+    margin-bottom: 20px;
+    padding: 8px;
+    margin-left: 30px;
+}
 
-  .articles {
+.niit-medeelel {
+    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
 
-      padding-bottom: 10px;
-      border-radius: 20px;
-      color: black;
-      background-color: #86AB87;
-      min-width: 40%;
-      width: 550px;
-      margin-bottom: 20px;
-      padding: 8px;
-      margin-left: 30px;
-  }
+    .medeelel {
+        column-gap: 40px;
+        display: flex;
 
-  .niit-medeelel {
+        & .ehniih {
+            line-height: 2;
+            font-size: 11px;
+        }
 
-      justify-content: space-around;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      column-gap: 20px;
+        & p {
+            text-align: center;
+            font-size: 10px;
+            display: inline;
 
-      .medeelel {
-          column-gap: 40px;
-          display: flex;
+        }
 
-          & .ehniih {
-              line-height: 2;
-              font-size: 11px;
-          }
+        & .pra {
+            color: var(--color-date);
+        }
 
-          & p {
-              text-align: center;
-              font-size: 10px;
-              display: inline;
+        & h4 {
+            font-size: 12px;
+        }
+    }
 
-          }
+    .pro {
+        border-radius: 50%;
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
 
+    .huleen-avah {
+        border-radius: 35%;
+        border: none;
+        background-color: var(--color-background-h3);
+        color: var(--color-white);
+        cursor: pointer;
+        padding: 12px 15px 9px 15px;
+        font-size: 8px;
+    }
 
-          & .pra {
-              color: #584C4C;
-          }
+    .tatgalzah {
+        text-align: center;
+        align-items: center;
+        border-radius: 35%;
+        border: none;
+        background-color: var(--color-red1);
+        color: var(--color-white);
+        cursor: pointer;
+        padding: 12.2px 10px 18px 10px;
+        ;
+        font-size: 8px;
+    }
+}
 
-          & h4 {
-              font-size: 12px;
-          }
-      }
+.see-more {
+    border: none;
+    cursor: pointer;
+}
 
-      .pro {
-          border-radius: 50%;
-          margin-top: 30%;
-          margin-bottom: 30%;
-      }
+.hide_show h3:before {
+    content: "▶";
+    margin-right: 1%;
+    cursor: pointer;
+    color: var(--color-white);
+}
 
-      .huleen-avah {
-          border-radius: 35%;
-          border: none;
-          background-color: #4D724D;
-          color: #fff;
-          cursor: pointer;
-          padding-left: 15px;
-          padding-top: 12px;
-          padding-bottom: 9px;
-          padding-right: 15px;
-          font-size: 8px;
-      }
+.hide_show h3.active:before {
+    content: "▽";
+}
 
-      .tatgalzah {
-          border-radius: 35%;
-          border: none;
-          background-color: #CE5858;
-          color: #fff;
-          cursor: pointer;
-          padding-left: 10px;
-          padding-top: 12.2px;
-          padding-bottom: 18px;
-          padding-right: 10px;
-          font-size: 8px;
-      }
-  }
+.hide_show .articles {
+    display: none;
+}
 
-  .see-more {
-      border: none;
-      cursor: pointer;
-  }
+.hide_show h3:hover {
+    cursor: pointer;
+}
 
-  .hide_show h3:before {
-      content: "▶";
-      margin-right: 1%;
-      cursor: pointer;
-      color: #fff;
+.notif.active {
+    display: none;
+}
 
-  }
+.hide_show .articles.active {
+    display: block;
+}
 
-  .hide_show h3.active:before {
-      content: "▽";
-  }
+.articless {
+    padding: 20px;
+    border-radius: 25px;
+    display: inline-block;
+    color: var(--color-white);
+    background-color: var(--color-background);
+    min-width: 30%;
+    width: 550px;
+    margin-bottom: 30px;
+}
 
-  .hide_show .articles {
-      display: none;
-  }
+.undsen-medeelel {
+    display: flex;
 
-  .hide_show h3:hover {
-      cursor: pointer;
-  }
+    & svg {
+        margin-top: 10px;
+        margin-left: 50%;
+        cursor: pointer;
+    }
 
-  .notif.active {
-      display: none;
-  }
+    & label {
+        font-size: 14px;
+        margin-top: 20px;
+        margin-left: 8px;
+    }
+}
 
-  .hide_show .articles.active {
-      display: block;
-  }
+.profile-pic {
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
 
+main h1 {
+    font-weight: bolder;
+    padding: 20px;
+    text-align: center;
+}
 
-  .articless {
-      flex-wrap: wrap;
-      padding: 20px;
-      border-radius: 25px;
-      display: inline-block;
-      color: white;
-      background-color: #86AB87;
-      min-width: 30%;
-      width: 550px;
-      margin-bottom: 30px;
-  }
+.btn {
+    margin-top: 40px;
+    color: var(--color-white);
+    background-color: var(--color-background-h3);
+    border-radius: 50px;
+    width: 40%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
 
+.bag {
+    display: flex;
+    justify-content: space-evenly;
+}
 
-  .undsen-medeelel {
-      display: flex;
+.bagts {
+    font-size: larger;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    color: var(--color-white);
+    background-color: var(--color-background-h3);
+    min-width: 30%;
+    width: 90%;
+    margin-bottom: 30px;
+    margin-left: 3%;
+    padding: 30px;
+}
 
-      & svg {
-          margin-top: 10px;
-          margin-left: 50%;
-          cursor: pointer;
+.btn-ustgah {
+    background-color: var(--color-red2);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
 
-      }
+.btn-zasah {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 65%;
+    margin-bottom: 20px;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+}
 
-      & label {
-          font-size: 14px;
-          margin-top: 25px;
-          margin-left: 8px;
-      }
+.book_info_main {
+    display: flex;
+    justify-content: center;
+    font-weight: none;
+    font-size: 13px;
+    align-items: center;
 
-  }
+    & .nomnii_medeelel {
+        white-space: normal;
+        width: 360px;
 
-  .profile-pic {
-      width: 50px;
-      border-radius: 50%;
-      margin-top: 10px;
-      margin-left: 20px;
-      margin-bottom: 20px;
-  }
+        & h4 {
+            font-size: medium;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            margin-left: 1.8rem;
+        }
 
+        & .tags {
+            display: flex;
+            justify-content: space-around;
+            font-weight: 300;
 
-  main h1 {
-      font-weight: bolder;
-      padding: 20px;
-      text-align: center;
-  }
+        }
+    }
 
+    .ehni-tag p {
+        line-height: 2;
+    }
 
-  .btn {
-      margin-top: 40px;
-      color: white;
-      background-color: #4D724D;
-      border-radius: 50px;
-      width: 40%;
-      height: 70px;
-      font-size: 20px;
-      font-weight: bolder;
-      border: none;
-      margin-bottom: 40px;
-      cursor: pointer;
-  }
+    .hoyrdah-tag p {
+        line-height: 2;
+    }
 
-  .bag {
-      display: flex;
-  }
+    .hoyrdah-tag {
+        margin-top: -1.9rem;
+        
 
-  .bagts {
-      font-size: larger;
-      flex-wrap: wrap;
-      padding-bottom: 10px;
-      border-radius: 20px;
-      display: inline-block;
-      color: white;
-      background-color: #4D724D;
-      min-width: 30%;
-      width: 90%;
-      margin-bottom: 30px;
-      margin-left: 3%;
-      padding: 30px;
-  }
+    }
+}
 
-  .btn-ustgah {
+.learn {
+    color: var(--color-background);
+    font-size: 20px;
+    border: none;
+    margin-bottom: 30px;
+    margin-left: 46.5%;
+    cursor: pointer;
+}
 
-      background-color: #cb6b6b;
-      border-radius: 10px;
-      padding: 10px;
-      border: none;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin-left: 25px;
-      margin-bottom: 25px;
-      cursor: pointer;
+@media only screen and (min-width: 730px) and (max-width: 1023px) {
+    .articles {
+        min-width: 30%;
+    }
 
-  }
+    .niit-medeelel {
+        .huleen-avah {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+        }
 
-  .btn-zasah {
-      background-color: #86AB87;
-      border-radius: 10px;
-      padding: 10px;
-      margin-left: 70%;
-      margin-bottom: 20px;
-      border: none;
-      padding-left: 30px;
-      padding-right: 30px;
-      cursor: pointer;
-  }
+        .tatgalzah {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 10px;
+        }
+    }
 
-  .book_info_main {
-      display: flex;
-      justify-content: center;
-      font-weight: none;
-      font-size: 13px;
-      align-items: center;
+    .bag {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
 
-      & .nomnii_medeelel {
-          white-space: normal;
-          width: 360px;
+    .bagts {
+        min-width: 50%;
 
-          & h4 {
-              font-size: medium;
-              font-weight: 500;
-              margin-bottom: 1.5rem;
-              margin-left: 1.8rem;
-          }
+        & .btn-ustgah {
+            background-color: #cb6b6b;
+            border-radius: 10px;
+            padding: 8px;
+            border: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 20px;
+            margin-bottom: 25px;
+            cursor: pointer;
+        }
 
-          & .tags {
-              display: flex;
-              justify-content: space-around;
-              font-weight: 300;
+        & .btn-zasah {
+            background-color: #86AB87;
+            border-radius: 10px;
+            padding: 8px;
+            margin-left: 53%;
+            margin-bottom: 20px;
+            border: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            cursor: pointer;
+        }
+    }
+}
 
-          }
+@media only screen and (min-width: 490px) and (max-width: 730px) {
+    .h3 {
+        width: 400px;
+        font-size: 12px;
+        font-weight: 300;
+    }
 
-          & p {
-              line-height: 2;
-          }
+    .articles {
+        border-radius: 15px;
+        min-width: 30%;
+        width: 400px;
+        padding: 6px;
+    }
 
-          .hoyrdah-tag {
-              margin-top: -1.9rem;
-          }
+    .niit-medeelel {
+        column-gap: 10px;
 
-      }
+        .medeelel {
+            column-gap: 20px;
+            display: inline-flex;
 
-  }
+            & .ehniih {
+                font-size: 8px;
+            }
 
-  .learn {
-      color: #86AB87;
-      font-size: 20px;
-      border: none;
-      margin-bottom: 30px;
-      margin-left: 46.5%;
-      cursor: pointer;
-  }
+            & p {
+                font-size: 8px;
+                display: inline-flex;
+            }
+
+            & h4 {
+                font-size: 10px;
+            }
+        }
+
+        .huleen-avah {
+            border-radius: 40%;
+            padding-left: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-right: 12px;
+            font-weight: 200;
+        }
+
+        .tatgalzah {
+            border-radius: 40%;
+            padding-left: 5px;
+            padding-top: 9px;
+            padding-bottom: 16px;
+            padding-right: 5px;
+            font-weight: 200;
+        }
+    }
+
+    .bag {
+        justify-content: center;
+    }
+
+    .bagts {
+        margin-left: auto;
+        padding: 4%;
+    }
+
+    .btn-zasah {
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .notif {
+        margin-left: -2px;
+    }
+
+    .h3 {
+        width: 385px;
+        font-size: 12px;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    .articles {
+        border-radius: 15px;
+        min-width: 10%;
+        width: 380px;
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+
+    .niit-medeelel {
+        column-gap: 8px;
+
+        .medeelel {
+            column-gap: 15px;
+            display: inline-flex;
+
+            & .ehniih {
+                line-height: 1.9;
+                font-size: 8px;
+            }
+
+            & p {
+                font-size: 8px;
+                display: inline-flex;
+            }
+
+            & h4 {
+                font-size: 10px;
+            }
+        }
+
+        .huleen-avah {
+            border-radius: 40%;
+            padding-left: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-right: 12px;
+            font-size: 8px;
+            font-weight: 200;
+        }
+
+        .tatgalzah {
+            border-radius: 40%;
+            padding-left: 5px;
+            padding-top: 9px;
+            padding-bottom: 16px;
+            padding-right: 5px;
+            font-size: 8px;
+            font-weight: 200;
+        }
+    }
+
+    .undsen-medeelel {
+        & svg {
+            margin-left: 70%;
+        }
+    }
+
+    .profile-pic {
+        width: auto;
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .bag {
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .bagts {
+        font-size: larg;
+        margin-left: auto;
+        padding: 4%;
+    }
+
+    .btn-ustgah {
+        padding: 8px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 10px;
+    }
+
+    .btn-zasah {
+        padding: 8px;
+        margin-left: 30%;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .book_info_main {
+        column-gap: 10px;
+    }
+
+    .learn {
+        margin-left: 40%;
+    }
+}
