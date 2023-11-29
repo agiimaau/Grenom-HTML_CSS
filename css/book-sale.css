@@ -295,6 +295,7 @@
       }
       
       .book-sale-button{
+        cursor: pointer;
         margin-top: 40px;
         color:white;
         background-color: #86AB87;;
@@ -521,6 +522,7 @@
       }
       
       .book-sale-button{
+        cursor: pointer;
         margin-top: 40px;
         color:white;
         background-color: #86AB87;;

@@ -1,25 +1,14 @@
-var header=document.getElementsByTagName("header")[0];
-        var body=document.getElementsByTagName("main")[0];
-        var searchBar=document.getElementById("searchbar");
-        var searchPopOut = document.querySelector('.search-pop-out');
-        searchPopOut.style.visibility="hidden";
-        searchBar.addEventListener('click', function() {
-        searchPopOut.style.visibility = 'visible';
+ 
+
         
-       
-        
-    });       
-    
-    body.addEventListener('click', function() {
-        searchPopOut.style.visibility="hidden";
-        });   
-        document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
             // Get the button and pop-out section
             const button = document.querySelector('.book-sale-button');
-            const popOut = document.getElementByClass('book-sale-pop-out');
+            const popOut = document.getElementsByClassName('book-sale-pop-out')[0];
 
             // Toggle the pop-out section
             function togglePopOut() {
+               
                 popOut.style.display = (popOut.style.display === 'none' || popOut.style.display === '') ? 'block' : 'none';
             }
 

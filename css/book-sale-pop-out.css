@@ -1,5 +1,6 @@
 .book-sale-pop-out{
     display: none;
+    filter: drop-shadow(100px 500px 200px rgba(0, 0, 0, 0.5));
     position: absolute;
     z-index: 200;
     top: 30%;
