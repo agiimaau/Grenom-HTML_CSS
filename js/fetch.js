@@ -58,7 +58,7 @@ function renderBooks(books) {
         article.className = "exchange-books";
 
         article.innerHTML = `
-        <figure class="undsen-medeelel">
+        <!--<figure class="undsen-medeelel">
             <img class="profile-pic" src="${book.publisherPicture}" alt="${book.publisherName}" width="50">
             <label>${book.publisherName}</label>
             <p class="stars">
@@ -85,7 +85,22 @@ function renderBooks(books) {
                 <p class="additional-info">Нэмэлт мэдээлэл: <span>${book.description}</span></p>
                 <button class="book-exchange-request-button">Солилцох хүсэлт явуулах</button>
             </div>
-        </div>
+        </div>-->
+        
+        <book-card
+            publisherPicture="${book.publisherPicture}"
+            publisherName="${book.publisherName}"
+            starRate="${book["star-rate"] }"
+            bookImage="${book.image}"
+            bookName="${book["book-name"]}"
+            publishedYear="${book.published}"
+            categories="${book.category}"
+            author="${book.author}"
+            wear="${book.wear}"
+            pages="${book.pages}"
+            description="${book.description}"
+        ></book-card>
+
         `;
 
         bookContainer.appendChild(article);

@@ -86,42 +86,39 @@
     width: 300px;
     margin-bottom: 20px;
 
-    & .undsen-medeelel {
-      display: flex;
+   
+  }
+  .undsen-medeelel {
+    display: flex;
+    margin: 0;
 
-      & stars {
-        width: 20px;
-      }
-
-      & p {
-        color: #FBE38B;
-        margin-top: 20px;
-        font-size: 10px;
-        margin-left: 26%;
-      }
-
-      & .profile-pic {
-        width: 30px;
-        border-radius: 50%;
-        margin-top: 10px;
-        margin-left: 20px;
-        margin-bottom: 10px;
-      }
-
-      & label {
-        font-size: 10px;
-        margin-top: 20px;
-        margin-left: 8px;
-      }
+    & stars {
+      width: 20px;
     }
 
-    & .nomnii-zurag {
-      margin-left: 20px;
-      margin-right: 10px;
-      width: 80px;
+    & p {
+      color: #FBE38B;
+      margin-top: 20px;
+      font-size: 10px;
+      margin-left: 26%;
+    }
 
+    & .profile-pic {
+      width: 30px;
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    & label {
+      font-size: 10px;
+      margin-top: 20px;
+      margin-left: 8px;
     }
   }
+
+
 
   .book-info-main {
     display: flex;
@@ -129,6 +126,14 @@
 
     font-weight: none;
     font-size: 8px;
+    & figure{
+      margin:0;
+    }
+    & figure .nomnii-zurag {
+      margin-left: 20px;
+    margin-right: 10px;
+    width: 80px !important;
+    }
 
     & .nomnii-medeelel {
       white-space: normal;
@@ -150,15 +155,17 @@
 
       .ehnii-tag p,
       h4 {
+        margin: 0;
         line-height: 2;
       }
 
       .hoyrdahi-tag p {
+        margin: 0;
         line-height: 2;
       }
 
       .additional-info {
-
+        margin: 0;
         line-height: 1.5;
         word-wrap: break-word;
 
@@ -302,41 +309,46 @@
     min-width: 30%;
     width: 500px;
     margin-bottom: 30px;
+  }
+   .undsen-medeelel {
+    display: flex;
+    margin: 0;
 
-    & .undsen-medeelel {
-      display: flex;
-
-      & p {
-        color: #FBE38B;
-        margin-top: 30px;
-        margin-left: 30%;
-      }
-
-      & .profile-pic {
-        width: 50px;
-        border-radius: 50%;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
-
-      & label {
-        margin-top: 30px;
-        margin-left: 20px;
-      }
+    & p {
+      color: #FBE38B;
+      margin-top: 30px;
+      margin-left: 30%;
     }
 
-    & .nomnii-zurag {
+    & .profile-pic {
+      width: 50px;
+      border-radius: 50%;
+      margin-top: 20px;
       margin-left: 20px;
-      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    & label {
+      margin-top: 30px;
+      margin-left: 20px;
     }
   }
+
+ 
 
   .book-info-main {
     display: flex;
     justify-content: center;
     font-weight: none;
     font-size: 10px;
+    & figure{
+      margin:0;
+    }
+    & figure .nomnii-zurag {
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 100px !important;
+    }
 
     & .nomnii-medeelel {
       white-space: normal;
@@ -358,14 +370,16 @@
       .ehnii-tag p,
       h4 {
         line-height: 2;
+        margin: 0;
       }
 
       .hoyrdahi-tag p {
         line-height: 2;
+        margin: 0;
       }
 
       .additional-info {
-
+        margin: 0;
         line-height: 1.5;
         word-wrap: break-word;
 
@@ -483,7 +497,7 @@
     margin-top: 40px;
     color: white;
     background-color: #86AB87;
-    ;
+    
     border-radius: 50px;
     width: 50%;
     height: 70px;
@@ -510,45 +524,50 @@
     width: 610px;
     margin-bottom: 30px;
 
-    & .undsen-medeelel {
-      display: flex;
-
-      & p {
-        color: #FBE38B;
-        margin-top: 30px;
-        margin-left: 36%;
-        font-size: 20px;
-
-      }
-
-      & .profile-pic {
-        width: 50px;
-        border-radius: 50%;
-        margin-top: 20px;
-        margin-left: 20px;
-        margin-bottom: 20px;
-      }
-
-      & label {
-        margin-top: 35px;
-        margin-left: 20px;
-        font-size: 18px;
-      }
-    }
-
-    & .nomnii-zurag {
-      margin-left: 20px;
-      margin-right: 40px;
-      width: 145px;
-    }
+    
   }
+  .undsen-medeelel {
+    display: flex;
+    margin: 0;
+
+    & p {
+      color: #FBE38B;
+      margin-top: 30px;
+      margin-left: 36%;
+      font-size: 20px;
+
+    }
+
+    & .profile-pic {
+      width: 50px;
+      border-radius: 50%;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    & label {
+      margin-top: 35px;
+      margin-left: 20px;
+      font-size: 18px;
+    }}
+  
+
+    
 
   .book-info-main {
     display: flex;
     justify-content: center;
     font-weight: none;
     font-size: 14px;
-
+    & figure{
+      margin:0;
+    }
+    & figure .nomnii-zurag {
+      margin-left: 20px;
+      margin-right: 40px;
+      width: 145px !important;
+    }
     & .nomnii-medeelel {
       white-space: normal;
       width: 360px;
@@ -569,14 +588,16 @@
       .ehnii-tag p,
       h4 {
         line-height: 2;
+        margin:0;
       }
 
       .hoyrdahi-tag p {
         line-height: 2;
+        margin:0;
       }
 
       .additional-info {
-
+        margin:0;
         line-height: 1.5;
         word-wrap: break-word;
 

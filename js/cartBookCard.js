@@ -2,14 +2,13 @@ class cartBookCard extends HTMLElement {
     constructor() {
         super();
         this.myRoot = this.attachShadow({ mode: "open" });
-        this.publisherPicture = this.getAttribute("publisherPicture") ?? "default-publisher-picture.jpg";
         this.publisherName = this.getAttribute("publisherName") ?? "Unknown Publisher";
         this.bookImage = this.getAttribute("bookImage") ?? "default-book-image.jpg";
         this.bookName = this.getAttribute("bookName") ?? "Unknown Book";
         this.categories = this.getAttribute("categories")?.split(",") || [];
-        this.wear = this.getAttribute("wear") ?? 0;
-        this.pages = this.getAttribute("pages") ?? "Unknown Pages";
-        this.description = this.getAttribute("description") ?? "No additional information.";
+        this.sentDate = this.getAttribute("sDate") ?? "no info";
+        this.leftTime = this.getAttribute("lTime") ?? "No information.";
+        this.status=this.getAttribute("status") ?? " No Info ";
 
         this.#render();
     }
@@ -20,53 +19,41 @@ class cartBookCard extends HTMLElement {
 
     #render() {
         this.myRoot.innerHTML = `
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             
-            <article class="exchange-books">
-                <figure class="undsen-medeelel">
-                    <img class="profile-pic" src="${this.publisherPicture}" alt="${this.publisherName}" width="50">
-                    <label>${this.publisherName}</label>
-                    <p class="stars">
-                        ${Array.from({ length: this.starRate }, () => '<span class="fa fa-star"></span>').join('')}
-                    </p>
-                </figure>
-                <div class="book-info-main">
-                    <figure>
-                        <img class="nomnii-zurag" src="${this.bookImage}" alt="${this.bookName}" width="100">
-                    </figure>
-                    <div class="nomnii-medeelel">
-                        <div class="tags">
-                            <div class="ehnii-tag">
-                                <h4>Номын нэр: <span>${this.bookName}</span></h4>
-                                <p>Хэвлэгдсэн он: <time>${this.publishedYear}</time></p>
-                                <p>Категори: <span>${this.categories.join(', ')}</span></p>
-                            </div>
-                            <div class="hoyrdahi-tag">
-                                <p>Зохиолч: <span>${this.author}</span></p>
-                                <p>Эдэлгээ:<meter value="${this.wear}" min="0" max="10" class="styled-meter"></meter></p>
-                                <p>Хуудасны тоо: <span>${this.pages}</span></p>
-                            </div>
-                        </div>
-                        <p class="additional-info">Нэмэлт мэдээлэл: <span>${this.description}</span></p>
-                        <button class="book-exchange-request-button">Солилцох хүсэлт явуулах</button>
-                    </div>
-                </div>
-            </article>
+    <figure>
+        <img class="nom" src="pictures/4bish4.jpg" alt="somebook name" width="140">
+    </figure>
+    <div class="nomnii-medeelel">
+        <div class="tags">
+            <div class="ehnii-tag">
+                <p>Нийтэлсэн: ${this.publisherName}</p>
+                <h4>Номын нэр: <span>${this.bookName}</span></h4>
+                <p>Хүсэлт явуулсан: ${this.sentDate}</p>
+                <p>Категори: <span>${this.categories}</span></p>
+                <p>Үлдсэн хугацаа:${this.leftTime}</p>
+                <h3><u>Төлөв:<span>${this.status}</span></u></h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <svg class="sav" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"/><path fill="none" d="M292 64h-72a4 4 0 0 0-4 4v28h80V68a4 4 0 0 0-4-4Z"/><path fill="#CE5858" d="M447.55 96H336V48a16 16 0 0 0-16-16H192a16 16 0 0 0-16 16v48H64.45L64 136h33l20.09 314A32 32 0 0 0 149 480h214a32 32 0 0 0 31.93-29.95L415 136h33ZM176 416l-9-256h33l9 256Zm96 0h-32V160h32Zm24-320h-80V68a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4Zm40 320h-33l9-256h33Z"/></svg>
         `;
     }
 
     static get observedAttributes() {
         return [
-            "publisherPicture",
+            
             "publisherName",
-            "starRate",
             "bookImage",
             "bookName",
-            "publishedYear",
             "categories",
-            "author",
-            "wear",
-            "pages",
-            "description"
+            "lTime",
+            "sDate",
+            "status",
+            
         ];
     }
 

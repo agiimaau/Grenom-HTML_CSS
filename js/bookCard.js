@@ -22,9 +22,13 @@ class BookCard extends HTMLElement {
     }
 
     #render() {
+        
         this.myRoot.innerHTML = `
-            
-            <article class="exchange-books">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/book-exchange.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <figure class="undsen-medeelel">
                     <img class="profile-pic" src="${this.publisherPicture}" alt="${this.publisherName}" width="50">
                     <label>${this.publisherName}</label>
@@ -41,7 +45,7 @@ class BookCard extends HTMLElement {
                             <div class="ehnii-tag">
                                 <h4>Номын нэр: <span>${this.bookName}</span></h4>
                                 <p>Хэвлэгдсэн он: <time>${this.publishedYear}</time></p>
-                                <p>Категори: <span>${this.categories.join(', ')}</span></p>
+                                <p>Категори: <span>${this.categories.join(',')}</span></p>
                             </div>
                             <div class="hoyrdahi-tag">
                                 <p>Зохиолч: <span>${this.author}</span></p>
@@ -53,7 +57,7 @@ class BookCard extends HTMLElement {
                         <button class="book-exchange-request-button">Солилцох хүсэлт явуулах</button>
                     </div>
                 </div>
-            </article>
+            
         `;
     }
 
