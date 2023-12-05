@@ -59,7 +59,7 @@
     margin-top: 20px;
     color: white;
     background-color: #86AB87;
-    ;
+    cursor: pointer;
     border-radius: 50px;
     width: 45%;
     height: 50px;
@@ -178,7 +178,7 @@
         width: 180px;
         color: #4D724D;
         font-weight: 700;
-        ;
+        cursor: pointer;
         background-color: #FFF;
         border: none;
         font-size: 10px;
@@ -283,7 +283,7 @@
     margin-top: 40px;
     color: white;
     background-color: #86AB87;
-    ;
+    cursor: pointer;
     border-radius: 50px;
     width: 45%;
     height: 60px;
@@ -386,13 +386,14 @@
       }
 
       .book-exchange-request-button {
+        
         margin-top: 20px;
         border-radius: 20px;
         padding: 4px;
         width: 320px;
         color: #4D724D;
         font-weight: 700;
-        ;
+        cursor: pointer;
         background-color: #FFF;
         border: none;
       }
@@ -497,7 +498,7 @@
     margin-top: 40px;
     color: white;
     background-color: #86AB87;
-    
+    cursor: pointer;
     border-radius: 50px;
     width: 50%;
     height: 70px;
@@ -610,10 +611,11 @@
         width: 360px;
         color: #4D724D;
         font-weight: 700;
-        ;
+        cursor: pointer;
         background-color: #FFF;
         border: none;
         font-size: 18px;
+
       }
 
 
