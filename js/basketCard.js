@@ -1,3 +1,4 @@
+
 class BasketCard extends HTMLElement {
   constructor() {
     super();
@@ -8,12 +9,40 @@ class BasketCard extends HTMLElement {
     this.categories = this.getAttribute("categories")?.split(",") || [];
     this.author = this.getAttribute("author") ?? "Unknown Author";
     this.requestedDate = this.getAttribute("requestedDate");
-    this.count = this.getAttribute("count");
+    this.count = this.getAttribute("count")?? "baidaggue";
     
     this.addEventListener("click", this.removeBook.bind(this));
-
     this.#render();
   }
+  
+ 
+
+
+  /*addToCart = (bookDetails) => {
+    let booksString = localStorage.getItem("GRENOM_BASKET");
+    let books = booksString === null ? [] : JSON.parse(booksString);
+
+    const existingBook = books.find(item => item.id === bookDetails.id);
+
+    if (existingBook) {
+      // Increment the count if the book is already in the basket
+      existingBook.count += 1;
+      console.log("it worked");
+    } else {
+      // Add the book to the basket with count 1
+      books.push({ ...bookDetails, count: 1 });
+    }
+
+    localStorage.setItem("GRENOM_BASKET", JSON.stringify(books));
+    window.refreshExchangeBasket();
+  };
+
+  connectedCallback() {
+    document.addEventListener("addToCart", (event) => {
+      const bookDetails = event.detail;
+      this.addToCart(bookDetails);
+    });
+  }*/
   
 
   removeBook = (e) => {
@@ -56,8 +85,8 @@ class BasketCard extends HTMLElement {
                     <div class="ehnii-tag">
                         <p>Нийтэлсэн: ${this.author}</p>
                         <h4>Номын нэр: <span>${this.bookName}</span></h4>
-                        <p>Хүсэлт явуулсан: ${(new Date(this.requestedDate)).toISOString().substring(0,10)}</p>
-                        <p>Категори: <span>${this.categories.join(",")}</span></p>
+                        <p>Хүсэлт явуулсан: ${(new Date(this.requestedDate))}</p>
+                        <p>Категори: <span>${this.categories}</span></p>
                         <p>Үлдсэн хугацаа:${this.name} цаг </p>
                         <h3><u>Төлөв:<span>${this.name}</span></u></h3>
                     </div>

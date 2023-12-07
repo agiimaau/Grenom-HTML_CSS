@@ -1,8 +1,10 @@
-
+//let cart = [];
+addCartToMemory = () => {
+    localStorage.setItem('GRENOM_BASKET', JSON.stringify(cart));
+}
 class BookCard extends HTMLElement {
     constructor() {
         super();
-       
         this.myRoot = this.attachShadow({ mode: "open" });
         this.id=this.getAttribute("id")?? 0;
         this.publisherPicture = this.getAttribute("publisherPicture") ?? "default-publisher-picture.jpg";
@@ -16,27 +18,67 @@ class BookCard extends HTMLElement {
         this.wear = this.getAttribute("wear") ?? 0;
         this.pages = this.getAttribute("pages") ?? "Unknown Pages";
         this.description = this.getAttribute("description") ?? "No additional information.";
-
         this.#render();
         
        
     } 
-    addToCart(book_id){
-
+    
+    /*addToCart = (id) => {
+        window.alert("ajillalaa");
+        let positionThisProductInCart = cart.findIndex((value) => value.id == id);
+        if(cart.length <= 0){
+            cart = [{
+                id: id,
+                quantity: 1
+            }];
+        }else if(positionThisProductInCart < 0){
+            cart.push({
+                id: id,
+                quantity: 1
+            });
+        }else{
+            
+        }
+        addCartToMemory();
     }
+    
+    
 
     connectedCallback() {
         // Add any event listeners or logic needed when the component is connected to the DOM
         this.myRoot.addEventListener('click', (event) => {
             console.log('Clicked on:', event.target);
-        
             const clickedButton = event.target.closest('.book-info-main .nomnii-medeelel .book-exchange-request-button');
             
             if (clickedButton) {
                 console.log('Button clicked!');
-                window.alert(this.id);
+                
                 this.addToCart(this.id);
                 
+            }
+        });
+    }*/
+    addToCart = () => {
+        const event = new CustomEvent("addToCart", {
+            
+            bubbles: true,
+            detail: {
+                id: this.id,
+            },
+            
+        });
+
+        this.dispatchEvent(event);
+        console.log("ahem");
+    }
+
+    connectedCallback() {
+        this.myRoot.addEventListener('click', (event) => {
+            const clickedButton = event.target.closest('.book-info-main .nomnii-medeelel .book-exchange-request-button');
+
+            if (clickedButton) {
+                this.addToCart();
+                console.log("bolloo");
             }
         });
     }
