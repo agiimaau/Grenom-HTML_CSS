@@ -61,6 +61,7 @@ function renderBooks(books) {
         
         
         <book-card
+            id="${book.id}"
             publisherPicture="${book.publisherPicture}"
             publisherName="${book.publisherName}"
             starRate="${book["star-rate"] }"
@@ -75,7 +76,7 @@ function renderBooks(books) {
         ></book-card>
 
         `;
-        
+
         bookContainer.appendChild(article);
         
         
