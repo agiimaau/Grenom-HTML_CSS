@@ -2,7 +2,7 @@ class BasketCard extends HTMLElement {
   constructor() {
     super();
     this.myRoot = this.attachShadow({ mode: "open" });
-    this.id = this.getAttribute("id") ?? Math.random(100);
+    this.id = this.getAttribute("id") ??0;
     this.bookImage = this.getAttribute("bookImage") ?? "default-book-image.jpg";
     this.bookName = this.getAttribute("bookName") ?? "Unknown Book";
     this.categories = this.getAttribute("categories")?.split(",") || [];
@@ -14,6 +14,7 @@ class BasketCard extends HTMLElement {
 
     this.#render();
   }
+  
 
   removeBook = (e) => {
     let booksString = localStorage.getItem("GRENOM_BASKET");
