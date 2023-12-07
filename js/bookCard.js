@@ -1,7 +1,10 @@
+
 class BookCard extends HTMLElement {
     constructor() {
         super();
+       
         this.myRoot = this.attachShadow({ mode: "open" });
+        this.id=this.getAttribute("id")?? 0;
         this.publisherPicture = this.getAttribute("publisherPicture") ?? "default-publisher-picture.jpg";
         this.publisherName = this.getAttribute("publisherName") ?? "Unknown Publisher";
         this.starRate = this.getAttribute("starRate") ?? 0;
@@ -15,6 +18,15 @@ class BookCard extends HTMLElement {
         this.description = this.getAttribute("description") ?? "No additional information.";
 
         this.#render();
+        
+       
+    } 
+    addToCart(book_id){
+
+    }
+
+    connectedCallback() {
+        // Add any event listeners or logic needed when the component is connected to the DOM
         this.myRoot.addEventListener('click', (event) => {
             console.log('Clicked on:', event.target);
         
@@ -22,15 +34,11 @@ class BookCard extends HTMLElement {
             
             if (clickedButton) {
                 console.log('Button clicked!');
-                window.alert(this.bookName);
+                window.alert(this.id);
+                this.addToCart(this.id);
                 
             }
         });
-       
-    }
-
-    connectedCallback() {
-        // Add any event listeners or logic needed when the component is connected to the DOM
     }
 
     #render() {
@@ -76,6 +84,7 @@ class BookCard extends HTMLElement {
 
     static get observedAttributes() {
         return [
+            "id",
             "publisherPicture",
             "publisherName",
             "starRate",
