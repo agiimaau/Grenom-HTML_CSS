@@ -75,9 +75,13 @@ function renderBooks(books) {
         ></book-card>
 
         `;
-
+        
         bookContainer.appendChild(article);
+        
+        
+        
     });
+
     /*<figure class="undsen-medeelel">
             <img class="profile-pic" src="${book.publisherPicture}" alt="${book.publisherName}" width="50">
             <label>${book.publisherName}</label>
@@ -106,4 +110,7 @@ function renderBooks(books) {
                 <button class="book-exchange-request-button">Солилцох хүсэлт явуулах</button>
             </div>
         </div>*/
+       
+        
 }
+

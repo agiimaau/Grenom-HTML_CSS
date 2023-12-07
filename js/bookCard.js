@@ -15,6 +15,18 @@ class BookCard extends HTMLElement {
         this.description = this.getAttribute("description") ?? "No additional information.";
 
         this.#render();
+        this.myRoot.addEventListener('click', (event) => {
+            console.log('Clicked on:', event.target);
+        
+            const clickedButton = event.target.closest('.book-info-main .nomnii-medeelel .book-exchange-request-button');
+            
+            if (clickedButton) {
+                console.log('Button clicked!');
+                window.alert(this.bookName);
+                
+            }
+        });
+       
     }
 
     connectedCallback() {
@@ -45,7 +57,7 @@ class BookCard extends HTMLElement {
                             <div class="ehnii-tag">
                                 <h4>Номын нэр: <span>${this.bookName}</span></h4>
                                 <p>Хэвлэгдсэн он: <time>${this.publishedYear}</time></p>
-                                <p>Категори: <span>${this.categories.join(',')}</span></p>
+                                <p>Категори: <span>${this.categories}</span></p>
                             </div>
                             <div class="hoyrdahi-tag">
                                 <p>Зохиолч: <span>${this.author}</span></p>
@@ -59,6 +71,7 @@ class BookCard extends HTMLElement {
                 </div>
             
         `;
+        
     }
 
     static get observedAttributes() {
