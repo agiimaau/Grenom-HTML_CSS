@@ -1,4 +1,4 @@
-//let cart = [];
+let cart = [];
 addCartToMemory = () => {
     localStorage.setItem('GRENOM_BASKET', JSON.stringify(cart));
 }
@@ -58,27 +58,39 @@ class BookCard extends HTMLElement {
             }
         });
     }*/
-    addToCart = () => {
-        const event = new CustomEvent("addToCart", {
-            
-            bubbles: true,
-            detail: {
-                id: this.id,
-            },
-            
-        });
+    addToCart(product_id) {
+        console.log("product_id");
+        let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
+        if(cart.length <= 0){
+            cart = [{
+                product_id: product_id,
+                quantity: 1
+            }];
+        }else if(positionThisProductInCart < 0){
+            cart.push({
+                product_id: product_id,
+                quantity: 1
+            });
+        }else{
+            cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+        }
+      
+        localStorage.setItem("GRENOM_BASKET", JSON.stringify(cart));
+        console.log("GRENOM_BASKET:", JSON.stringify(cart));
 
-        this.dispatchEvent(event);
-        console.log("ahem");
-    }
-
+        
+      }
+    
     connectedCallback() {
+        
         this.myRoot.addEventListener('click', (event) => {
             const clickedButton = event.target.closest('.book-info-main .nomnii-medeelel .book-exchange-request-button');
-
+    
             if (clickedButton) {
-                this.addToCart();
+                this.addToCart(this.id);
                 console.log("bolloo");
+                
+
             }
         });
     }

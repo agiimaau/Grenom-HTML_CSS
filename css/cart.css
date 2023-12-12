@@ -10,7 +10,7 @@
     font-size: 25px;
     border:none;
     margin-bottom: 20px;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 8.5%;
 
   }
@@ -19,15 +19,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 8%;
-  }
-  
-  .flex-item-left {
-    flex: 50%;
-
-  }
-  
-  .flex-item-right {
-    flex: 50%;
+    align-items: center;
   }
   
   .box {
@@ -35,11 +27,11 @@
     font-weight: none;
     font-size: 13px;
     background-color: #4D724D;
-    width: 90%; 
+    width: 24rem; 
     padding: 25px; 
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 5%;
+    
     border-radius:25px;
     color: #ffffff;
  
@@ -50,27 +42,7 @@
        
       }
 
-    .box1 {
-      display: flex;
-      font-weight: none;
-      font-size: 13px;
-      background-color: #4D724D;
-      width: 90%; 
-      padding: 25px; 
-      margin-top: 20px;
-      margin-bottom: 20px;
-      
-      margin-left: -14.5%;
-      border-radius:25px;
-      color: #ffffff;
-      
-
-          & .ehnii-tag{
-
-            & h4{font-weight: 400;}
-          }
-         
-      }
+    
       .ehnii-tag p,h4, h3{
         line-height: 2.3;
         text-indent: 10px;
