@@ -22,42 +22,9 @@ class BookCard extends HTMLElement {
         
        
     } 
-    
-    /*addToCart = (id) => {
-        window.alert("ajillalaa");
-        let positionThisProductInCart = cart.findIndex((value) => value.id == id);
-        if(cart.length <= 0){
-            cart = [{
-                id: id,
-                quantity: 1
-            }];
-        }else if(positionThisProductInCart < 0){
-            cart.push({
-                id: id,
-                quantity: 1
-            });
-        }else{
-            
-        }
-        addCartToMemory();
-    }
+   
     
     
-
-    connectedCallback() {
-        // Add any event listeners or logic needed when the component is connected to the DOM
-        this.myRoot.addEventListener('click', (event) => {
-            console.log('Clicked on:', event.target);
-            const clickedButton = event.target.closest('.book-info-main .nomnii-medeelel .book-exchange-request-button');
-            
-            if (clickedButton) {
-                console.log('Button clicked!');
-                
-                this.addToCart(this.id);
-                
-            }
-        });
-    }*/
     addToCart(product_id) {
         console.log("product_id");
         let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);

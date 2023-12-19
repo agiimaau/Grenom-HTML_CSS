@@ -23,6 +23,7 @@ const getData = function () {
 
 }
 
+
 function renderBooksfr(book) {
   const bookContainer = document.getElementsByClassName("flex-container")[1];
 
@@ -32,11 +33,12 @@ function renderBooksfr(book) {
     return;
   }
   
-  const article = document.createElement("article");
-  article.className = "exchange-books";
+  const article = document.createElement("div");
+  article.className = "books";
 
   article.innerHTML = `
     <basket-card
+        id="${book.id}"
         bookImage="${book.image}"
         bookName="${book["book-name"]}"
         categories="${book.category}"

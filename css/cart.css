@@ -34,7 +34,6 @@
     
     border-radius:25px;
     color: #ffffff;
- 
         & .ehnii-tag{
 
           & h4{font-weight: 400;}
@@ -44,7 +43,7 @@
 
     
       .ehnii-tag p,h4, h3{
-        line-height: 2.3;
+        
         text-indent: 10px;
       }
 
