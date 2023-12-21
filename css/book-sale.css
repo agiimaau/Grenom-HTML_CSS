@@ -688,6 +688,26 @@
     }
     
 }
+.book-sale-request-button,
+.book-sale-button,
+  .sale-books {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .book-sale-button:hover {
+    background-color: #357535; /* Change the color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+  }
+
+  .sale-books:hover {
+    background-color: #3e5f3e; /* Change the color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+  }
+  .book-info-main .nomnii-medeelel .book-sale-request-button:hover { 
+    background-color: #86AB87 !important; /* Change the color on hover */
+    color: #fff;
+  }
+  
 
 
   

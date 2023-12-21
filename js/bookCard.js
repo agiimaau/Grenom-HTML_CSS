@@ -57,6 +57,7 @@ class BookCard extends HTMLElement {
                 this.addToCart(this.id);
                 console.log("bolloo");
                 
+                
 
             }
         });

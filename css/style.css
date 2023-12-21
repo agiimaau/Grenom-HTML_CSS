@@ -7,6 +7,7 @@ body{
   margin:0;
   padding:0;
 }
+
 @media only screen and (max-width: 480px) {
   .poster-1 {
     margin-top: 0.2%;
@@ -17,6 +18,7 @@ body{
     padding-left:2.25rem;
     height:14rem;
     border-radius:1.563rem;
+    
   }
   
     
@@ -1556,6 +1558,13 @@ body{
       font-size: 1.3rem;
     }
   }
+}
+.book-grid{
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.book-grid:hover {
+  background-color: #357535; /* Change the color on hover */
+  transform: scale(1.05); /* Add a subtle scale effect on hover */
 }
 
 

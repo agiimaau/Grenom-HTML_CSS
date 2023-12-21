@@ -1,3 +1,4 @@
+
 @media only screen and (max-width: 480px) {
   .book-exchange {
     & .filter {
@@ -615,6 +616,7 @@
         background-color: #FFF;
         border: none;
         font-size: 18px;
+        
 
       }
 
@@ -655,6 +657,27 @@
   .switch-btn:hover {
     background-color: #357535;
   }
-
-
 }
+.book-exchange-request-button,
+.book-exchange-button,
+  .exchange-books {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .book-exchange-button:hover {
+    background-color: #357535; /* Change the color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+  }
+
+  .exchange-books:hover {
+    background-color: #3e5f3e; /* Change the color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+  }
+  .book-info-main .nomnii-medeelel .book-exchange-request-button:hover { 
+    background-color: #86AB87 !important; /* Change the color on hover */
+    color: #fff;
+  }
+  
+  
+
+/* Define the animation keyframes */
