@@ -38,7 +38,7 @@
         margin-top: 10px;
         padding: 0 2%;
         display: inline-block;
-        width: 45%; /* Adjust based on the remaining space */
+        width: 30%; /* Adjust based on the remaining space */
         max-width:60% ; /* Set a max-width to avoid excessively stretching on larger screens */
         height: 1rem;
         flex-shrink: 0;
@@ -54,7 +54,7 @@
           position: absolute;
           outline: none;
           left: 10px;
-          width: 80%;
+          width: 70%;
           padding-left: 5px;
           font-size: 8px;
           height: 2.5rem;
@@ -111,6 +111,12 @@
         & #profile {
           padding-left: 2px;
           width: 1.5rem;
+        }
+        & #l-out{
+          
+          padding-left: 7px;
+          width: 0.9rem;
+          
         }
         & button{
           border: none;
@@ -270,6 +276,11 @@
           padding-left: 3px;
           width: 29px;
          
+        }
+        & #l-out{
+          
+          padding-left: 9px;
+          width: 1.1rem;
         }
         & button{
           border: none;
@@ -431,6 +442,11 @@
           padding-left: 5px;
           width: 35px;
         }
+        & #l-out{
+          padding-top: 2px;
+          padding-left: 13px;
+          width: 1.3rem;
+        }
         & button{
           border: none;
           cursor: pointer;
@@ -586,6 +602,11 @@
         & #profile {
           padding-top: 2px;
           padding-left: 11px;
+          width: 2.5rem;
+        }
+        & #l-out{
+          padding-top: 6px;
+          padding-left: 15px;
           width: 2.5rem;
         }
         & button{
