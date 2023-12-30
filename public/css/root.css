@@ -6,48 +6,72 @@
     --color-date: #584C4C;
     --color-red1: #CE5858;
     --color-red2: #cb6b6b;
+    --border-rad-side: 50%;
+    --font-weight-h: 300;
+    --border-rad: 15px;
+    --width: 550px;
+    --padding-btn: 10px;
+    --padding: 8px;
+    --column-gap: 20px;
+    --line-height: 2;
+    --font-size: 10px;
+    --font-size-h: 12px;
+    --border-rad-avah-tatgalzah: 35%;
+    --font-size-p: 8px;
+    --min-width: 30%;
+    --padding2: 20px;
+    --font-size2: 20px;
+    --column-gap2: 10px;
+    --margin-btm: 15px;
+    --padding-persent: 4%;
+    --font-weight-avah-tqatgalzah: 200;
+    --padding-tatgalzah: 9px 5px 16px;
+    --border-rad2: 40%;
+    --margin-left-bagts: auto;
+    --width-h-artic: 400px;
+    --padding-left-right: 30px;
+    --border-rad-ustgah-zasah: 10px;
+    --padding-top: 15px;
+
 }
 
 .notif {
     width: 25px;
     height: 25px;
-    margin-top: 26px;
-    margin-left: -10px;
+    margin: 26px 0px 0px -10px;
     background-color: var(--color-background);
     color: var(--color-white);
-    border-radius: 50%;
+    border-radius: var(--border-rad-side);
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
 
     & h4 {
-        font-weight: 300;
+        font-weight: var(--font-weight-h);
     }
 }
 
 .h3 {
-    margin-top: 40px;
+    margin: 40px 0px 20px 0px;
     color: var(--color-white);
     background-color: var(--color-background-h3);
-    border-radius: 15px;
-    width: 550px;
+    border-radius: var(--border-rad);
+    width: var(--width);
     font-size: 15px;
-    margin-bottom: 20px;
     padding: 25px;
     font-weight: 350;
 }
 
 .articles {
-    padding-bottom: 10px;
+    padding-bottom: var(--padding-btn);
     border-radius: 20px;
     color: var(--color-black);
     background-color: var(--color-background);
     min-width: 40%;
-    width: 550px;
-    margin-bottom: 20px;
-    padding: 8px;
-    margin-left: 30px;
+    width: var(--width);
+    margin: 0px 0px 20px 30px;
+    padding: var(--padding);
 }
 
 .niit-medeelel {
@@ -55,20 +79,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    column-gap: var(--column-gap);
 
     .medeelel {
         column-gap: 40px;
         display: flex;
 
         & .ehniih {
-            line-height: 2;
+            line-height: var(--line-height);
             font-size: 11px;
         }
 
         & p {
             text-align: center;
-            font-size: 10px;
+            font-size: var(--font-size);
             display: inline;
 
         }
@@ -78,37 +102,35 @@
         }
 
         & h4 {
-            font-size: 12px;
+            font-size: var(--font-size-h);
         }
     }
 
     .pro {
-        border-radius: 50%;
-        margin-top: 30%;
-        margin-bottom: 30%;
+        border-radius: var(--border-rad-side);
+        margin: 30% 0;
     }
 
     .huleen-avah {
-        border-radius: 35%;
+        border-radius: var(--border-rad-avah-tatgalzah);
         border: none;
         background-color: var(--color-background-h3);
         color: var(--color-white);
         cursor: pointer;
         padding: 12px 15px 9px 15px;
-        font-size: 8px;
+        font-size: var(--font-size-p);
     }
 
     .tatgalzah {
         text-align: center;
         align-items: center;
-        border-radius: 35%;
+        border-radius: var(--border-rad-avah-tatgalzah);
         border: none;
         background-color: var(--color-red1);
         color: var(--color-white);
         cursor: pointer;
         padding: 12.2px 10px 18px 10px;
-        ;
-        font-size: 8px;
+        font-size: var(--font-size-p);
     }
 }
 
@@ -145,13 +167,13 @@
 }
 
 .articless {
-    padding: 20px;
+    padding: var(--padding2);
     border-radius: 25px;
     display: inline-block;
     color: var(--color-white);
     background-color: var(--color-background);
-    min-width: 30%;
-    width: 550px;
+    min-width: var(--min-width);
+    width: var(--width);
     margin-bottom: 30px;
 }
 
@@ -159,43 +181,39 @@
     display: flex;
 
     & svg {
-        margin-top: 10px;
-        margin-left: 50%;
+        margin: 10px 0px 0px 50%;
         cursor: pointer;
     }
 
     & label {
         font-size: 14px;
-        margin-top: 20px;
-        margin-left: 8px;
+        margin: 25px 0px 0px 8px;
+
+    }
+    .profile-pic {
+        width: 50px;
+        border-radius: var(--border-rad-side);
+        margin: 10px 0px 15px 0px;
     }
 }
 
-.profile-pic {
-    width: 50px;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
 
 main h1 {
     font-weight: bolder;
-    padding: 20px;
+    padding: var(--padding2);
     text-align: center;
 }
 
 .btn {
-    margin-top: 40px;
+    margin: 40px 0px 40px 0px;
     color: var(--color-white);
     background-color: var(--color-background-h3);
     border-radius: 50px;
     width: 40%;
     height: 70px;
-    font-size: 20px;
+    font-size: var(--font-size2);
     font-weight: bolder;
     border: none;
-    margin-bottom: 40px;
     cursor: pointer;
 }
 
@@ -207,39 +225,33 @@ main h1 {
 .bagts {
     font-size: larger;
     flex-wrap: wrap;
-    padding-bottom: 10px;
     border-radius: 20px;
     display: inline-block;
     color: var(--color-white);
     background-color: var(--color-background-h3);
-    min-width: 30%;
+    min-width: var(--min-width);
     width: 90%;
-    margin-bottom: 30px;
-    margin-left: 3%;
+    margin: 0px 0px 30px 3%;
     padding: 30px;
 }
 
 .btn-ustgah {
     background-color: var(--color-red2);
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: var(--border-rad-ustgah-zasah);
     border: none;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 25px;
-    margin-bottom: 25px;
+    padding: 0px 30px;
+    margin: 0px 0px 20px 20px;
     cursor: pointer;
 }
 
 .btn-zasah {
     background-color: var(--color-background);
-    border-radius: 10px;
+    border-radius: var(--border-rad-ustgah-zasah);
     padding: 10px;
-    margin-left: 65%;
-    margin-bottom: 20px;
+    margin: 0px 0px 20px 65%;
     border: none;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
     cursor: pointer;
 }
 
@@ -257,56 +269,52 @@ main h1 {
         & h4 {
             font-size: medium;
             font-weight: 500;
-            margin-bottom: 1.5rem;
-            margin-left: 1.8rem;
+            margin: 0 0 1.5rem 1.8rem;
         }
 
         & .tags {
             display: flex;
             justify-content: space-around;
-            font-weight: 300;
+            font-weight: var(--font-weight-h);
 
         }
     }
 
     .ehni-tag p {
-        line-height: 2;
+        line-height: var(--line-height);
     }
 
     .hoyrdah-tag p {
-        line-height: 2;
+        line-height: var(--line-height);
     }
 
     .hoyrdah-tag {
         margin-top: -1.9rem;
-        
-
     }
 }
 
 .learn {
     color: var(--color-background);
-    font-size: 20px;
+    font-size: var(--font-size2);
     border: none;
-    margin-bottom: 30px;
-    margin-left: 46.5%;
+    margin: 0px 0px 30px 46.5%;
     cursor: pointer;
 }
 
 @media only screen and (min-width: 730px) and (max-width: 1023px) {
     .articles {
-        min-width: 30%;
+        min-width: var(--min-width);
     }
 
     .niit-medeelel {
         .huleen-avah {
-            padding-top: 15px;
-            padding-bottom: 10px;
+            padding-top: var(--padding-top);
+            padding-bottom: var(--padding-btn);
             padding-right: 15px;
         }
 
         .tatgalzah {
-            padding-top: 15px;
+            padding-top: var(--padding-top);
             padding-bottom: 15px;
             padding-right: 10px;
         }
@@ -321,26 +329,24 @@ main h1 {
         min-width: 50%;
 
         & .btn-ustgah {
-            background-color: #cb6b6b;
-            border-radius: 10px;
-            padding: 8px;
+            background-color: var(--color-red2);
+            border-radius: var(--border-rad-ustgah-zasah);
+            padding: var(--padding);
             border: none;
-            padding-left: 30px;
-            padding-right: 30px;
-            margin-left: 20px;
-            margin-bottom: 25px;
+            padding-left: var(--padding-left-right);
+            padding-right: var(--padding-left-right);
+            margin-left: 0px 0px 25px 20px;
             cursor: pointer;
         }
 
         & .btn-zasah {
-            background-color: #86AB87;
-            border-radius: 10px;
-            padding: 8px;
-            margin-left: 53%;
-            margin-bottom: 20px;
+            background-color: var(--color-background);
+            border-radius: var(--border-rad-ustgah-zasah);
+            padding: var(--padding);
+            margin: 0px 0px 20px 53%;
             border: none;
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: var(--padding-left-right);
+            padding-right: var(--padding-left-right);
             cursor: pointer;
         }
     }
@@ -348,55 +354,49 @@ main h1 {
 
 @media only screen and (min-width: 490px) and (max-width: 730px) {
     .h3 {
-        width: 400px;
-        font-size: 12px;
-        font-weight: 300;
+        width: var(--width-h-artic);
+        font-size: var(--font-size-h);
+        font-weight: var(--font-weight-h);
     }
 
     .articles {
-        border-radius: 15px;
-        min-width: 30%;
-        width: 400px;
+        border-radius: var(--border-rad);
+        min-width: var(--min-width);
+        width: var(--width-h-artic);
         padding: 6px;
     }
 
     .niit-medeelel {
-        column-gap: 10px;
+        column-gap: var(--column-gap2);
 
         .medeelel {
-            column-gap: 20px;
+            column-gap: var(--column-gap);
             display: inline-flex;
 
             & .ehniih {
-                font-size: 8px;
+                font-size: var(--font-size-p);
             }
 
             & p {
-                font-size: 8px;
+                font-size: var(--font-size-p);
                 display: inline-flex;
             }
 
             & h4 {
-                font-size: 10px;
+                font-size: var(--font-size);
             }
         }
 
         .huleen-avah {
-            border-radius: 40%;
-            padding-left: 12px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-right: 12px;
-            font-weight: 200;
+            border-radius: var(--border-rad2);
+            padding: var(--padding) 12px;
+            font-weight: var(--font-weight-avah-tqatgalzah);
         }
 
         .tatgalzah {
-            border-radius: 40%;
-            padding-left: 5px;
-            padding-top: 9px;
-            padding-bottom: 16px;
-            padding-right: 5px;
-            font-weight: 200;
+            border-radius: var(--border-rad2);
+            padding: var(--padding-tatgalzah);
+            font-weight: var(--font-weight-avah-tqatgalzah);
         }
     }
 
@@ -405,12 +405,23 @@ main h1 {
     }
 
     .bagts {
-        margin-left: auto;
-        padding: 4%;
+        margin-left: var(--margin-left-bagts);
+        padding: var(--padding-persent);
     }
 
     .btn-zasah {
         margin-left: 30%;
+    }
+
+    .undsen-medeelel {
+
+        & label {
+            margin: 25px 0px 0px 8px;
+        }
+        & svg {
+            margin: 15px 0px 0px 50%;
+            cursor: pointer;
+        }
     }
 }
 
@@ -421,16 +432,16 @@ main h1 {
 
     .h3 {
         width: 385px;
-        font-size: 12px;
+        font-size: var(--font-size-h);
         margin-bottom: 20px;
-        font-weight: 300;
+        font-weight: var(--font-weight-h);
     }
 
     .articles {
-        border-radius: 15px;
+        border-radius: var(--border-rad);
         min-width: 10%;
         width: 380px;
-        margin-bottom: 15px;
+        margin-bottom: var(--margin-btm);
         padding: 5px;
     }
 
@@ -443,37 +454,31 @@ main h1 {
 
             & .ehniih {
                 line-height: 1.9;
-                font-size: 8px;
+                font-size: var(--font-size-p);
             }
 
             & p {
-                font-size: 8px;
+                font-size: var(--font-size-p);
                 display: inline-flex;
             }
 
             & h4 {
-                font-size: 10px;
+                font-size: var(--font-size);
             }
         }
 
         .huleen-avah {
-            border-radius: 40%;
-            padding-left: 12px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-right: 12px;
-            font-size: 8px;
-            font-weight: 200;
+            border-radius: var(--border-rad2);
+            padding: 8px 12px;
+            font-size: var(--font-size-p);
+            font-weight: var(--font-weight-avah-tqatgalzah);
         }
 
         .tatgalzah {
-            border-radius: 40%;
-            padding-left: 5px;
-            padding-top: 9px;
-            padding-bottom: 16px;
-            padding-right: 5px;
-            font-size: 8px;
-            font-weight: 200;
+            border-radius: var(--border-rad2);
+            padding: var(--padding-tatgalzah);
+            font-size: var(--font-size-p);
+            font-weight: var(--font-weight-avah-tqatgalzah);
         }
     }
 
@@ -486,40 +491,49 @@ main h1 {
     .profile-pic {
         width: auto;
         margin-left: 15px;
-        margin-bottom: 15px;
+        margin-bottom: var(--margin-btm);
     }
 
     .bag {
-        justify-content: center;
         justify-content: space-evenly;
     }
 
     .bagts {
-        font-size: larg;
-        margin-left: auto;
-        padding: 4%;
+        font-size: large;
+        margin-left: var(--margin-left-bagts);
+        padding: var(--padding-persent);
     }
 
     .btn-ustgah {
-        padding: 8px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0px 18px;
         margin-left: 10px;
     }
 
     .btn-zasah {
-        padding: 8px;
-        margin-left: 30%;
-        margin-bottom: 25px;
+        margin: 0px 0px 25px 30%;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .book_info_main {
-        column-gap: 10px;
+        column-gap: var(--column-gap2);
     }
 
     .learn {
         margin-left: 40%;
     }
+
+    .undsen-medeelel {
+        & label {
+            margin: 25px 0px 0px 8px;
+
+        }
+        & svg {
+            margin: 5px 0px 0px 29%;
+        }  
+        
+    }
+
+    
+
 }
