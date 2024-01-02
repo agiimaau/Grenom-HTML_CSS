@@ -13,6 +13,7 @@ const cookieParser = require('cookie-parser');
 const configurePassport = require("./passportConfig");
 configurePassport(passport);
 const multer = require('multer');
+app.use(express.json());
 const upload = multer();
 
 const swaggerUi = require("swagger-ui-express");
@@ -288,18 +289,21 @@ app.get("/bookdata", async (req, res) => {
             SELECT eb.*, 
                    u.UserPicture AS publisherpicture,
                    u.LastName AS publisherlastname,
-                   u.FirstName AS publisherfirstname
+                   u.FirstName AS publisherfirstname,
+                   ce.Status AS status,
+                   ce.ReqDate AS reqdate
             FROM public.ExchangeBooks AS eb
-            JOIN public.Users AS u ON eb.UserID = u.UserID;
+            JOIN public.Users AS u ON eb.UserID = u.UserID
+            LEFT JOIN public.CartEx AS ce ON eb.BookID = ce.BookID;
         `;
         const data = await pool.query(query);
-        console.log(data.rows);
         res.status(200).json(data.rows);
     } catch (err) {
         console.error(err.message);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
 
 /**
  * @swagger
@@ -480,13 +484,17 @@ app.post(
     app.get("/bookdata-sale", async (req, res) => {
         try {
             const query = `
-                SELECT eb.*, 
-                       u.UserPicture AS PublisherPicture,
-                       u.LastName AS PublisherLastName,
-                       u.FirstName AS PublisherFirstName
-                FROM public.SaleBooks AS eb
-                JOIN public.Users AS u ON eb.UserID = u.UserID;
-            `;
+            SELECT eb.*, 
+            u.UserPicture AS publisherpicture,
+            u.LastName AS publisherlastname,
+            u.FirstName AS publisherfirstname,
+            ce.Status AS status,
+            ce.ReqDate AS reqdate
+     FROM public.SaleBooks AS eb
+     JOIN public.Users AS u ON eb.UserID = u.UserID
+     LEFT JOIN public.CartSale AS ce ON eb.BookID = ce.BookID;
+ `;
+            
             const data = await pool.query(query);
             
             res.status(200).json(data.rows);
@@ -495,6 +503,122 @@ app.post(
             res.status(500).json({ error: "Internal Server Error" });
         }
     });
+    app.post('/addToCart', upload.none(), async (req, res) => {
+        const { sellerID, bookID } = req.body;
+        var buyerID = req.user.userid;
+        console.log(buyerID, sellerID, bookID);
+    
+        if (buyerID != sellerID) {
+            try {
+                // First, check if the book is already in the cart
+                const checkQuery = `SELECT * FROM CartEx WHERE BuyerID = $1 AND SellerID = $2 AND BookID = $3`;
+                const checkResult = await pool.query(checkQuery, [buyerID, sellerID, bookID]);
+    
+                if (checkResult.rows.length > 0) {
+                    // If the book is already in the cart, send a message
+                    res.status(400).send('This book is already in your cart');
+                } else {
+                    // If the book is not in the cart, insert it
+                    const insertQuery = `INSERT INTO CartEx (BuyerID, SellerID, BookID, Status, ReqDate) VALUES ($1, $2, $3, 'W', NOW()) RETURNING *;`;
+                    const result = await pool.query(insertQuery, [buyerID, sellerID, bookID]);
+                    res.json(result.rows[0]);
+                    console.log("Successfully added to database");
+                }
+            } catch (err) {
+                console.error(err);
+                res.status(500).send('Server error');
+            }
+        } else {
+            // If buyerID and sellerID are the same, send an appropriate response
+            res.status(400).send('Buyer and seller cannot be the same');
+        }
+    });
+    
+
+    app.post('/addToCartSB', upload.none(), async (req, res) => {
+        const { sellerID, bookID } = req.body;
+        var buyerID = req.user.userid;
+        console.log(buyerID, sellerID, bookID);
+    
+        if (buyerID != sellerID) {
+            try {
+                // First, check if the book is already in the cart
+                const checkQuery = `SELECT * FROM CartSale WHERE BuyerID = $1 AND SellerID = $2 AND BookID = $3`;
+                const checkResult = await pool.query(checkQuery, [buyerID, sellerID, bookID]);
+    
+                if (checkResult.rows.length > 0) {
+                    // If the book is already in the cart, send a message
+                    res.status(400).send('This book is already in your cart');
+                } else {
+                    // If the book is not in the cart, insert it
+                    const insertQuery = `INSERT INTO CartSale (BuyerID, SellerID, BookID, Status, ReqDate) VALUES ($1, $2, $3, 'W', NOW()) RETURNING *;`;
+                    const result = await pool.query(insertQuery, [buyerID, sellerID, bookID]);
+                    res.json(result.rows[0]);
+                    console.log("Successfully added to database");
+                }
+            } catch (err) {
+                console.error(err);
+                res.status(500).send('Server error');
+            }
+        } else {
+            // If buyerID and sellerID are the same, send an appropriate response
+            res.status(400).send('Buyer and seller cannot be the same');
+            console.log("uurinhuu nomiig awkd bn nemegdeegu shuu");
+        }
+    });
+    app.get('/basket', async (req, res) => {
+        try {
+            const buyerID = req.user.userid; 
+            const query = 'SELECT * FROM CartEx WHERE BuyerID = $1';
+            const result = await pool.query(query, [buyerID]);
+            res.json(result.rows);
+            console.log(result.rows);
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Server error');
+        }
+    });
+    app.get('/basketSB', async (req, res) => {
+        try {
+            const buyerID = req.user.userid; 
+            const query = 'SELECT * FROM CartSale WHERE BuyerID = $1';
+            const result = await pool.query(query, [buyerID]);
+            res.json(result.rows);
+            console.log(result.rows);
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Server error');
+        }
+    });
+    app.post('/removeFromCart', async (req, res) => {
+        const { product_id } = req.body;
+        var buyerID = req.user.userid;
+    
+        try {
+            const deleteQuery = `DELETE FROM CartEx WHERE BuyerID = $1 AND BookID = $2`;
+            await pool.query(deleteQuery, [buyerID, product_id]);
+            
+            res.json({ message: 'Item removed from cart' });
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Server error');
+        }
+    });
+    app.post('/removeFromCartSB', async (req, res) => {
+        const { product_id } = req.body;
+        var buyerID = req.user.userid;
+    
+        try {
+            const deleteQuery = `DELETE FROM CartSale WHERE BuyerID = $1 AND BookID = $2`;
+            await pool.query(deleteQuery, [buyerID, product_id]);
+            
+            res.json({ message: 'Item removed from cart' });
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Server error');
+        }
+    });
+    
     app.post('/addExchangeBook', upload.none(),async(req,res)=>{
         let { booknameex, bookauthor, bookwear,catergory_lists_ex, book_addition_info_ex, bookdate, bookpage} = req.body;
         let errorsOfBE=[];

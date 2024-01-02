@@ -131,6 +131,7 @@ function renderBooks(books, page) {
         
         <book-sale-card
         id="${book.bookid}"
+        userId="${book.userid}"
         oldprice=${book.oldprice}
         newprice=${book.newprice}
         publisherPicture="${book.publisherpicture}"

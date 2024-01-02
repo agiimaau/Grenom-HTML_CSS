@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 });
 
-const getData = function () {
+/*const getData = function () {
   console.log("REFRESH BASKET and got data");
 
   // Initialize or set the GRENOM_BASKET if not present
@@ -35,6 +35,29 @@ const getData = function () {
 });
 console.log("ene saleid nuud shuu "+sale_ids);
 
+}*/
+const getData = function () {
+  console.log("REFRESH BASKET and got data");
+
+  fetch('/basket')
+      .then(response => response.json())
+      .then(data => {
+          // Assuming data is an array of cart items
+          data.forEach(item => {
+              fetchAndRenderBooksById(item.bookid); 
+          });
+      })
+      .catch(error => console.error('Error fetching cart data:', error));
+      fetch('/basketSB')
+      .then(response => response.json())
+      .then(data => {
+          // Assuming data is an array of cart items
+          data.forEach(item => {
+              
+              fetchAndRenderSaleBooksById(item.bookid); 
+          });
+      })
+      .catch(error => console.error('Error fetching cart data:', error));
 }
 
 
@@ -47,6 +70,11 @@ function renderBooksfr_sale(book) {
     bookContainer.innerHTML=`<h1>not found</h1>`;
     return;
   }
+  let formattedDate = '';
+  if (book.reqdate) {
+    const date = new Date(book.reqdate);
+    formattedDate = date.toISOString().split('T')[0]; // splits at 'T' and takes the date part
+  }
   
   const article = document.createElement("div");
   article.className = "books";
@@ -58,7 +86,8 @@ function renderBooksfr_sale(book) {
         bookName="${book["bookname"]}"
         categories="${book.category}"
         author="${book.publisherfirstname} ${book.publisherlastname}"
-        requestedDate="${book.requestedDate}"
+        requestedDate="${formattedDate}"
+        status=${book.status}
         count="${book.count}"
     ></basket-sale-card>
   `;
@@ -74,6 +103,12 @@ function renderBooksfr(book) {
     bookContainer.innerHTML=`<h1>not found</h1>`;
     return;
   }
+  let formattedDate = '';
+  if (book.reqdate) {
+    const date = new Date(book.reqdate);
+    formattedDate = date.toISOString().split('T')[0]; // splits at 'T' and takes the date part
+  }
+
   
   const article = document.createElement("div");
   article.className = "books";
@@ -85,7 +120,8 @@ function renderBooksfr(book) {
         bookName="${book["bookname"]}"
         categories="${book.category}"
         author="${book.publisherfirstname} ${book.publisherlastname}"
-        requestedDate="${book.requestedDate}"
+        requestedDate="${formattedDate}"
+        status="${book.status}"
         count="${book.count}"
     ></basket-card>
   `;

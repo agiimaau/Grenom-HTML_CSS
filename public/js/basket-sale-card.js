@@ -9,26 +9,54 @@ class BasketSaleCard extends HTMLElement {
       this.categories = this.getAttribute("categories")?.split(", ") || [];
       this.author = this.getAttribute("author") ?? "Unknown Author";
       this.requestedDate = this.getAttribute("requestedDate");
+      this.status = this.getAttribute("status");
       this.count = this.getAttribute("count")?? "baidaggue";
    
     }
     
     removeFromGrenomBasket_Sale(product_id) {
-      let books = JSON.parse(localStorage.getItem("GRENOM_BASKET_SALE"));
-    
-      // Find the index of the book to remove
-      let indexToRemove = books.findIndex(item => item.product_id == product_id);
-    
-      if (indexToRemove !== -1) {
-        // Remove the book from the array
-        books.splice(indexToRemove, 1);
-    
-        // Update the local storage
-        localStorage.setItem("GRENOM_BASKET_SALE", JSON.stringify(books));
-        location.reload();
-      }
-    }
+      fetch('/removeFromCartSB', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ product_id }),
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(() => {
+          // Remove the card element from the DOM
+          this.removeCardElement();
+      })
+      .catch(error => console.error('Error:', error));
+  }
   
+  removeCardElement() {
+      // Assuming 'this' refers to the basket card component
+      if (this.parentNode) {
+          this.parentNode.removeChild(this);
+      }
+  }
+  findStatus() {
+    // Ensure the status property is defined and is a string
+    if (typeof this.status !== 'string') {
+        return 'Status unknown';
+    }
+    console.log(this.status);
+  
+    switch (this.status.toLowerCase()) {
+        case 'w':
+            return 'Хүлээгдэж буй'; // Waiting
+        case 'd':
+            return 'Цуцлагдсан'; // Cancelled
+        default:
+            return 'Тодорхойгүй статус'; // Undefined status
+    }
+  }
   
   connectedCallback() {
           
@@ -59,10 +87,10 @@ class BasketSaleCard extends HTMLElement {
                       <div class="ehnii-tag">
                           <p>Нийтэлсэн: ${this.author}</p>
                           <h4>Номын нэр: <span>${this.bookName}</span></h4>
-                          <p>Хүсэлт явуулсан: ${(new Date(this.requestedDate))}</p>
+                          <p>Хүсэлт явуулсан: ${this.requestedDate}</p>
                           <p>Категори: <span>${this.categories}</span></p>
                           <p>Үлдсэн хугацаа:${this.count} цаг </p>
-                          <h3><u>Төлөв:<span>${this.count}</span></u></h3>
+                          <h3><u>Төлөв:<span>${this.findStatus()}</span></u></h3>
                       </div>
        
                       </div>
@@ -83,6 +111,7 @@ class BasketSaleCard extends HTMLElement {
         "categories",
         "author",
         "requestedDate",
+        "status",
         "count",
       ];
     }

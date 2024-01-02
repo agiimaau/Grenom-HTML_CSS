@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+/*document.addEventListener('DOMContentLoaded', function(){
     let savedBooks = JSON.parse(localStorage.getItem("GRENOM_BASKET")) || [];
     console.log(savedBooks);
     cart.push(...savedBooks);
@@ -8,12 +8,13 @@ document.addEventListener('DOMContentLoaded', function(){
 let cart = [];
 addCartToMemory = () => {
     localStorage.setItem('GRENOM_BASKET', JSON.stringify(cart));
-}
+}*/
 class BookCard extends HTMLElement {
     constructor() {
         super();
         this.myRoot = this.attachShadow({ mode: "open" });
         this.id=this.getAttribute("id")?? 0;
+        this.userId=this.getAttribute("userId")?? 0;
         this.publisherPicture = this.getAttribute("publisherPicture") ?? "default-publisher-picture.jpg";
         this.publisherName = this.getAttribute("publisherName") ?? "Unknown Publisher";
         this.starRate = this.getAttribute("starRate") ?? 0;
@@ -32,7 +33,7 @@ class BookCard extends HTMLElement {
    
     
     
-    addToCart(product_id) {
+    /*addToCart(product_id) {
         console.log("product_id: " + product_id);
         let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
         if(cart.length <= 0){
@@ -52,7 +53,20 @@ class BookCard extends HTMLElement {
         localStorage.setItem("GRENOM_BASKET", JSON.stringify(cart));
         console.log("GRENOM_BASKET:", JSON.stringify(cart));
 
-      }
+      }*/
+     addToCart(sellerID, bookID) {
+        console.log("Before fetch: ", { sellerID, bookID });
+        fetch('/addToCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ sellerID, bookID }),
+        })
+        .then(response => response.json())
+        .then(data => console.log('Added to cart:', data))
+        .catch((error) => console.error('Error:', error));
+    }
     
     connectedCallback() {
         
@@ -60,10 +74,11 @@ class BookCard extends HTMLElement {
             const clickedButton = event.target.closest('.book-info-main .nomnii-medeelel .book-exchange-request-button');
     
             if (clickedButton) {
-                this.addToCart(this.id);
-                console.log("bolloo");
+                this.addToCart(this.userId, this.id);
+                console.log(this.userId,this.id);
                 
                 
+
             }
         });
     }
@@ -112,6 +127,7 @@ class BookCard extends HTMLElement {
     static get observedAttributes() {
         return [
             "id",
+            "userId",
             "publisherPicture",
             "publisherName",
             "starRate",

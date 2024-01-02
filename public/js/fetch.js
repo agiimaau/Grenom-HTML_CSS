@@ -124,6 +124,7 @@ function renderBooks(books, page) {
         article.innerHTML = `
         <book-card
         id="${book.bookid}"
+        userId="${book.userid}"
         publisherPicture="${book.publisherpicture}"
         let publisherName = "${book.publisherfirstname} ${book.publisherlastname}";
         starRate="${book["starrate"] }"
