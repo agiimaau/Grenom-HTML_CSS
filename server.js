@@ -15,10 +15,37 @@ configurePassport(passport);
 const multer = require('multer');
 const upload = multer();
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("swagger-jsdoc");
 
+const options = {
+    swaggerDefinition: {
+        openapi: "3.0.0",
+        info: {
+            title: "Grenom",
+            version: "1.0.0",
+            description:
+                "Ном солилцооны вэбсайт", 
+            contact: {
+                name: "Admin",
+                url: "localhost:4000",
+                email: "grenom@gmail.com"
+            }
+        },
+        servers: [
+            {
+                url: "http://localhost:4000/"
+            }
+        ]
+    },
+    apis: ["./server.js"]
+  };
+  
+  const specs = swaggerDocument(options);
+  app.use("/docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 const PORT=process.env.PORT || 4000;
-//app.set("view engine", "ejs");
+
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('secret'));
 app.use(session({
@@ -428,7 +455,25 @@ app.post(
 
 
 
-
+/**
+ * @swagger
+ * /bookdata-sale:
+ *   get:
+ *     summary: Retrieve Sale Book Data
+ *     description: Fetches data for books available for sale, including information about the publisher.
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved sale book data.
+ *         content:
+ *           application/json:
+ *             example:
+ *               - BookData: { bookId: 1, title: "Book Title", author: "Author Name", ... }
+ *               - PublisherPicture: "URL to Publisher's Picture"
+ *               - PublisherLastName: "Publisher's Last Name"
+ *               - PublisherFirstName: "Publisher's First Name"
+ *       500:
+ *         description: Internal Server Error.
+ */
 
 
 
