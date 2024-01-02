@@ -87,7 +87,9 @@
       min-width: 30%;
       width: 300px;
       margin-bottom: 20px;
-        & .hymdral{
+     
+    }
+        .hymdral{
           background-color: #FBE38B;
           padding: 3px 8px;
           border-radius: 20px;
@@ -95,22 +97,22 @@
           font-size: 8px;
           color: black;
           position: absolute;
-          top: 0;
-          right: 0;
-          transform: translate(20%, -20%); /* To center vertically and align to the right */
+         
+          transform: translate(-30%, -50%); /* To center vertically and align to the right */
   
-          /* Additional styles for aligning text to the right */
-          text-align: right;
-          line-height: 1; /* To center vertically within the label */
           
-          }
-          & .une{
+        }
+          
+          .une{
             display: flex;
             justify-content: right;
             margin-top: 5px;
             padding-right: 10px;
           }
-          & p .anhnii-une{
+          p{
+            margin-bottom: 0;
+          }
+           p .anhnii-une{
               font-size: 6px;
               color: #FBE38B;
               margin-top: 10px;
@@ -118,15 +120,16 @@
               
               
           }
-          & p .zarah-une{
-              font-size: 9px;
+          p .zarah-une{
+              font-size: 10px;
               margin-top: 8px;
               margin-left: 3px;
              
               
           }
-          & .undsen-medeelel{
+           .undsen-medeelel{
             display: flex;
+            margin: 0;
             & stars{
               width: 20px;
             }
@@ -139,6 +142,7 @@
             & .profile-pic{
               width: 30px;
               border-radius: 50%;
+              
               margin-left: 20px;
               margin-bottom: 10px;
             }
@@ -149,21 +153,22 @@
             }
           }
           
-      }
+      
       
       .book-info-main{
         display: flex;
         justify-content: center;
         font-weight: none;
         font-size: 8px;
-        & .nomnii-zurag{
-          margin-left:20px;
-          margin-right:10px;
-          & img{
-            width: 80px !important  ;
-          }
-          
+        & figure{
+          margin:0;
         }
+        & figure .nomnii-zurag {
+          margin-left: 20px;
+        margin-right: 10px;
+        width: 80px !important;
+        }
+       
       
         & .nomnii-medeelel{
           white-space: normal; 
@@ -177,16 +182,20 @@
               
               & h4{font-weight: 400;}
             }
-           
+          }
+        
         }
+      }
           .ehnii-tag p,h4{
             line-height: 2;
+            margin: 0;
           }
           .hoyrdahi-tag p{
             line-height: 2;
+            margin: 0;
           }
           .additional-info {
-            
+            margin: 0;
             line-height: 1.5;
             word-wrap: break-word;
             
@@ -205,9 +214,7 @@
           }
           
           
-        }
-       
-      }
+      
       
       .change-buttons {
         margin-top: 0px;
@@ -239,235 +246,8 @@
       
       }
 }
-@media only screen and (min-width: 1024px) {
-  .book-sale{
-    & .filter{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-     
-      & h3{
-        color:#4D724D;
-        margin-right: 30px;
-        font-weight: 400;
-        display: inline-block;
-        font-size: 30px;
-  
-        
-      }
-      & .filter-names{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        & button{
-          background-color: #4D724D;
-          border-radius: 15px;
-          border:#4D724D;
-          color: white;
-          font-size: 18px;
-          padding-left: 15px;
-          padding-right: 15px;
-          margin-right:15px ;
-          padding-top: 3px;
-          padding-bottom: 3px;
-          & svg{
-            float:right;
-            cursor: pointer; 
-            margin-left: 15px;
-  
-          }
-        }
-      }
-      
-    }
-    margin-top: 40px;
-  }
-     
-  
-      .book-sale-main{
-        & h3{
-          display: flex;
-          justify-content: center;
-          
-        }
-      }
-      
-      .book-sale-button{
-        cursor: pointer;
-        margin-top: 40px;
-        color:white;
-        background-color: #86AB87;;
-        border-radius: 50px;
-        width:50%;
-        height: 70px;
-        font-size: 20px;
-        border:none;
-        margin-bottom: 40px;
-      }
-      .all-sale-books{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5%;
-      }
-      
-      
-      
-      .sale-books{
-        position: relative;
-        flex-wrap: wrap;
-      padding-bottom: 20px;
-      border-radius: 25px;
-      display: inline-block;
-      color:white;
-      background-color: #4D724D;
-      min-width: 30%;
-      width: 610px;
-      margin-bottom: 30px;
-        & .hymdral{
-          background-color: #FBE38B;
-          padding: 9px 14px;
-          border-radius: 20px;
-          font-weight: 700;
-          font-size: 20px;
-          color: black;
-          position: absolute;
-          top: 0;
-          right: 0;
-          transform: translate(25%, -50%); /* To center vertically and align to the right */
-  
-          /* Additional styles for aligning text to the right */
-          text-align: right;
-          line-height: 1; /* To center vertically within the label */
-          
-          }
-          & .une{
-            display: flex;
-            justify-content: right;
-            margin-top: 5px;
-            padding-right: 10px;
-          }
-          & p .anhnii-une{
-              font-size: 14px;
-              color: #FBE38B;
-              margin-top: 25px;
-              margin-right: 6px;
-              
-              
-              
-          }
-          & p .zarah-une{
-              font-size: 21px;
-              margin-top: 20px;
-             
-              
-          }
-          & .undsen-medeelel{
-            display: flex;
-            & p{
-              color: #FBE38B;
-              margin-top: 12px;
-              margin-left: 36%;
-              font-size: 20px;
-            }
-            & .profile-pic{
-              width: 50px;
-              border-radius: 50%;
-             
-              margin-left: 20px;
-              margin-bottom: 20px;
-            }
-            & label{
-              margin-top: 10px;
-              margin-left: 20px;
-              font-size:18px ;
-            }
-          }
-          & .nomnii-zurag{
-            margin-left:20px;
-            margin-right:40px;
-            & img{
-              width: 145px;
-            }
-           
-          }
-      }
-      .book-info-main{
-        display: flex;
-        justify-content: center;
-        font-weight: none;
-        font-size: 14px;
-  
-      
-        & .nomnii-medeelel{
-          white-space: normal; 
-          width:360px;
-          & .tags{
-            display: flex;
-            justify-content: space-between;
-            
-            & .ehnii-tag{
-              
-              & h4{font-weight: 400;}
-            }
-           
-        }
-          .ehnii-tag p,h4{
-            line-height: 2;
-          }
-          .hoyrdahi-tag p{
-            line-height: 2;
-          }
-          .additional-info {
-            
-            line-height: 1.5;
-            word-wrap: break-word;
-            
-          }
-          .book-sale-request-button{
-            margin-top:20px;
-            border-radius: 20px;
-            padding: 8px;
-            width: 360px;
-            color:#4D724D;
-            font-weight: 700;;
-            background-color: #FFF;
-            border: none;
-            font-size: 18px;
-          }
-          
-          
-        }
-       
-      }
-      .change-buttons {
-        margin-top: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 40px;
-      }
-      
-      .switch-btn {
-          margin: 0 5px;
-      }
-      
-      .switch-btn {
-          background-color: #4d724d;
-          color: white;
-          font-size: large ;
-          border: none;
-          padding: 16px 21px;
-          border-radius: 50%;
-          cursor: pointer;
-      }
-    
-    .switch-btn:hover {
-        background-color: #357535;
-    }
-}
+
+
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   .book-sale{
     & .filter{
@@ -481,7 +261,7 @@
         margin-right: 30px;
         font-weight: 400;
         display: inline-block;
-  
+        
         
       }
       & .filter-names{
@@ -492,14 +272,15 @@
         & button{
           background-color: #4D724D;
           border-radius: 10px;
-          border:#4D724D;
+          border: #4D724D;
           color: white;
           padding-left: 15px;
           padding-right: 15px;
-          margin-right:15px ;
+          margin-right: 15px;
           padding-top: 3px;
           padding-bottom: 3px;
           & svg{
+            
             float:right;
             cursor: pointer; 
             margin-left: 15px;
@@ -513,112 +294,109 @@
   }
      
   
-      .book-sale-main{
-        & h3{
-          display: flex;
-          justify-content: center;
-          
-        }
-      }
+  .book-sale-main{
+    & h3{
+      display: flex;
+      justify-content: center;
       
-      .book-sale-button{
-        cursor: pointer;
-        margin-top: 40px;
-        color:white;
-        background-color: #86AB87;;
-        border-radius: 50px;
-        width:45%;
-        height: 60px;
-        font-size: 15px;
-        border:none;
-        margin-bottom: 40px;
-      }
-      .all-sale-books{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5%;
-      }
-      
-      
-      
-      .sale-books{
-        position: relative;
-        flex-wrap: wrap;
-      padding-bottom: 20px;
-      border-radius: 20px;
-      display: inline-block;
-      color:white;
-      background-color: #4D724D;
-      min-width: 30%;
-      width: 500px;
-      margin-bottom: 30px;
-        & .hymdral{
-          background-color: #FBE38B;
-          padding: 5px 10px;
-          border-radius: 20px;
-          font-weight: 700;
-          font-size: 15px;
-          color: black;
-          position: absolute;
-          top: 0;
-          right: 0;
-          transform: translate(20%, -20%); /* To center vertically and align to the right */
+    }
+  }
   
-          /* Additional styles for aligning text to the right */
-          text-align: right;
-          line-height: 1; /* To center vertically within the label */
-          
-          }
-          & .une{
-            display: flex;
-            justify-content: right;
-            margin-top: 5px;
-            padding-right: 10px;
-          }
-          & p .anhnii-une{
-              font-size: 12px;
-              color: #FBE38B;
-              margin-top: 25px;
-              
-              
-              
-          }
-          & p .zarah-une{
-              font-size: 16px;
-              margin-top: 20px;
-             
-              
-          }
-          & .undsen-medeelel{
-            display: flex;
-            & p{
-              color: #FBE38B;
-              margin-top: 10px;
-              margin-left: 30%;
-            }
-            & .profile-pic{
-              width: 50px;
-              border-radius: 50%;
-             
-              margin-left: 20px;
-              margin-bottom: 20px;
-            }
-            & label{
-              margin-top: 10px;
-              margin-left: 20px;
-            }
-          }
-          & .nomnii-zurag{
-            margin-left:20px;
-            margin-right:20px;
-          }
+  .book-sale-button{
+    margin-top: 40px;
+    color: white;
+    background-color: #86AB87;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 45%;
+    height: 60px;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 40px;
+  }
+  .all-sale-books{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+  }   
+  .sale-books{
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    color: white;
+    background-color: #4D724D;
+    min-width: 30%;
+    width: 500px;
+    margin-bottom: 30px;
+  }
+  .hymdral{
+    background-color: #FBE38B;
+    padding: 8px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    color: black;
+   position: absolute;
+   
+    transform: translate(-30%, -50%); /* To center vertically and align to the right */
+
+    
+    }
+    .une{
+      display: flex;
+      justify-content: right;
+      margin-top: 5px;
+      padding-right: 10px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+    p .anhnii-une{
+        font-size: 12px;
+        color: #FBE38B;
+        margin-top: 15px; 
+    }
+    p .zarah-une{
+        font-size: 16px;
+        margin-top: 10px;  
+    }
+    .undsen-medeelel{
+      display: flex;
+      margin: 0;
+      & p{
+        color: #FBE38B;
+      margin-top: 20px;
+      margin-left: 30%;
       }
+      & .profile-pic{
+        width: 50px;
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      }
+      & label{
+        margin-top: 20px;
+      margin-left: 20px;
+      }
+    }
+          
+      
       .book-info-main{
         display: flex;
         justify-content: center;
         font-weight: none;
         font-size: 10px;
+        & figure{
+          margin:0;
+        }
+        & figure .nomnii-zurag {
+          margin-left: 20px;
+          margin-right: 20px;
+          width: 100px !important;
+        }
       
         & .nomnii-medeelel{
           white-space: normal; 
@@ -635,12 +413,14 @@
         }
           .ehnii-tag p,h4{
             line-height: 2;
+            margin: 0;
           }
           .hoyrdahi-tag p{
             line-height: 2;
+            margin: 0;
           }
           .additional-info {
-            
+            margin: 0;
             line-height: 1.5;
             word-wrap: break-word;
             
@@ -659,6 +439,10 @@
           
         }
        
+      }
+      .styled-meter {
+        margin-left: 5px;
+    
       }
       .change-buttons {
         margin-top: 30px;
@@ -686,27 +470,261 @@
     .switch-btn:hover {
         background-color: #357535;
     }
-    
 }
-.book-sale-request-button,
-.book-sale-button,
-  .sale-books {
-    transition: background-color 0.3s ease, transform 0.3s ease;
+@media only screen and (min-width: 1024px) {
+  .book-sale{
+    & .filter{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+     
+      & h3{
+        color: #4D724D;
+        margin-right: 30px;
+        font-weight: 400;
+        display: inline-block;
+        font-size: 30px; 
+      }
+      & .filter-names{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        & button{
+          background-color: #4D724D;
+          border-radius: 15px;
+          border: #4D724D;
+          font-size: 18px;
+          color: white;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-right: 15px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          & svg{
+            padding-top: 2px;
+            float: right;
+            cursor: pointer;
+            margin-left: 15px;
+  
+          }
+        }
+      }
+      
+    }
+    margin-top: 40px;
+  }
+     
+  
+  .book-sale-main{
+    & h3{
+      display: flex;
+      justify-content: center;
+      
+    }
   }
   
-  .book-sale-button:hover {
-    background-color: #357535; /* Change the color on hover */
-    transform: scale(1.05); /* Add a subtle scale effect on hover */
+  .book-sale-button{
+    margin-top: 40px;
+    color: white;
+    background-color: #86AB87;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 50%;
+    height: 70px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 40px;
+  }
+  .all-sale-books{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+  }   
+  .sale-books{
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    display: inline-block;
+    color: white;
+    background-color: #4D724D;
+    min-width: 30%;
+    width: 610px;
+    margin-bottom: 30px;
+  }
+  .hymdral{
+    background-color: #FBE38B;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    transform: translate(-30%,-50%);
+    z-index: 6;
+   
+    
+    
+    }
+    .une{
+      display: flex;
+      justify-content: right;
+      margin-top: 25px;
+      padding-right: 40px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+    p .anhnii-une{
+        font-size: 16px;
+        color: #FBE38B;
+        margin-top: 10px;
+        
+    }
+    p .zarah-une{
+        font-size: 20px;
+        
+        
+    }
+    .undsen-medeelel{
+      display: flex;
+      margin: 0;
+      & p{
+        color: #FBE38B;
+        margin-top: 15px;
+      margin-left: 36%;
+      font-size: 20px;
+      }
+      & .profile-pic{
+        width: 50px;
+      border-radius: 50%;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      }
+      & label{
+        margin-top: 15px;
+      margin-left: 20px;
+      font-size: 18px;
+      }
+    }
+  
+          
+      
+      .book-info-main{
+        display: flex;
+        justify-content: center;
+        font-weight: none;
+        font-size: 14px;
+        & figure {
+          margin:0;
+        }
+        & figure .nomnii-zurag  {
+          margin-left: 20px;
+          margin-right: 40px;
+          width: 145px !important;
+        }
+        & .nomnii-medeelel{
+          white-space: normal; 
+          width:360px;
+          & .tags{
+            display: flex;
+            justify-content: space-between;
+            
+            & .ehnii-tag{
+              
+              & h4{font-weight: 400;}
+            }
+           
+        }
+      }
+          .ehnii-tag p,h4{
+            line-height: 2;
+            margin: 0;
+            margin-right: 5px;
+          }
+          .hoyrdahi-tag p{
+            line-height: 2;
+            margin: 0;
+          }
+          .additional-info {
+            margin: 0;
+            line-height: 1.5;
+            word-wrap: break-word;
+            
+          }
+          .book-sale-request-button{
+            margin-top: 20px;
+            border-radius: 20px;
+            padding: 8px;
+            width: 360px;
+            color: #4D724D;
+            font-weight: 700;
+            cursor: pointer;
+            background-color: #FFF;
+            border: none;
+            font-size: 18px;
+          }
+          
+          
+        
+       
+      }
+      .styled-meter {
+        margin-left: 5px;
+    
+      }
+      .change-buttons {
+        margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 40px;
+      }
+      
+      .switch-btn {
+          margin: 0 5px;
+      }
+      
+      .switch-btn {
+          background-color: #4d724d;
+          color: white;
+          font-size: large ;
+          border: none;
+          padding: 16px 21px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+      
+    
+    .switch-btn:hover {
+        background-color: #357535;
+    }
   }
 
-  .sale-books:hover {
-    background-color: #3e5f3e; /* Change the color on hover */
-    transform: scale(1.05); /* Add a subtle scale effect on hover */
-  }
-  .book-info-main .nomnii-medeelel .book-sale-request-button:hover { 
-    background-color: #86AB87 !important; /* Change the color on hover */
-    color: #fff;
-  }
+
+    
+
+  .book-sale-request-button,
+  .book-sale-button,
+    .sale-books {
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .book-sale-button:hover {
+      background-color: #357535; /* Change the color on hover */
+      transform: scale(1.05); /* Add a subtle scale effect on hover */
+    }
+
+    .sale-books:hover {
+      background-color: #3e5f3e; /* Change the color on hover */
+      transform: scale(1.05); /* Add a subtle scale effect on hover */
+    }
+    .book-info-main .nomnii-medeelel .book-sale-request-button:hover { 
+      background-color: #86AB87 !important; /* Change the color on hover */
+      color: #fff;
+    }
   
 
 

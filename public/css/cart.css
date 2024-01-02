@@ -40,10 +40,29 @@
         }
        
       }
+      .box-sale {
+        display: flex;
+        font-weight: none;
+        font-size: 13px;
+        background-color: #4D724D;
+        width: 24rem; 
+        padding: 25px; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+        border-radius:25px;
+        color: #ffffff;
+            & .ehnii-tag{
+    
+              & h4{font-weight: 400;}
+            }
+           
+          }
 
     
       .ehnii-tag p,h4, h3{
-        
+        white-space: nowrap;
+      
         text-indent: 10px;
       }
 
@@ -61,7 +80,7 @@
     }
 }
 
-  @media only screen and (min-width: 567px) and (max-width: 1023px) {
+  @media only screen and (min-width: 480px) and (max-width: 1023px) {
   
     .Cart-btn{
       margin-top: 40px;
@@ -105,6 +124,7 @@
       margin-left: -7%;
       border-radius:25px;
       color: #ffffff;
+      
    
           & .ehnii-tag{
   
@@ -116,6 +136,8 @@
         .ehnii-tag p,h4, h3{
           line-height: 2.3;
           text-indent: 10px;
+         
+          
         }
   
       .switch-button{

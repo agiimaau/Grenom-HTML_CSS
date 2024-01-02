@@ -256,7 +256,7 @@
 @media only screen and (min-width: 1024px) {
     .search-pop-out{
         top: 78px;
-        left: 29%;
+        left: 26.5%;
         position: absolute;
         padding: 10px;
         border-radius: 15px;
@@ -266,6 +266,7 @@
         flex-direction: column;
         text-align: center;
         background-color: white;
+        z-index: 9;
         & form{
             & h1{
                 padding-top: 35px;

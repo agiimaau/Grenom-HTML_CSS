@@ -24,8 +24,44 @@
 
             // Attach the toggle function to the button click
             button.addEventListener('click', togglePopOut);
+
+
+            var pop = document.getElementById('book-sale-pop');
+                if (pop) {
+                    pop.addEventListener('submit', function(e) {
+                        e.preventDefault();
+
+                        var formData = new FormData(this);
+                        fetch('/addSaleBook', {
+                        method: 'POST',
+                        body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                        if (data.success) {
+                            
+                            document.getElementById('message').textContent = 'Ном амжилттай бүртгэгдлээ. ';
+                            setTimeout(function() {
+                            window.location.href = '/book-sale'; // Redirect to log-in after 3 seconds
+                             }, 2000); // 3000 milliseconds = 3 seconds
+                                       
+                        } else if (data.errors) {
+                            // Handle errors
+                            document.getElementById('message').textContent = data.errors.map(e => e.message).join(', ');
+                        } else {
+                            // Handle other cases
+                            document.getElementById('message').textContent = 'Алдаа гарлаа.';
+                        }
+                        })
+                        .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('message').textContent = 'Алдаа гарлаа.';
+                        });
+                    });
+                } else {
+                    console.error(' form олдсонгүй.');
+                }
         });
+
         
-        $(':radio').change(function() {
-  console.log('New star rating: ' + this.value);
-});
+      

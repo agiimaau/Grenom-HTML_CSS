@@ -1,6 +1,7 @@
+//end basket datagaa herhen fetch hiij haruulj bgag haruulj bga.
 document.addEventListener("DOMContentLoaded", () => {
   getData();
-  setupEventListeners();
+  
 });
 
 const getData = function () {
@@ -10,10 +11,16 @@ const getData = function () {
   if (!localStorage.getItem("GRENOM_BASKET")) {
     localStorage.setItem("GRENOM_BASKET", JSON.stringify([]));
   }
+  if (!localStorage.getItem("GRENOM_BASKET_SALE")) {
+    localStorage.setItem("GRENOM_BASKET_SALE", JSON.stringify([]));
+  }
 
   let books = JSON.parse(localStorage.getItem("GRENOM_BASKET"));
   console.log(books);
   let ids=books.map(item=> item.product_id);
+  let sale_books = JSON.parse(localStorage.getItem("GRENOM_BASKET_SALE"));
+  console.log(sale_books);
+  let sale_ids=sale_books.map(item=> item.product_id);
 
   
 
@@ -21,12 +28,45 @@ const getData = function () {
   ids.forEach(bookId => {
     fetchAndRenderBooksById(bookId);
   });
- console.log("ene id nuud shuu "+ids);
+ console.log("ene exid nuud shuu "+ids);
+
+ sale_ids.forEach(bookId => {
+  fetchAndRenderSaleBooksById(bookId);
+});
+console.log("ene saleid nuud shuu "+sale_ids);
 
 }
 
 
+function renderBooksfr_sale(book) {
+  
+  const bookContainer = document.getElementsByClassName("flex-container")[0];
+
+  if (!book) {
+    console.error("Book not found!");
+    bookContainer.innerHTML=`<h1>not found</h1>`;
+    return;
+  }
+  
+  const article = document.createElement("div");
+  article.className = "books";
+
+  article.innerHTML = `
+    <basket-sale-card
+        id="${book.bookid}"
+        bookImage="${book.bookimage}"
+        bookName="${book["bookname"]}"
+        categories="${book.category}"
+        author="${book.publisherfirstname} ${book.publisherlastname}"
+        requestedDate="${book.requestedDate}"
+        count="${book.count}"
+    ></basket-sale-card>
+  `;
+
+  bookContainer.appendChild(article);
+}
 function renderBooksfr(book) {
+  
   const bookContainer = document.getElementsByClassName("flex-container")[1];
 
   if (!book) {
@@ -44,7 +84,7 @@ function renderBooksfr(book) {
         bookImage="${book.bookimage}"
         bookName="${book["bookname"]}"
         categories="${book.category}"
-        author="${book.PublisherName}"
+        author="${book.publisherfirstname} ${book.publisherlastname}"
         requestedDate="${book.requestedDate}"
         count="${book.count}"
     ></basket-card>
@@ -78,10 +118,29 @@ function fetchAndRenderBooksById(bookId) {
     })
     .catch(error => console.error('Error fetching data:', error));
 }
+function fetchAndRenderSaleBooksById(bookId) {
+  fetch("/bookdata-sale")
+    .then(response => response.json())
+    .then(data => {
+      // Log the data to check what is received
+      console.log(data);
 
+      // Find the book based on the provided ID
+      const book = data.find(book => book.bookid == bookId);
 
-function setupEventListeners() {
-  // Add event listeners for cart-related actions, if needed
-  // Example: document.addEventListener("addToCart", (event) => {});
-  // You can trigger the "addToCart" event when adding items to the cart
+      if (book) {
+        // If the book is found, render it
+        renderBooksfr_sale(book);
+      } else {
+        // Log an error or handle the case where the book is not found
+        console.error(`Book with id ${bookId} not found.`);
+      }
+
+      // Log the found book to check if it's found
+      
+    })
+    .catch(error => console.error('Error fetching data:', error));
 }
+
+
+

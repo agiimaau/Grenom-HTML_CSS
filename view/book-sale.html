@@ -96,17 +96,16 @@
                     <div class="book-cat">
                         <label for="book-categories">Категориор:</label>
                         <select id="book-categories" name="catergory-lists" >
-                            <option value="history">Түүх</option>
-                            <option value="politics">Улс төр</option>
-                            <option value="science">Шинжлэх ухаан</option>
-                            <option value="literature">Уран зохиол</option>
-                            <option value="bussines">Бизнес</option>
-                            <option value="computer">Компьютер</option>
-                            <option value="health">Эрүүл мэнд</option>
-                            <option value="manual">Гарын авлага</option>
-                            <option value="children">Хүүхдийн</option>
-                            <option value="philosophy">Филисофи</option>
-                            <option value="self-development">Хувь хүний хөгжил</option>
+                        	<option value=""></option>
+                            <option value="Түүх">Түүх</option>
+                            <option value="Улс төр">Улс төр</option>
+                            <option value="Шинжлэх ухаан">Шинжлэх ухаан</option>
+                            <option value="Уран зохиол">Уран зохиол</option>
+                            <option value="Бизнес">Бизнес</option>
+                            <option value="Компьютер">Компьютер</option>
+                            <option value="Эрүүл мэнд">Эрүүл мэнд</option>
+                            <option value="Филисофи">Филисофи</option>
+                            <option value="Хувь хүний хөгжил">Хувь хүний хөгжил</option>
                         </select>
                     </div>
                 </div>
@@ -118,7 +117,7 @@
                     </div>
                     <div class="price">
                         <label for="price">Үнийн дүнгээр:</label>
-                        <input type="number" id="price" name="price" min="0" step="5000" >
+                        <input type="number" id="price" name="price" >
             
                     </div>
                </div> 
@@ -131,10 +130,11 @@
         
         <section class="book-sale-pop-out">
             
-                <form>
+                <form action="addSaleBook" method="POST" id="book-sale-pop">
                     
                     
                     <h1>Та зарах номын мэдээллээ оруулна уу.</h1>
+                    <span id="message"></span>
                     <div class="grid-container">
                         <div class="item-1">
                             <label for="img">Зургаа сонгоно уу:</label>
@@ -143,71 +143,78 @@
                     
                         <div class="item-2">
                             <label>Номын нэр:</label>
-                            <input type="text" class="book-upload" id="book-name">
+                            <input type="text" class="book-upload" id="bookname" name="booknamesa">
                         </div>
                         <div class="item-3">
                             <label>Зохиолч:</label>
-                            <input type="text" class="book-upload" id="book-author">    
+                            <input type="text" class="book-upload" id="bookauthor" name="bookauthor">    
                         </div>
                         <div class="item-4"> 
                             <label>Эдэлгээгээр:</label>
-                            <input type="range" id="book-rating" class="book-upload" min="1" max="10">
+                            <input type="range" id="bookwear" name="bookwear"class="book-upload" min="1" max="10">
                         </div>
                         <div class="item-5"> 
                             <label>Анх авсан үнэ:</label>
-                            <input type="text" class="book-upload" id="book-fprice">
+                            <input type="text" class="book-upload" id="bookfprice" name="bookfprice">
                         </div>
                         <div class="item-6">
                             <label>Одоо зарах үнэ:</label>
-                            <input type="text" class="book-upload" id="book-lprice">      
+                            <input type="text" class="book-upload" id="booklprice" name="booklprice">      
                         </div>
                         <div class="item-7">
                             <label>Категори:</label>
-                            <select id="book-categories" name="catergory-lists" >
-                                <option value="history">Түүх</option>
-                                <option value="politics">Улс төр</option>
-                                <option value="science">Шинжлжх ухаан</option>
-                                <option value="literature">Уран зохиол</option>
-                                <option value="bussines">Бизнес</option>
-                                <option value="computer">Компьютер</option>
-                                <option value="health">Эрүүл мэнд</option>
-                                <option value="manual">Гарын авлага</option>
-                                <option value="children">Хүүхдийн</option>
-                                <option value="philosophy">Филсофи</option>
-                                <option value="self-development">Хувь хүний хөгжил</option>
+                            <select id="book-categories" name="catergory_lists_sale" >
+                                <option value=""></option>
+                                <option value="Түүх">Түүх</option>
+                                <option value="Улс төр">Улс төр</option>
+                                <option value="Шинжлэх ухаан">Шинжлэх ухаан</option>
+                                <option value="Уран зохиол">Уран зохиол</option>
+                                <option value="Бизнес">Бизнес</option>
+                                <option value="Компьютер">Компьютер</option>
+                                <option value="Эрүүл мэнд">Эрүүл мэнд</option>
+                                <option value="Филисофи">Филисофи</option>
+                                <option value="Хувь хүний хөгжил">Хувь хүний хөгжил</option>
                             </select>    
+                        </div>
+                        <div class="item-10">
+                            <label>Хэвлэгдсэн он:</label>
+                            <input type="text" class="book-upload"  id="bookdate" name="bookdate">      
+                        </div>
+                        <div class="item-11">
+                            <label>Хуудасны тоо:</label>
+                            <input type="text" class="book-upload"  id="bookpage" name="bookpage">      
                         </div>
                         <div class="item-8"> 
                             <label>Нэмэлт мэдээлэл</label>
-                            <textarea class="book-addition-info"></textarea>
+                            <textarea class="book_addition_info" name="book_addition_info"></textarea>
                         </div>
                         <div class="item-9">
                             <p>Номын үнэлгээ:</p>
                             <div class="rating-od">
                                 <label>
-                                  <input type="radio" name="stars-od" value="1" />
+                                  <input type="radio" name="starsod" value="1" />
                                   <span class="icon">★</span>
                                 </label>
                                 <label>
-                                  <input type="radio" name="stars-od" value="2" />
+                                  <input type="radio" name="starsod" value="2" />
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
                                 </label>
                                 <label>
-                                  <input type="radio" name="stars-od" value="3" />
+                                  <input type="radio" name="starsod" value="3" />
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>   
                                 </label>
                                 <label>
-                                  <input type="radio" name="stars-od" value="4" />
+                                  <input type="radio" name="starsod" value="4" />
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
                                 </label>
                                 <label>
-                                  <input type="radio" name="stars-od" value="5" />
+                                  <input type="radio" name="starsod" value="5" />
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
                                   <span class="icon">★</span>
@@ -216,6 +223,7 @@
                                 </label>
                             </div>
                         </div>
+                        
                     </div>
                     
                     
@@ -230,371 +238,57 @@
         </section>
         <main class="book-sale">
             <section class="filter" >
-                <h3>Шүүлтүүр:</h3>
-                <div class="filter-names">
-                    <button class="category-filter-btn" onclick="filterSelection('category')"> Категори: <span>Уран зохиол</span>
-                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.0675 15.1832C16.1256 15.2412 16.1717 15.3102 16.2031 15.386C16.2345 15.4619 16.2507 15.5432 16.2507 15.6253C16.2507 15.7075 16.2345 15.7888 16.2031 15.8647C16.1717 15.9405 16.1256 16.0095 16.0675 16.0675C16.0095 16.1256 15.9405 16.1717 15.8647 16.2031C15.7888 16.2345 15.7075 16.2507 15.6253 16.2507C15.5432 16.2507 15.4619 16.2345 15.386 16.2031C15.3102 16.1717 15.2412 16.1256 15.1832 16.0675L10.0003 10.8839L4.81754 16.0675C4.70026 16.1848 4.5412 16.2507 4.37535 16.2507C4.2095 16.2507 4.05044 16.1848 3.93316 16.0675C3.81588 15.9503 3.75 15.7912 3.75 15.6253C3.75 15.4595 3.81588 15.3004 3.93316 15.1832L9.11675 10.0003L3.93316 4.81754C3.81588 4.70026 3.75 4.5412 3.75 4.37535C3.75 4.2095 3.81588 4.05044 3.93316 3.93316C4.05044 3.81588 4.2095 3.75 4.37535 3.75C4.5412 3.75 4.70026 3.81588 4.81754 3.93316L10.0003 9.11675L15.1832 3.93316C15.3004 3.81588 15.4595 3.75 15.6253 3.75C15.7912 3.75 15.9503 3.81588 16.0675 3.93316C16.1848 4.05044 16.2507 4.2095 16.2507 4.37535C16.2507 4.5412 16.1848 4.70026 16.0675 4.81754L10.8839 10.0003L16.0675 15.1832Z" fill="white"/>
-                        </svg>
-                    </button>
-                    <button class="condition-filter-btn" onclick="filterSelection('condition')">Эдэлгээ: <span>8/10</span>
-                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.0675 15.1832C16.1256 15.2412 16.1717 15.3102 16.2031 15.386C16.2345 15.4619 16.2507 15.5432 16.2507 15.6253C16.2507 15.7075 16.2345 15.7888 16.2031 15.8647C16.1717 15.9405 16.1256 16.0095 16.0675 16.0675C16.0095 16.1256 15.9405 16.1717 15.8647 16.2031C15.7888 16.2345 15.7075 16.2507 15.6253 16.2507C15.5432 16.2507 15.4619 16.2345 15.386 16.2031C15.3102 16.1717 15.2412 16.1256 15.1832 16.0675L10.0003 10.8839L4.81754 16.0675C4.70026 16.1848 4.5412 16.2507 4.37535 16.2507C4.2095 16.2507 4.05044 16.1848 3.93316 16.0675C3.81588 15.9503 3.75 15.7912 3.75 15.6253C3.75 15.4595 3.81588 15.3004 3.93316 15.1832L9.11675 10.0003L3.93316 4.81754C3.81588 4.70026 3.75 4.5412 3.75 4.37535C3.75 4.2095 3.81588 4.05044 3.93316 3.93316C4.05044 3.81588 4.2095 3.75 4.37535 3.75C4.5412 3.75 4.70026 3.81588 4.81754 3.93316L10.0003 9.11675L15.1832 3.93316C15.3004 3.81588 15.4595 3.75 15.6253 3.75C15.7912 3.75 15.9503 3.81588 16.0675 3.93316C16.1848 4.05044 16.2507 4.2095 16.2507 4.37535C16.2507 4.5412 16.1848 4.70026 16.0675 4.81754L10.8839 10.0003L16.0675 15.1832Z" fill="white"/>
-                        </svg>
-                    </button>
-                    <button class="price-filter-btnbtn" onclick="filterSelection('price')"> Үнийн дүн: <span>50000₮-аас доош</span>
-                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.0675 15.1832C16.1256 15.2412 16.1717 15.3102 16.2031 15.386C16.2345 15.4619 16.2507 15.5432 16.2507 15.6253C16.2507 15.7075 16.2345 15.7888 16.2031 15.8647C16.1717 15.9405 16.1256 16.0095 16.0675 16.0675C16.0095 16.1256 15.9405 16.1717 15.8647 16.2031C15.7888 16.2345 15.7075 16.2507 15.6253 16.2507C15.5432 16.2507 15.4619 16.2345 15.386 16.2031C15.3102 16.1717 15.2412 16.1256 15.1832 16.0675L10.0003 10.8839L4.81754 16.0675C4.70026 16.1848 4.5412 16.2507 4.37535 16.2507C4.2095 16.2507 4.05044 16.1848 3.93316 16.0675C3.81588 15.9503 3.75 15.7912 3.75 15.6253C3.75 15.4595 3.81588 15.3004 3.93316 15.1832L9.11675 10.0003L3.93316 4.81754C3.81588 4.70026 3.75 4.5412 3.75 4.37535C3.75 4.2095 3.81588 4.05044 3.93316 3.93316C4.05044 3.81588 4.2095 3.75 4.37535 3.75C4.5412 3.75 4.70026 3.81588 4.81754 3.93316L10.0003 9.11675L15.1832 3.93316C15.3004 3.81588 15.4595 3.75 15.6253 3.75C15.7912 3.75 15.9503 3.81588 16.0675 3.93316C16.1848 4.05044 16.2507 4.2095 16.2507 4.37535C16.2507 4.5412 16.1848 4.70026 16.0675 4.81754L10.8839 10.0003L16.0675 15.1832Z" fill="white"/>
-                        </svg>
-                    </button>
-                    <button class="name-filter-btn" onclick="filterSelection('name')"> <span>"4 биш 4"</span>
-                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.0675 15.1832C16.1256 15.2412 16.1717 15.3102 16.2031 15.386C16.2345 15.4619 16.2507 15.5432 16.2507 15.6253C16.2507 15.7075 16.2345 15.7888 16.2031 15.8647C16.1717 15.9405 16.1256 16.0095 16.0675 16.0675C16.0095 16.1256 15.9405 16.1717 15.8647 16.2031C15.7888 16.2345 15.7075 16.2507 15.6253 16.2507C15.5432 16.2507 15.4619 16.2345 15.386 16.2031C15.3102 16.1717 15.2412 16.1256 15.1832 16.0675L10.0003 10.8839L4.81754 16.0675C4.70026 16.1848 4.5412 16.2507 4.37535 16.2507C4.2095 16.2507 4.05044 16.1848 3.93316 16.0675C3.81588 15.9503 3.75 15.7912 3.75 15.6253C3.75 15.4595 3.81588 15.3004 3.93316 15.1832L9.11675 10.0003L3.93316 4.81754C3.81588 4.70026 3.75 4.5412 3.75 4.37535C3.75 4.2095 3.81588 4.05044 3.93316 3.93316C4.05044 3.81588 4.2095 3.75 4.37535 3.75C4.5412 3.75 4.70026 3.81588 4.81754 3.93316L10.0003 9.11675L15.1832 3.93316C15.3004 3.81588 15.4595 3.75 15.6253 3.75C15.7912 3.75 15.9503 3.81588 16.0675 3.93316C16.1848 4.05044 16.2507 4.2095 16.2507 4.37535C16.2507 4.5412 16.1848 4.70026 16.0675 4.81754L10.8839 10.0003L16.0675 15.1832Z" fill="white"/>
-                        </svg>
-                    </button>
-                </div>
+               
             </section>
             
             <section class="book-sale-main">
                 <h3><button class="book-sale-button" >Та зарах номоо энд дарж оруулна уу.</button></h3>
                 <div class="all-sale-books">
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                    <!---
+                
+                    <article class="sale-books">
+                        <label class="hymdral">50%</label>
+                        <p class="une"> 
+                            <label class="anhnii-une"><del>30000₮</del></label>
+                            <label class="zarah-une">15000₮</label>
                         </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
+                        
+                        <figure class="undsen-medeelel">
+                            <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
+                            <label>Agiimaa Unurtsolmon</label>
+                            <p class="stars">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
                         </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
+                        <div class="book-info-main">
+                            <figure class="nomnii-zurag">
+                                <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
+                            </figure>
+                            <div class="nomnii-medeelel">
+                                
+                                <div class="tags">
+                                    <div class="ehnii-tag">
+                                        <h4>Номын нэр: <span>4 биш 4</span></h4>
+                                        <p>Хэвлэгдсэн он:<time>2023</time></p>
+                                        <p>Категори:<span>уран зохиол</span></p>
+                                    </div>
+                                    <div class="hoyrdahi-tag">
+                                        <p>Зохиолч: <span>Анударь</span></p>
+                                        <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
+                                        <p>Хуудасны тоо:<span>120</span></p>
+                                    </div>
                                 </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
+                                
+                                <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
+                                <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
                             </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
                         </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="sale-books">
-                    <label class="hymdral">50%</label>
-                    <p class="une"> 
-                        <label class="anhnii-une"><del>30000₮</del></label>
-                        <label class="zarah-une">15000₮</label>
-                    </p>
-                    
-                    <figure class="undsen-medeelel">
-                        <img class="profile-pic" src=" pictures/Agiimaa.jpg" alt="Agiimaa" width="50">
-                        <label>Agiimaa Unurtsolmon</label>
-                        <p class="stars">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-                    </figure>
-                    <div class="book-info-main">
-                        <figure class="nomnii-zurag">
-                            <img src=" pictures/4bish4.jpg" alt="ad uzegdeh zorig" width="100">
-                        </figure>
-                        <div class="nomnii-medeelel">
-                            
-                            <div class="tags">
-                                <div class="ehnii-tag">
-                                    <h4>Номын нэр: <span>4 биш 4</span></h4>
-                                    <p>Хэвлэгдсэн он:<time>2023</time></p>
-                                    <p>Категори:<span>уран зохиол</span></p>
-                                </div>
-                                <div class="hoyrdahi-tag">
-                                    <p>Зохиолч: <span>Анударь</span></p>
-                                    <p>Эдэлгээ:<meter value="8" min="0" max="10" class="styled-meter"></meter></p>
-                                    <p>Хуудасны тоо:<span>120</span></p>
-                                </div>
-                            </div>
-                            
-                            <p class="additional-info">Нэмэлт мэдээлэл: <span>3,4 р хороолол хавьцаа солилцвол сайн байна. Бараг шинээрээ байгаа.</span> </p>
-                            <button class="book-sale-request-button">Солилцох хүсэлт явуулах</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
+                    </article>-->
+                </div>
                 
                 <div class="change-buttons">
                     <figure>
@@ -633,6 +327,8 @@
             <p>&copy; 2023 Grenom. All rights reserved.</p>
         </footer>
     </body>
+    <script src="js/book-sale-fetch.js"></script>
+    
     <script >
         var header=document.getElementsByTagName("header")[0];
         var body=document.getElementsByTagName("main")[0];
@@ -648,6 +344,10 @@
     });  
     </script>
     <script src="js/book-sale.js"></script>
+    <script src="js/booksalecard.js"></script>
+    <script src="js/basketCard.js"></script>
+    <script src="js/book-sale-fetch.js"></script>
+
     
     
 </html>

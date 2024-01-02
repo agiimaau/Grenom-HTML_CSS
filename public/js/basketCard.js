@@ -1,4 +1,4 @@
-
+//ene bol basket dahi soliltsoh nomnii card
 class BasketCard extends HTMLElement {
   constructor() {
     super();
@@ -11,61 +11,10 @@ class BasketCard extends HTMLElement {
     this.requestedDate = this.getAttribute("requestedDate");
     this.count = this.getAttribute("count")?? "baidaggue";
     
-    //this.addEventListener("click", this.removeFromGrenomBasket.bind(this));
-    //this.#render();
+    
   }
   
- 
 
-
-  /*addToCart = (bookDetails) => {
-    let booksString = localStorage.getItem("GRENOM_BASKET");
-    let books = booksString === null ? [] : JSON.parse(booksString);
-
-    const existingBook = books.find(item => item.id === bookDetails.id);
-
-    if (existingBook) {
-      // Increment the count if the book is already in the basket
-      existingBook.count += 1;
-      console.log("it worked");
-    } else {
-      // Add the book to the basket with count 1
-      books.push({ ...bookDetails, count: 1 });
-    }
-
-    localStorage.setItem("GRENOM_BASKET", JSON.stringify(books));
-    window.refreshExchangeBasket();
-  };
-
-  connectedCallback() {
-    document.addEventListener("addToCart", (event) => {
-      const bookDetails = event.detail;
-      this.addToCart(bookDetails);
-    });
-  }*/
-  
-
-  /*removeBook = (product_id) => {
-
-    let booksString = localStorage.getItem("GRENOM_BASKET");
-    let books = booksString === null ? [] : JSON.parse(booksString);
-    const index = books.findIndex(item=>item.bookName === this.bookName);
-    if(index !== -1){
-      books.splice(index, 1);
-    }
-    localStorage.setItem("GRENOM_BASKET", JSON.stringify(books));
-
-    window.refreshExchangeBasket();
-  };
-
-  connectedCallback() {
-    
-    const el = document.getElementById('sav');
-    if(el){
-      el.addEventListener("click", this.removeBook(this.id));
-      console.log("ustgal daragdlaa");
-    }
-  }*/
   removeFromGrenomBasket(product_id) {
     let books = JSON.parse(localStorage.getItem("GRENOM_BASKET"));
   
