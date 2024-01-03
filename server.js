@@ -547,6 +547,52 @@ app.post(
         }
     });
 
+/**
+ * @swagger
+ * /addToCart:
+ *   post:
+ *     summary: Nom Sagslah
+ *     description: Hereglegchiin id bolon hudaldagchiin id g taaruulan sagsand nemne.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               sellerID:
+ *                 type: integer
+ *                 description: Zarj baigaa hereglegchiin ID.
+ *               bookID:
+ *                 type: integer
+ *                 description: Sags ruu orj baigaa nomnii ID.
+ *     responses:
+ *       200:
+ *         description: Nom sagsand nemegdene.
+ *         content:
+ *           application/json:
+ *             example:
+ *               BuyerID: 1
+ *               SellerID: 2
+ *               BookID: 3
+ *               Status: 'W'
+ *               ReqDate: '2024-01-01T12:00:00.000Z'
+ *       400:
+ *         description: huselt amjiltgui esvel nom sagsand baigaa.
+ *         content:
+ *           text/plain:
+ *             example: Nom ali hediin sagsand orson baina
+ *       401:
+ *         description: Huselt amjiltgui esvel hudalgach bolon hudaldan avagchiin id adilhan baina.
+ *         content:
+ *           text/plain:
+ *             example: Hudaldan avagch bolon hudaldagch 2 iin id adilhan baina
+ *       500:
+ *         description: Internal Server Error.
+ */
+
+
+
     app.post('/addToCart', upload.none(), async (req, res) => {
         const { sellerID, bookID } = req.body;
         var buyerID = req.user.userid;
@@ -578,6 +624,50 @@ app.post(
         }
     });
     
+    /**
+ * @swagger
+ * /addToCartSB:
+ *   post:
+ *     summary: Zarah nomiig sagslana
+ *     description: buyer bolon seller iin id deer undeslej zarah nomiin sagslana
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               sellerID:
+ *                 type: integer
+ *                 description: Seller iin ID.
+ *               bookID:
+ *                 type: integer
+ *                 description: Sags ruu oroh zarah nomnii ID
+ *     responses:
+ *       200:
+ *         description: Zarah nomiin sagsalna
+ *         content:
+ *           application/json:
+ *             example:
+ *               BuyerID: 1
+ *               SellerID: 2
+ *               BookID: 3
+ *               Status: 'W'
+ *               ReqDate: '2024-01-01T12:00:00.000Z'
+ *       400:
+ *         description: Huselt amjiltgui esvel nom sagsand baina
+ *         content:
+ *           text/plain:
+ *             example: Nom sagsand baina
+ *       400:
+ *         description: Huselt amjiltgui esvel buyer bolon seller 1 hun baina
+ *         content:
+ *           text/plain:
+ *             example: buyer bolon seller iin ID adilhan baina
+ *       500:
+ *         description: Internal Server Error.
+
+ */
 
     app.post('/addToCartSB', upload.none(), async (req, res) => {
         const { sellerID, bookID } = req.body;
@@ -610,6 +700,48 @@ app.post(
             console.log("uurinhuu nomiig awkd bn nemegdeegu shuu");
         }
     });
+
+/**
+ * @swagger
+ * /basket:
+ *   get:
+ *     summary: Hereglegchiin sags
+ *     description: Hereglegchiin sagsand sagsalsan nomiin tataj avna
+ *     responses:
+ *       200:
+ *         description: Sagsand nom nemegdej medeelel shinegchlegdene.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   buyerID:
+ *                     type: integer
+ *                   sellerID:
+ *                     type: integer
+ *                   bookID:
+ *                     type: integer
+ *                   status:
+ *                     type: string
+ *                   reqDate:
+ *                     type: string
+ *               example:
+ *                 - buyerID: 1
+ *                   sellerID: 2
+ *                   bookID: 3
+ *                   status: 'W'
+ *                   reqDate: '2024-01-01T12:00:00.000Z'
+ *                 - buyerID: 1
+ *                   sellerID: 3
+ *                   bookID: 4
+ *                   status: 'W'
+ *                   reqDate: '2024-01-01T12:30:00.000Z'
+ *       500:
+ *         description: Internal Server Error.
+ */
+
     app.get('/basket', async (req, res) => {
         try {
             const buyerID = req.user.userid; 
@@ -622,6 +754,49 @@ app.post(
             res.status(500).send('Server error');
         }
     });
+
+// ***************************************
+
+/**
+ * @swagger
+ * /basketSB:
+ *   get:
+ *     summary: Hereglegchiin sags(Zarah nom)
+ *     description: Hereglegchiin sagsalsan zarah nomiin sagsalj haruulna
+ *     responses:
+ *       200:
+ *         description: Zarah nomnii medeellig sagsalj haruulna
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   buyerID:
+ *                     type: integer
+ *                   sellerID:
+ *                     type: integer
+ *                   bookID:
+ *                     type: integer
+ *                   status:
+ *                     type: string
+ *                   reqDate:
+ *                     type: string
+ *               example:
+ *                 - buyerID: 1
+ *                   sellerID: 2
+ *                   bookID: 3
+ *                   status: 'W'
+ *                   reqDate: '2024-01-01T12:00:00.000Z'
+ *                 - buyerID: 1
+ *                   sellerID: 3
+ *                   bookID: 4
+ *                   status: 'W'
+ *                   reqDate: '2024-01-01T12:30:00.000Z'
+ *       500:
+ *         description: Internal Server Error.
+ */
     app.get('/basketSB', async (req, res) => {
         try {
             const buyerID = req.user.userid; 
