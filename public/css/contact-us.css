@@ -37,6 +37,8 @@
     text-align: justify;
     margin-top: 5%;
     margin-bottom: 6rem;
+    padding-top: 10%;
+    padding-top: 5%;
   }
   .FAQ h2{
   margin-left:4%;
@@ -240,6 +242,7 @@
     text-align: justify;
     margin-top: 5%;
     margin-bottom: 6rem;
+    padding-top: 5%;
   }
   .FAQ h2{
   margin-left:4%;
@@ -448,6 +451,7 @@
     color: white;
     text-align: justify;
     margin-top: 5%;
+    padding-top: 5%;
   }
   .FAQ h2{
   margin-left:4%;
@@ -654,6 +658,8 @@
   color: white;
   text-align: justify;
   margin-top: 5%;
+  padding-top: 5%;
+
 }
 .FAQ h2{
 margin-left:4%;
