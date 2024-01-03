@@ -221,10 +221,10 @@ app.get('/log-out', (req, res) => {
  * @swagger
  * /bookdata:
  *   get:
- *     summary: Nomnii medeelel haruulah.
+ *     summary: Soliltsoh nomnii medeelel haruulah.
  *     description: Ogogdliin sangaas nomnii medeelluudiig tataj, json helbert oruulna.
  *     tags:
- *       - Books
+ *       - Book Exchange
  *     responses:
  *       '200':
  *         description: JSON helbert orson ogogdliin sangiin datag haruulna.
@@ -463,21 +463,64 @@ app.post(
  * @swagger
  * /bookdata-sale:
  *   get:
- *     summary: Retrieve Sale Book Data
- *     description: Fetches data for books available for sale, including information about the publisher.
+ *     summary: Zarah nomnii medeelel haruulah.
+ *     description: Ogogdliin sangaas nomnii medeelluudiig tataj, json helbert oruulna.
+ *     tags:
+ *       - Sale Books
  *     responses:
- *       200:
- *         description: Successfully retrieved sale book data.
+ *       '200':
+ *         description: JSON helbert orson ogogdliin sangiin datag haruulna.
  *         content:
  *           application/json:
- *             example:
- *               - BookData: { bookId: 1, title: "Book Title", author: "Author Name", ... }
- *               - PublisherPicture: "URL to Publisher's Picture"
- *               - PublisherLastName: "Publisher's Last Name"
- *               - PublisherFirstName: "Publisher's First Name"
- *       500:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   bookid:
+ *                     type: integer
+ *                   userid:
+ *                     type: integer
+ *                   oldprice:
+ *                     type: integer
+ *                   newprice:
+ *                     type: integer
+ *                   bookimage:
+ *                     type: string
+ *                   star_rate:  # Corrected property name
+ *                     type: integer
+ *                   bookname:
+ *                     type: string
+ *                   category:
+ *                     type: array
+ *                   author:
+ *                     type: string
+ *                   wear:
+ *                     type: integer
+ *                   pages:
+ *                     type: integer
+ *                   publisheddate:
+ *                     type: string
+ *                   description:
+ *                     type: string
+ *               example:
+ *                 - bookid: 17
+ *                   userid: 1
+ *                   oldprice: 3500
+ *                   newprice: 15000
+ *                   bookimage: "pictures/ad uzegdeh zorig.jpg"
+ *                   star_rate: 4  # Corrected property name
+ *                   bookname: "4 биш 4"
+ *                   category: ["Улс төр", "Уран Зохиол"]
+ *                   author: "Анударь"
+ *                   wear: 8
+ *                   pages: 120
+ *                   publisheddate: "2023"
+ *                   description: "3,4 р хороолол хавьцаа солилцвол сайн байна."
+ *       '500':
  *         description: Internal Server Error.
  */
+
 
 
 
@@ -503,6 +546,7 @@ app.post(
             res.status(500).json({ error: "Internal Server Error" });
         }
     });
+
     app.post('/addToCart', upload.none(), async (req, res) => {
         const { sellerID, bookID } = req.body;
         var buyerID = req.user.userid;

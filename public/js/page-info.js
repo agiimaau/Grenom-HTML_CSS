@@ -14,4 +14,4 @@ class PageInfo extends HTMLElement {
   }
 }
 
-window.customElements.define("page-info", ServiceInfo);
+window.customElements.define("page-info", PageInfo);
