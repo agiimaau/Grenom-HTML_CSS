@@ -858,6 +858,21 @@ app.post(
             res.status(500).send('Server error');
         }
     });
+    app.post('/removeFromMiniiBulan', async (req, res) => {
+        const { product_id } = req.body;
+        var buyerID = req.user.userid;
+        console.log(buyerID,product_id);
+    
+        try {
+            const deleteQuery = `DELETE FROM SaleBooks WHERE UserID = $1 AND BookID = $2`;
+            await pool.query(deleteQuery, [buyerID, product_id]);
+            
+            res.json({ message: 'Item removed from cart' });
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Server error');
+        }
+    });
     
     app.post('/addExchangeBook', upload.none(),async(req,res)=>{
         let { booknameex, bookauthor, bookwear,catergory_lists_ex, book_addition_info_ex, bookdate, bookpage} = req.body;

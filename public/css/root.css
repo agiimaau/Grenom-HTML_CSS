@@ -1,5 +1,6 @@
 :root {
     --color-background: #86AB87;
+    --color-background-hover-ig:#357535;
     --color-background-h3: #4D724D;
     --color-white: #ffffff;
     --color-black: #000000;
@@ -72,6 +73,7 @@
     width: var(--width);
     margin: 0px 0px 20px 30px;
     padding: var(--padding);
+    
 }
 
 .niit-medeelel {
@@ -110,7 +112,6 @@
         border-radius: var(--border-rad-side);
         margin: 30% 0;
     }
-
     .huleen-avah {
         border-radius: var(--border-rad-avah-tatgalzah);
         border: none;
@@ -120,7 +121,6 @@
         padding: 12px 15px 9px 15px;
         font-size: var(--font-size-p);
     }
-
     .tatgalzah {
         text-align: center;
         align-items: center;
@@ -133,7 +133,6 @@
         font-size: var(--font-size-p);
     }
 }
-
 .see-more {
     border: none;
     cursor: pointer;
@@ -174,6 +173,7 @@
     background-color: var(--color-background);
     min-width: var(--min-width);
     width: var(--width);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition effect */
     margin-bottom: 30px;
 }
 
@@ -536,4 +536,8 @@ main h1 {
 
     
 
+}
+.articless:hover {
+    transform: scale(1.05); /* Slightly scale up */
+    background-color: var(--color-background-hover-ig); /* Change background color */
 }
