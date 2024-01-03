@@ -175,7 +175,7 @@ app.get('/cart', (req, res) => {
 *           text/html:
 *             example: "<html>Minii Bulan huudasnii contentuud</html>"
 */
-app.get('/minii-bulan', checkNotAuthenticated, (req, res) => {
+app.get('/minii-bulan',  (req, res) => {
    res.sendFile('/view/MiniiBulan.html', { root: __dirname })
 });
 
@@ -590,6 +590,27 @@ app.post(
             res.status(500).send('Server error');
         }
     });
+    app.get('/miniiBulanFetch', async (req, res) => {
+        try {
+            const buyerID = req.user.userid; 
+            const query = `
+                SELECT eb.*, 
+                u.UserPicture AS publisherpicture,
+                u.LastName AS publisherlastname,
+                u.FirstName AS publisherfirstname
+                FROM public.SaleBooks AS eb
+                JOIN public.Users AS u ON eb.UserID = u.UserID
+                WHERE eb.UserID = $1
+            `;
+            const result = await pool.query(query, [buyerID]);
+            res.json(result.rows);
+            console.log(result.rows);
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Server error');
+        }
+    });
+    
     app.post('/removeFromCart', async (req, res) => {
         const { product_id } = req.body;
         var buyerID = req.user.userid;
