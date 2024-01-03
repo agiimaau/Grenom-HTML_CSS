@@ -809,6 +809,79 @@ app.post(
             res.status(500).send('Server error');
         }
     });
+
+       /**
+ * @swagger
+ * /miniiBulanFetch:
+ *   get:
+ *     summary: Hereglegchiin niitelsen nomiig haruualh
+ *     description: Hereglegchiin niitelsen nomiig haruulna
+ *     responses:
+ *       200:
+ *         description: Hereglegchin niitelsen nomuud garj irne.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   bookID:
+ *                     type: integer
+ *                   userID:
+ *                     type: integer
+ *                   oldPrice:
+ *                     type: integer
+ *                   newPrice:
+ *                     type: integer
+ *                   bookImage:
+ *                     type: string
+ *                   starRate:
+ *                     type: integer
+ *                   bookName:
+ *                     type: string
+ *                   category:
+ *                     type: array
+ *                   author:
+ *                     type: string
+ *                   wear:
+ *                     type: integer
+ *                   pages:
+ *                     type: integer
+ *                   publishedDate:
+ *                     type: string
+ *                   description:
+ *                     type: string
+ *               example:
+ *                 - bookID: 1
+ *                   userID: 2
+ *                   oldPrice: 3000
+ *                   newPrice: 15000
+ *                   bookImage: "images/book1.jpg"
+ *                   starRate: 4
+ *                   bookName: "Sample Book 1"
+ *                   category: ["Fiction", "Mystery"]
+ *                   author: "John Doe"
+ *                   wear: 8
+ *                   pages: 200
+ *                   publishedDate: "2023-01-01"
+ *                   description: "A thrilling mystery novel."
+ *                 - bookID: 2
+ *                   userID: 2
+ *                   oldPrice: 2500
+ *                   newPrice: 12000
+ *                   bookImage: "images/book2.jpg"
+ *                   starRate: 5
+ *                   bookName: "Sample Book 2"
+ *                   category: ["Non-Fiction", "Science"]
+ *                   author: "Jane Doe"
+ *                   wear: 6
+ *                   pages: 150
+ *                   publishedDate: "2022-12-15"
+ *                   description: "An informative science book."
+ *       500:
+ *         description: Internal Server Error.
+ */
     app.get('/miniiBulanFetch', async (req, res) => {
         try {
             const buyerID = req.user.userid; 
@@ -829,6 +902,39 @@ app.post(
             res.status(500).send('Server error');
         }
     });
+
+    /**
+ * @swagger
+ * /removeFromCart:
+ *   post:
+ *     summary: sagsann dahi solih nomiig ustgana
+ *     description: Songoson productiig db ees ustgana.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               product_id:
+ *                 type: integer
+ *                 description: The ID of the product to remove.
+ *                 example: 3
+ *     responses:
+ *       200:
+ *         description: Product successfully removed from the cart.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Item removed from cart
+ *       500:
+ *         description: Internal Server Error.
+ */
+
     
     app.post('/removeFromCart', async (req, res) => {
         const { product_id } = req.body;
@@ -844,6 +950,39 @@ app.post(
             res.status(500).send('Server error');
         }
     });
+
+/**
+ * @swagger
+ * /removeFromCartSB:
+ *   post:
+ *     summary: sagsann dahi zarah nomiig ustgana
+ *     description: Songoson productiig db ees ustgana.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               product_id:
+ *                 type: integer
+ *                 description: The ID of the product to remove.
+ *                 example: 3
+ *     responses:
+ *       200:
+ *         description: Product successfully removed from the cart.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Item removed from cart
+ *       500:
+ *         description: Internal Server Error.
+ */
+
     app.post('/removeFromCartSB', async (req, res) => {
         const { product_id } = req.body;
         var buyerID = req.user.userid;
@@ -858,21 +997,106 @@ app.post(
             res.status(500).send('Server error');
         }
     });
-    app.post('/removeFromMiniiBulan', async (req, res) => {
-        const { product_id } = req.body;
-        var buyerID = req.user.userid;
-        console.log(buyerID,product_id);
-    
-        try {
-            const deleteQuery = `DELETE FROM SaleBooks WHERE UserID = $1 AND BookID = $2`;
-            await pool.query(deleteQuery, [buyerID, product_id]);
-            
-            res.json({ message: 'Item removed from cart' });
-        } catch (err) {
-            console.error(err);
-            res.status(500).send('Server error');
-        }
-    });
+
+    /**
+ * @swagger
+ * /removeFromMiniiBulan:
+ *   post:
+ *     summary: Minii bulangaas nom hasah
+ *     description: Hereglegchiin bulangaas songogdson nomiin hasna
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               product_id:
+ *                 type: integer
+ *                 description: Nomnii ID.
+ *     responses:
+ *       200:
+ *         description: Songogdson nom hereglegchiin bulangaas ustana
+ *         content:
+ *           application/json:
+ *             example:
+ *               message: 'Item removed from cart'
+ *       500:
+ *         description: Internal Server Error.
+ */
+app.post('/removeFromMiniiBulan', async (req, res) => {
+    const { product_id } = req.body;
+    var buyerID = req.user.userid;
+    console.log(buyerID, product_id);
+
+    try {
+        const deleteQuery = `DELETE FROM SaleBooks WHERE UserID = $1 AND BookID = $2`;
+        await pool.query(deleteQuery, [buyerID, product_id]);
+
+        res.json({ message: 'Item removed from cart' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server error');
+    }
+});
+
+/**
+ * @swagger
+ * /addExchangeBook:
+ *   post:
+ *     summary: Soliltson nom nemeh
+ *     description: Oruulsan medeelliin daguu soliltson nom nemeh API
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               booknameex:
+ *                 type: string
+ *                 description: Soliltsoh nomnii ner.
+ *               bookauthor:
+ *                 type: string
+ *                 description: Nomnii zohiolch.
+ *               bookwear:
+ *                 type: integer
+ *                 description: Nomnii edelgee.
+ *               catergory_lists_ex:
+ *                 type: array
+ *                 description: Nomnii category.
+ *                 items:
+ *                   type: string
+ *               book_addition_info_ex:
+ *                 type: string
+ *                 description: Nemelt medeelel
+ *               starsod:
+ *                 type: integer
+ *                 description: Nomnii unelgee.
+ *               bookdate:
+ *                 type: string
+ *                 description: Nomnii niitlegdsen ognoo.
+ *               bookpage:
+ *                 type: integer
+ *                 description: Nomnii huudas
+ *     responses:
+ *       200:
+ *         description: Soliltsoh hesegt nom nemegdene
+ *         content:
+ *           application/json:
+ *             example:
+ *               success: true
+ *       400:
+ *         description: Huselt amjiltgui esvel nomnii batalgaajuulalttai holbootoi asuudal
+ *         content:
+ *           application/json:
+ *             example:
+ *               errorsOfBE:
+ *                 - message: "Бүх талбарыг бөглөнө үү."
+ *       500:
+ *         description: Internal Server Error.
+ */
+
     
     app.post('/addExchangeBook', upload.none(),async(req,res)=>{
         let { booknameex, bookauthor, bookwear,catergory_lists_ex, book_addition_info_ex, bookdate, bookpage} = req.body;
@@ -904,6 +1128,70 @@ app.post(
         }
        
     });
+
+    /**
+ * @swagger
+ * /addSaleBook:
+ *   post:
+ *     summary: Zarah nom nemeh
+ *     description: Oruulsan medeelliin daguu zarah nom nemne
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               booknamesa:
+ *                 type: string
+ *                 description: Zarah nomnii ner.
+ *               bookauthor:
+ *                 type: string
+ *                 description: Nomnii zohiogch
+ *               bookwear:
+ *                 type: integer
+ *                 description: Nomnii edelgee.
+ *               bookfprice:
+ *                 type: integer
+ *                 description: Nomnii jinhene une.
+ *               booklprice:
+ *                 type: integer
+ *                 description: Zarah nomnii une.
+ *               catergory_lists_sale:
+ *                 type: array
+ *                 description: Nomnii category.
+ *                 items:
+ *                   type: string
+ *               book_addition_info:
+ *                 type: string
+ *                 description: Nemelt medeelel.
+ *               starsod:
+ *                 type: integer
+ *                 description: Nomnii unelgee.
+ *               bookdate:
+ *                 type: string
+ *                 description: Nom niitlegdsen ognoo.
+ *               bookpage:
+ *                 type: integer
+ *                 description: Nomnii huudas.
+ *     responses:
+ *       200:
+ *         description: Zarah nom nemegdene.
+ *         content:
+ *           application/json:
+ *             example:
+ *               success: true
+ *       400:
+ *         description:  Huselt amjiltgui esvel nomnii batalgaajuulalttai holbootoi asuudal
+ *         content:
+ *           application/json:
+ *             example:
+ *               errorsOfSB:
+ *                 - message: "Бүх талбарыг бөглөнө үү."
+ *       500:
+ *         description: Internal Server Error.
+ */
+
     app.post('/addSaleBook', upload.none(),async(req,res)=>{
         let { booknamesa, bookauthor, bookwear,bookfprice, booklprice,catergory_lists_sale, book_addition_info, bookdate, bookpage} = req.body;
         let errorsOfSB=[];
@@ -934,6 +1222,65 @@ app.post(
         }
        
     });
+
+    /**
+ * @swagger
+ * tags:
+ *   name: Recommendations
+ *   description: Sanal huselt huleej avah
+ * 
+ * /recco:
+ *   post:
+ *     summary: Sanal huselt ilgeeh API
+ *     description: Hereglegchees sanal huseltiig huleej avna
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: Hereglegchiin ner
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: hereglegchiin mail hayg
+ *               rec:
+ *                 type: string
+ *                 description: Sanal huselt
+ *             required:
+ *               - name
+ *               - email
+ *               - rec
+ *     responses:
+ *       '200':
+ *         description: Successful submission
+ *         content:
+ *           application/json:
+ *             example:
+ *               success: true
+ *       '401':
+ *         description: User not authenticated
+ *         content:
+ *           application/json:
+ *             example:
+ *               error: User not authenticated
+ *       '400':
+ *         description: Bad Request - Validation errors
+ *         content:
+ *           application/json:
+ *             example:
+ *               errorsOfRec:
+ *                 - message: "Бүх талбарыг бөглөнө үү."
+ *       '500':
+ *         description: Internal Server Error
+ *         content:
+ *           application/json:
+ *             example:
+ *               error: Internal Server Error
+ */
     
     app.post('/recco',upload.none(), async(req, res) => {
         // Check if the user is authenticated
