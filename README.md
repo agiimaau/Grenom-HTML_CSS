@@ -1,2 +1,2 @@
 # Grenom-HTML_CSS
-CSS ee end nemne uu. bayrlalaa
+WEB-APP Ном солилцох болон зарах веб хуудас бүтэн код
